@@ -1,0 +1,2777 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0141)https://dede3phc22dgx.cloudfront.net/thread_output/46b84ba8-de3a-4c81-81f5-31626b6aae50/f8616390-3031-70a0-7b35-fa2bb2d556d8/LandingPage.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PragmaApps – AI-First Software Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --black: #0a0a0a;
+            --black-soft: #1a1a1a;
+            --black-mid: #2c2c2c;
+            --red: #d72638;
+            --red-dark: #b01e2d;
+            --red-light: #f5e0e3;
+            --white: #ffffff;
+            --gray-50: #f9f9f9;
+            --gray-100: #f2f2f2;
+            --gray-200: #e8e8e8;
+            --gray-300: #d1d1d1;
+            --gray-500: #8a8a8a;
+            --gray-700: #4a4a4a;
+            --font: 'Plus Jakarta Sans', sans-serif;
+            --radius: 12px;
+            --radius-sm: 8px;
+            --shadow-sm: 0 1px 4px rgba(0,0,0,0.07);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.10);
+            --shadow-lg: 0 8px 40px rgba(0,0,0,0.13);
+        }
+
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font);
+            background: var(--white);
+            color: var(--black);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* ===== LAYOUT ===== */
+        .container {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section {
+            padding: 96px 0;
+        }
+
+        .section-sm {
+            padding: 64px 0;
+        }
+
+        .section-tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--red);
+            background: var(--red-light);
+            border-radius: 40px;
+            padding: 6px 16px;
+            margin-bottom: 18px;
+        }
+
+        .section-title {
+            font-size: clamp(28px, 4vw, 48px);
+            font-weight: 800;
+            color: var(--black);
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        .section-sub {
+            font-size: 17px;
+            color: var(--gray-700);
+            max-width: 560px;
+            line-height: 1.7;
+        }
+
+        .section-center {
+            text-align: center;
+        }
+
+        .section-center .section-sub {
+            margin: 0 auto;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 28px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.22s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--red);
+            color: var(--white);
+            border-color: var(--red);
+        }
+
+        .btn-primary:hover {
+            background: var(--red-dark);
+            border-color: var(--red-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(215,38,56,0.3);
+        }
+
+        .btn-black {
+            background: var(--black);
+            color: var(--white);
+            border-color: var(--black);
+        }
+
+        .btn-black:hover {
+            background: var(--black-soft);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--black);
+            border-color: var(--gray-300);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--black);
+            transform: translateY(-1px);
+        }
+
+        /* ===== HEADER / NAV ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--gray-200);
+            transition: box-shadow 0.3s;
+        }
+
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--black);
+            letter-spacing: -0.5px;
+            flex-shrink: 0;
+        }
+
+        .logo span {
+            color: var(--red);
+        }
+
+        /* Right-aligned nav group */
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            margin-left: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-700);
+            transition: color 0.2s;
+            padding: 8px 14px;
+            border-radius: 6px;
+            transition: color 0.2s, background 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--red);
+            background: var(--red-light);
+        }
+
+        .nav-links a.active {
+            color: var(--red);
+            font-weight: 600;
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-login {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 9px 20px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            border: 1.5px solid var(--gray-300);
+            background: transparent;
+            color: var(--black);
+            transition: all 0.22s ease;
+        }
+
+        .btn-login:hover {
+            border-color: var(--black);
+            background: var(--black);
+            color: white;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--black);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding-top: 140px;
+            padding-bottom: 80px;
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(215,38,56,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--red-light);
+            color: var(--red);
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--red);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%,100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.4); }
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 62px);
+            font-weight: 900;
+            line-height: 1.08;
+            letter-spacing: -1.5px;
+            color: var(--black);
+            margin-bottom: 22px;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: var(--red);
+        }
+
+        .hero-sub {
+            font-size: 18px;
+            color: var(--gray-700);
+            line-height: 1.7;
+            margin-bottom: 36px;
+            max-width: 480px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 44px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 36px;
+            padding-top: 28px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .hero-stat-num {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--black);
+            letter-spacing: -0.5px;
+        }
+
+        .hero-stat-num span {
+            color: var(--red);
+        }
+
+        .hero-stat-label {
+            font-size: 13px;
+            color: var(--gray-500);
+            margin-top: 2px;
+        }
+
+        .hero-visual {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: var(--shadow-lg);
+            width: 100%;
+            max-width: 420px;
+        }
+
+        .hero-card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .hero-card-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .ai-pipeline {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .pipeline-step {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            background: var(--gray-50);
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--black-soft);
+        }
+
+        .pipeline-step.active {
+            background: var(--red);
+            color: white;
+        }
+
+        .pipeline-step.active .step-icon {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .step-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            background: var(--gray-200);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .floating-badge {
+            position: absolute;
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 10px 16px;
+            box-shadow: var(--shadow-md);
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+
+        .floating-badge.top-left {
+            top: -20px;
+            left: -30px;
+        }
+
+        .floating-badge.bottom-right {
+            bottom: -20px;
+            right: -20px;
+        }
+
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #22c55e;
+        }
+
+        /* ===== TRUSTED BY / LOGOS ===== */
+        .trusted-strip {
+            background: var(--gray-50);
+            padding: 32px 0;
+            border-top: 1px solid var(--gray-200);
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .trusted-inner {
+            display: flex;
+            align-items: center;
+            gap: 48px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .trusted-label {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--gray-500);
+            white-space: nowrap;
+        }
+
+        .logo-list {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .logo-item {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--gray-300);
+            letter-spacing: -0.3px;
+        }
+
+        /* ===== SERVICES / WHAT WE DO ===== */
+        .services { background: var(--white); }
+
+        .svc-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-top: 56px;
+        }
+
+        .svc-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .svc-card:hover {
+            border-color: var(--red);
+            box-shadow: 0 16px 56px rgba(215,38,56,0.11);
+            transform: translateY(-6px);
+        }
+
+        .svc-icon-wrap {
+            padding: 32px 32px 24px;
+            background: linear-gradient(145deg, #f9f9f9 0%, #f2f2f2 100%);
+            transition: background 0.3s ease;
+        }
+
+        .svc-card:hover .svc-icon-wrap {
+            background: linear-gradient(145deg, #fff0f2 0%, #fde4e8 100%);
+        }
+
+        .svc-icon-box {
+            width: 54px;
+            height: 54px;
+            background: var(--white);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+
+        .svc-icon-box svg {
+            width: 26px;
+            height: 26px;
+            stroke: var(--red);
+            stroke-width: 1.8;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .svc-body {
+            padding: 24px 28px 28px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .svc-title {
+            font-size: 17px;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .svc-desc {
+            font-size: 13.5px;
+            color: var(--gray-700);
+            line-height: 1.78;
+            flex: 1;
+            margin-bottom: 20px;
+        }
+
+        .svc-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--red);
+            transition: gap 0.2s ease;
+        }
+
+        .svc-link svg {
+            stroke: var(--red);
+            fill: none;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: transform 0.2s ease;
+        }
+
+        .svc-card:hover .svc-link {
+            gap: 8px;
+        }
+
+        .svc-card:hover .svc-link svg {
+            transform: translateX(3px);
+        }
+
+        @media (max-width: 1024px) {
+            .svc-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 600px) {
+            .svc-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ===== MISSION ===== */
+        .mission { background: var(--white); }
+
+        .mission-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .mission-visual {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .mission-card {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius);
+            padding: 24px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .mission-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .mission-card.accent {
+            background: var(--red);
+            color: white;
+            border-color: var(--red);
+        }
+
+        .mission-card.accent .mcard-icon { background: rgba(255,255,255,0.2); }
+        .mission-card.accent .mcard-num { color: rgba(255,255,255,0.7); }
+
+        .mcard-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--white);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 14px;
+            font-size: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .mcard-num {
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: -1px;
+            color: var(--black);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .mcard-label {
+            font-size: 13px;
+            font-weight: 500;
+            opacity: 0.8;
+        }
+
+        .mission-content .section-sub {
+            max-width: 480px;
+            margin-bottom: 28px;
+        }
+
+        .mission-values {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 28px;
+        }
+
+        .mission-value {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px;
+            background: var(--gray-50);
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--red);
+        }
+
+        .mission-value-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+
+        .mission-value-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 2px;
+        }
+
+        .mission-value-text { font-size: 13px; color: var(--gray-700); }
+
+        /* ===== APPROACH ===== */
+        .approach { background: var(--gray-50); }
+
+        .approach-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 48px;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .accordion-item {
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .accordion-item:hover {
+            border-color: var(--red);
+            box-shadow: var(--shadow-md);
+        }
+
+        .accordion-item.active {
+            border-color: var(--red);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .accordion-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 32px;
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.2s ease;
+        }
+
+        .accordion-header:hover {
+            background: var(--gray-50);
+        }
+
+        .accordion-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex: 1;
+        }
+
+        .accordion-number {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--red);
+            line-height: 1;
+            min-width: 48px;
+        }
+
+        .accordion-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--red-light) 0%, #fef0f2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .accordion-title-wrap {
+            flex: 1;
+        }
+
+        .accordion-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--black);
+            margin: 0 0 4px 0;
+            line-height: 1.3;
+        }
+
+        .accordion-subtitle {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--red);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0;
+        }
+
+        .accordion-toggle {
+            color: var(--gray-500);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s;
+            flex-shrink: 0;
+        }
+
+        .accordion-item.active .accordion-toggle {
+            transform: rotate(180deg);
+            color: var(--red);
+        }
+
+        .accordion-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 0 32px;
+        }
+
+        .accordion-item.active .accordion-body {
+            max-height: 1000px;
+            padding: 0 32px 32px 32px;
+        }
+
+        .accordion-content-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 32px;
+            padding-top: 20px;
+        }
+
+        .accordion-main {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .accordion-desc {
+            font-size: 15px;
+            color: var(--gray-700);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .accordion-detail-section h4 {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--black);
+            margin: 0 0 12px 0;
+        }
+
+        .accordion-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-left: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .accordion-list li {
+            font-size: 14px;
+            color: var(--gray-700);
+            line-height: 1.6;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .accordion-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--red);
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .accordion-sidebar {
+            background: linear-gradient(135deg, var(--black) 0%, var(--black-soft) 100%);
+            border-radius: var(--radius-sm);
+            padding: 28px;
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .accordion-sidebar::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(215,38,56,0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .accordion-badge {
+            display: inline-block;
+            background: var(--red);
+            color: var(--white);
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 6px 10px;
+            border-radius: 6px;
+            width: fit-content;
+            position: relative;
+            z-index: 1;
+        }
+
+        .accordion-insight {
+            font-size: 14px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.95);
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .accordion-insight strong {
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        .accordion-impact {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-sm);
+            padding: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .impact-label {
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 10px;
+        }
+
+        .impact-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .impact-tag {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .approach-summary {
+            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+            border-radius: var(--radius);
+            padding: 48px;
+            margin-top: 48px;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .summary-content h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--white);
+        }
+
+        .summary-content p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 800px;
+            margin: 0 auto 24px;
+        }
+
+        .summary-highlight {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .highlight-item {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .highlight-divider {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 20px;
+        }
+        /* ===== WHY PRAGMAAPPS ===== */
+        .why-pragma { background: var(--gray-50); }
+
+        .why-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .why-left .section-sub { margin-bottom: 36px; }
+
+        .why-quote {
+            background: var(--black);
+            color: white;
+            border-radius: 16px;
+            padding: 28px 32px;
+            position: relative;
+            margin-top: 8px;
+        }
+
+        .why-quote-mark {
+            font-size: 64px;
+            color: var(--red);
+            line-height: 0.8;
+            margin-bottom: 12px;
+            font-family: Georgia, serif;
+        }
+
+        .why-quote-text {
+            font-size: 15px;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.75;
+            font-style: italic;
+        }
+
+        .why-quote-author {
+            font-size: 12px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.4);
+            margin-top: 16px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .why-pillars { display: flex; flex-direction: column; gap: 4px; }
+
+        .why-pillar {
+            display: grid;
+            grid-template-columns: 48px 1fr;
+            gap: 16px;
+            align-items: start;
+            padding: 20px 20px 20px 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .why-pillar:last-child { border-bottom: none; }
+
+        .why-pillar-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .why-pillar-title { font-size: 15px; font-weight: 700; color: var(--black); margin-bottom: 5px; }
+        .why-pillar-text { font-size: 13px; color: var(--gray-700); line-height: 1.65; }
+
+        /* ===== CASE STUDY ===== */
+        .case-study { background: var(--white); }
+
+        .case-study-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            margin-top: 56px;
+        }
+
+        .case-study-inner { display: grid; grid-template-columns: 1fr 1.2fr; }
+
+        .case-img-wrap {
+            position: relative;
+            min-height: 480px;
+            background: var(--black);
+            overflow: hidden;
+        }
+
+        .case-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+        }
+
+        .case-img-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(215,38,56,0.3) 0%, transparent 60%);
+        }
+
+        .case-img-badge {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            background: var(--red);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 40px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .case-content { padding: 44px 40px; }
+        .case-client { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gray-500); margin-bottom: 8px; }
+        .case-title { font-size: 24px; font-weight: 800; color: var(--black); margin-bottom: 28px; line-height: 1.3; }
+        .case-section-label { font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: var(--black); margin-bottom: 8px; }
+        .case-section-text { font-size: 14px; color: var(--gray-700); line-height: 1.7; margin-bottom: 24px; }
+
+        .tech-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+
+        .tech-tag {
+            padding: 5px 14px;
+            border: 1px solid var(--gray-300);
+            border-radius: 40px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--gray-700);
+        }
+
+        .case-metrics {
+            display: flex;
+            gap: 24px;
+            padding: 20px;
+            background: var(--gray-50);
+            border-radius: var(--radius);
+            margin-top: 8px;
+        }
+
+        .case-metric { text-align: center; flex: 1; }
+
+        .case-metric-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 8px;
+            font-size: 16px;
+        }
+
+        .case-metric-val { font-size: 14px; font-weight: 700; color: var(--black); }
+        .case-metric-lbl { font-size: 11px; color: var(--gray-500); margin-top: 2px; }
+
+        .case-nav { display: flex; justify-content: center; gap: 12px; margin-top: 32px; }
+
+        .case-btn {
+            width: 44px;
+            height: 44px;
+            border: 1px solid var(--gray-300);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: white;
+            transition: all 0.2s;
+            font-size: 18px;
+        }
+
+        .case-btn:hover {
+            background: var(--red);
+            color: white;
+            border-color: var(--red);
+        }
+
+        /* ===== CLIENT REVIEWS ===== */
+        .reviews { background: var(--gray-50); }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 56px;
+        }
+
+        .review-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius);
+            padding: 28px;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+
+        .review-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+
+        .review-card.featured {
+            background: var(--black);
+            color: white;
+            border-color: var(--black);
+        }
+
+        .review-stars { display: flex; gap: 3px; margin-bottom: 16px; color: #f59e0b; font-size: 14px; }
+
+        .review-text {
+            font-size: 14px;
+            line-height: 1.75;
+            color: var(--gray-700);
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .review-card.featured .review-text { color: rgba(255,255,255,0.8); }
+
+        .review-quote-icon { font-size: 40px; color: var(--gray-200); line-height: 1; margin-bottom: 12px; }
+        .review-card.featured .review-quote-icon { color: rgba(255,255,255,0.15); }
+
+        .reviewer {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-top: 16px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .review-card.featured .reviewer { border-top-color: rgba(255,255,255,0.1); }
+
+        .reviewer-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .reviewer-name { font-size: 14px; font-weight: 700; color: var(--black); }
+        .review-card.featured .reviewer-name { color: white; }
+        .reviewer-role { font-size: 12px; color: var(--gray-500); }
+        .review-card.featured .reviewer-role { color: rgba(255,255,255,0.5); }
+
+        .reviews-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 48px;
+            padding: 24px;
+            background: var(--gray-50);
+            border-radius: var(--radius);
+        }
+
+        .reviews-stat { text-align: center; }
+        .reviews-stat-num { font-size: 28px; font-weight: 800; color: var(--black); letter-spacing: -1px; }
+        .reviews-stat-num span { color: var(--red); }
+        .reviews-stat-lbl { font-size: 12px; color: var(--gray-500); margin-top: 2px; }
+        .reviews-divider { width: 1px; height: 40px; background: var(--gray-300); }
+
+        /* ===== CONTACT ===== */
+        .contact { background: var(--white); }
+
+        .contact-inner {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 48px;
+            margin-top: 56px;
+        }
+
+        .contact-info { display: flex; flex-direction: column; gap: 20px; }
+
+        .contact-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius);
+            padding: 28px;
+        }
+
+        .contact-card-title { font-size: 18px; font-weight: 700; color: var(--black); margin-bottom: 20px; }
+
+        .contact-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px; }
+
+        .contact-item-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--gray-100);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            flex-shrink: 0;
+        }
+
+        .contact-item-label { font-size: 12px; font-weight: 600; color: var(--gray-500); margin-bottom: 2px; }
+        .contact-item-val { font-size: 14px; font-weight: 600; color: var(--black); }
+
+        .expect-list { display: flex; flex-direction: column; gap: 10px; }
+
+        .expect-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--gray-700); }
+
+        .expect-check {
+            width: 18px;
+            height: 18px;
+            background: #dcfce7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            flex-shrink: 0;
+            color: #16a34a;
+        }
+
+        .contact-form {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius);
+            padding: 36px;
+        }
+
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .form-group { margin-bottom: 18px; }
+
+        .form-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 7px;
+        }
+
+        .form-label .req { color: var(--red); }
+
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1.5px solid var(--gray-200);
+            border-radius: var(--radius-sm);
+            font-family: var(--font);
+            font-size: 14px;
+            color: var(--black);
+            background: var(--white);
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            border-color: var(--red);
+            box-shadow: 0 0 0 3px rgba(215,38,56,0.08);
+        }
+
+        .form-textarea { resize: vertical; min-height: 120px; }
+        .form-submit { width: 100%; margin-top: 4px; justify-content: center; }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--black);
+            color: rgba(255,255,255,0.7);
+            padding: 64px 0 32px;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .footer-brand .logo { color: white; margin-bottom: 16px; }
+        .footer-brand p { font-size: 14px; line-height: 1.7; max-width: 280px; }
+        .footer-col-title { font-size: 13px; font-weight: 700; color: white; letter-spacing: 0.5px; margin-bottom: 18px; }
+
+        .footer-links { display: flex; flex-direction: column; gap: 10px; }
+
+        .footer-links a {
+            font-size: 13px;
+            color: rgba(255,255,255,0.55);
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: var(--red); }
+
+        .footer-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 28px;
+            font-size: 13px;
+        }
+
+        .footer-socials { display: flex; gap: 12px; }
+
+        .social-link {
+            width: 34px;
+            height: 34px;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+            transition: all 0.2s;
+        }
+
+        .social-link:hover { background: var(--red); border-color: var(--red); color: white; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .approach-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+        }
+
+        @media (max-width: 768px) {
+            .hero-inner { grid-template-columns: 1fr; }
+            .hero-visual { display: none; }
+            .mission-inner { grid-template-columns: 1fr; }
+            .mission-visual { grid-template-columns: repeat(2, 1fr); }
+            .approach-grid { grid-template-columns: 1fr; }
+            .case-study-inner { grid-template-columns: 1fr; }
+            .case-img-wrap { min-height: 240px; }
+            .reviews-grid { grid-template-columns: 1fr; }
+            .contact-inner { grid-template-columns: 1fr; }
+            .footer-top { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .form-row { grid-template-columns: 1fr; }
+            .hero-stats { gap: 20px; }
+            .reviews-bottom { flex-direction: column; gap: 16px; }
+            .reviews-divider { width: 40px; height: 1px; }
+            .why-inner { grid-template-columns: 1fr; gap: 40px; }
+            .nav-cta .btn-login { display: none; }
+            .accordion-header { padding: 20px 20px; }
+            .accordion-left { flex-direction: column; align-items: flex-start; gap: 12px; }
+            .accordion-number { font-size: 24px; min-width: auto; }
+            .accordion-icon { width: 40px; height: 40px; font-size: 20px; }
+            .accordion-title { font-size: 18px; }
+            .accordion-subtitle { font-size: 12px; }
+            .accordion-body { padding: 0 20px; }
+            .accordion-item.active .accordion-body { padding: 0 20px 24px 20px; }
+            .accordion-content-grid { grid-template-columns: 1fr; gap: 20px; }
+            .accordion-sidebar { padding: 20px; }
+            .accordion-desc { font-size: 14px; }
+            .accordion-list li { font-size: 13px; }
+            .summary-content h3 { font-size: 22px; }
+            .summary-content p { font-size: 14px; }
+            .highlight-item { font-size: 16px; }
+            .summary-highlight { flex-direction: column; gap: 8px; }
+            .highlight-divider { display: none; }
+            .approach-summary { padding: 32px 24px; margin-top: 32px; }
+        }
+
+        /* ===== NAV DROPDOWN ===== */
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .nav-dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .dropdown-arrow {
+            font-size: 8px;
+            display: inline-block;
+            transition: transform 0.25s ease;
+        }
+
+        .nav-dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .nav-dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(6px);
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-top: 3px solid var(--red);
+            border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+            box-shadow: var(--shadow-lg);
+            min-width: 220px;
+            z-index: 1000;
+            overflow: hidden;
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+            padding: 6px 0;
+        }
+
+        .nav-dropdown:hover .nav-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 11px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-700);
+            transition: background 0.15s ease, color 0.15s ease, padding-left 0.15s ease;
+            white-space: nowrap;
+        }
+
+        .nav-dropdown-menu a:hover {
+            background: var(--gray-50);
+            color: var(--black);
+            padding-left: 26px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header scrolled" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="LandingPage.html" class="logo">Pragma<span>Apps</span></a>
+
+                <!-- Right-aligned navigation -->
+                <div class="nav-right">
+                    <div class="nav-links" id="navLinks">
+                        <a href="LandingPage.html" class="active">Home</a>
+                        <div class="nav-dropdown">
+                            <a href="#" class="nav-dropdown-toggle">Services <span class="dropdown-arrow">&#9660;</span></a>
+                            <div class="nav-dropdown-menu">
+                                <a href="ProductDevelopmentPage.html">Product Development</a>
+                                <a href="DigitalTransformationPage.html">Digital Transformation</a>
+                                <a href="EnterpriseIntegrationPage.html">Enterprise Integration</a>
+                                <a href="AIAndMLPage.html">AI &amp; Machine Learning</a>
+                                <a href="CTOAsAServicePage.html">CTO as a Service</a>
+                                <a href="PerformanceEngineeringPage.html">Performance Engineering</a>
+                            </div>
+                        </div>
+                        <a href="#">Products</a>
+                        <a href="#">About</a>
+                        <a href="#">Blog</a>
+                    </div>
+                    <div class="nav-cta">
+                        <a href="#" class="btn-login">Login</a>
+                        <div class="hamburger" id="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-inner">
+                <div>
+                    <div class="hero-badge">🤖 AI Model Active</div>
+                    <h1>Build Smarter.<br><em>Ship Faster</em>.<br>Scale Confidently.</h1>
+                    <p class="hero-sub">PragmaApps combines 15+ years of engineering expertise with cutting-edge AI tools to deliver high-quality web, mobile, and enterprise software — at optimal cost, without compromise.</p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary">Start Your Project →</button>
+                        <button class="btn btn-outline">View Case Studies</button>
+                    </div>
+                    <div class="hero-stats">
+                        <div>
+                            <div class="hero-stat-num"><span>350+</span></div>
+                            <div class="hero-stat-label">Clients Served</div>
+                        </div>
+                        <div>
+                            <div class="hero-stat-num"><span>15+</span></div>
+                            <div class="hero-stat-label">Years Experience</div>
+                        </div>
+                        <div>
+                            <div class="hero-stat-num"><span>60%</span></div>
+                            <div class="hero-stat-label">Faster Delivery with AI</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-card">
+                        <div class="hero-card-header">
+                            <div class="hero-card-dot" style="background: var(--red);"></div>
+                            <div class="hero-card-dot" style="background: var(--gray-300);"></div>
+                            <div class="hero-card-dot" style="background: var(--gray-300);"></div>
+                        </div>
+                        <div class="ai-pipeline">
+                            <div class="pipeline-step">
+                                <div class="step-icon">🔍</div>
+                                <span>Discovery &amp; Planning</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <div class="step-icon">⚡</div>
+                                <span>AI Prototyping</span>
+                            </div>
+                            <div class="pipeline-step active">
+                                <div class="step-icon">🛠</div>
+                                <span>Development</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <div class="step-icon">🚀</div>
+                                <span>Launch &amp; Scale</span>
+                            </div>
+                        </div>
+                        <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--gray-200); font-size: 12px; color: var(--gray-500);">
+                            ✅ Production Deployed
+                        </div>
+                    </div>
+                    <div class="floating-badge top-left">
+                        🎯 350+
+                        <br>Customers served worldwide
+                    </div>
+                    <div class="floating-badge bottom-right">
+                        <div class="badge-dot"></div>
+                        System Online
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Strip -->
+    <section class="trusted-strip">
+        <div class="container">
+            <div class="trusted-inner">
+                <div class="trusted-label">Trusted by teams at</div>
+                <div class="logo-list">
+                    <div class="logo-item">Inscopix</div>
+                    <div class="logo-item">LifeSherpa</div>
+                    <div class="logo-item">MedFlow</div>
+                    <div class="logo-item">SocialEngine</div>
+                    <div class="logo-item">AWS Partner</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section style="background: var(--gray-50); padding: 48px 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center;">
+                <div>
+                    <div style="font-size: 28px; font-weight: 800; color: var(--black); margin-bottom: 4px;">🧠</div>
+                    <div style="font-size: 28px; font-weight: 800; color: var(--black); margin-bottom: 4px;">350+</div>
+                    <div style="font-size: 13px; color: var(--gray-500);">Customers served worldwide</div>
+                </div>
+                <div>
+                    <div style="font-size: 28px; font-weight: 800; color: var(--black); margin-bottom: 4px;">📅</div>
+                    <div style="font-size: 28px; font-weight: 800; color: var(--black); margin-bottom: 4px;">15+</div>
+                    <div style="font-size: 13px; color: var(--gray-500);">Years of engineering excellence</div>
+                </div>
+                <div>
+                    <div style="font-size: 28px; font-weight: 800; color: var(--black); margin-bottom: 4px;">⚡</div>
+                    <div style="font-size: 28px; font-weight: 800; color: var(--black); margin-bottom: 4px;">60%</div>
+                    <div style="font-size: 13px; color: var(--gray-500);">Faster delivery with AI tools</div>
+                </div>
+                <div>
+                    <div style="font-size: 28px; font-weight: 800; color: var(--black); margin-bottom: 4px;">🤝</div>
+                    <div style="font-size: 28px; font-weight: 800; color: var(--black); margin-bottom: 4px;">99%</div>
+                    <div style="font-size: 13px; color: var(--gray-500);">Client satisfaction rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission section" id="mission">
+        <div class="container">
+            <div class="mission-inner">
+                <div>
+                    <div class="section-tag">OUR MISSION</div>
+                    <h2 class="section-title">Build great solutions at optimal cost</h2>
+                    <p class="section-sub">Since 2007, PragmaApps has partnered with startups and enterprises to deliver world-class software. Our mission has always been the same — great solutions, right cost. Today, AI supercharges how we deliver on that promise.</p>
+                    <div class="mission-values">
+                        <div class="mission-value">
+                            <div class="mission-value-icon">🧠</div>
+                            <div>
+                                <div class="mission-value-title">AI-Augmented Engineering</div>
+                                <div class="mission-value-text">We integrate AI tools across every stage — from architecture planning to code generation, testing, and documentation — without sacrificing quality or craftsmanship.</div>
+                            </div>
+                        </div>
+                        <div class="mission-value">
+                            <div class="mission-value-icon">🏆</div>
+                            <div>
+                                <div class="mission-value-title">Expert-Led, Not Average-Team-Scaled</div>
+                                <div class="mission-value-text">We work with small teams of top-tier engineers. An expert programmer with AI tools outperforms a large team of average developers — and delivers better code.</div>
+                            </div>
+                        </div>
+                        <div class="mission-value">
+                            <div class="mission-value-icon">🔗</div>
+                            <div>
+                                <div class="mission-value-title">Partner-Centric Culture</div>
+                                <div class="mission-value-text">Every senior engineer is a partner in the business. Your success is our success. We're invested in building long-term relationships, not just closing tickets.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mission-visual">
+                    <div class="mission-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                        <div class="mcard-icon">🎯</div>
+                        <div class="mcard-num">350<span>+</span></div>
+                        <div class="mcard-label">Customers served worldwide</div>
+                    </div>
+                    <div class="mission-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                        <div class="mcard-icon">📅</div>
+                        <div class="mcard-num">15<span>+</span></div>
+                        <div class="mcard-label">Years of engineering excellence</div>
+                    </div>
+                    <div class="mission-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                        <div class="mcard-icon">⚡</div>
+                        <div class="mcard-num">60<span>%</span></div>
+                        <div class="mcard-label">Faster delivery with AI tools</div>
+                    </div>
+                    <div class="mission-card accent" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                        <div class="mcard-icon">🤝</div>
+                        <div class="mcard-num">99<span>%</span></div>
+                        <div class="mcard-label">Client satisfaction rate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work / Approach Section -->
+    <section class="approach section" id="approach">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 64px;">
+                <div class="section-tag">OUR PROCESS</div>
+                <h2 class="section-title">How We Work</h2>
+                <p class="section-sub" style="margin: 0 auto;">Software Built Faster — Without Cutting Corners</p>
+                <p style="font-size: 15px; color: var(--gray-700); margin-top: 12px; max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.7;">At Pragma Apps, AI does not replace engineering — it removes friction. We use AI to assist engineers in repetitive cognitive tasks so they can focus on architecture, correctness, and long-term reliability. The result is earlier clarity, better decisions, and fewer surprises.</p>
+            </div>
+
+            <div class="approach-accordion">
+                <!-- Accordion Item 1 -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="accordion-left">
+                            <div class="accordion-number">01</div>
+                            <div class="accordion-icon">🎯</div>
+                            <div class="accordion-title-wrap">
+                                <h3 class="accordion-title">Requirement Analysis &amp; Scoping</h3>
+                                <p class="accordion-subtitle">Discover Missing Requirements Early</p>
+                            </div>
+                        </div>
+                        <div class="accordion-toggle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion-body">
+                        <div class="accordion-content-grid">
+                            <div class="accordion-main">
+                                <p class="accordion-desc">Many project delays originate at the very beginning: incomplete or ambiguous requirements. We use AI as a structured analysis assistant during discovery.</p>
+                                <div class="accordion-detail-section">
+                                    <h4>AI helps our team:</h4>
+                                    <ul class="accordion-list">
+                                        <li>Transform informal business ideas into structured requirements</li>
+                                        <li>Generate user stories and acceptance criteria</li>
+                                        <li>Identify edge cases and failure scenarios</li>
+                                        <li>Surface hidden assumptions</li>
+                                        <li>Anticipate integration and data-flow issues</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordion-sidebar">
+                                <div class="accordion-badge">Why this matters</div>
+                                <p class="accordion-insight">Traditional projects discover missing requirements during testing or after launch. <strong>We discover them during planning.</strong></p>
+                                <div class="accordion-impact">
+                                    <div class="impact-label">Impact</div>
+                                    <div class="impact-tags">
+                                        <span class="impact-tag">Clearer scope</span>
+                                        <span class="impact-tag">Accurate estimates</span>
+                                        <span class="impact-tag">Fewer change requests</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 2 -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="accordion-left">
+                            <div class="accordion-number">02</div>
+                            <div class="accordion-icon">🎨</div>
+                            <div class="accordion-title-wrap">
+                                <h3 class="accordion-title">Rapid Prototyping &amp; UX Validation</h3>
+                                <p class="accordion-subtitle">Validate Workflows Before Building</p>
+                            </div>
+                        </div>
+                        <div class="accordion-toggle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion-body">
+                        <div class="accordion-content-grid">
+                            <div class="accordion-main">
+                                <p class="accordion-desc">Before writing production code, we validate workflows. AI accelerates prototyping so you see results faster.</p>
+                                <div class="accordion-detail-section">
+                                    <h4>AI helps us:</h4>
+                                    <ul class="accordion-list">
+                                        <li>Explore alternate user flows</li>
+                                        <li>Draft UI structures</li>
+                                        <li>Simulate interaction scenarios</li>
+                                        <li>Prepare testable mock workflows</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordion-sidebar">
+                                <div class="accordion-badge">Early validation</div>
+                                <p class="accordion-insight">Stakeholders can react to a working model early rather than reviewing static specifications.</p>
+                                <div class="accordion-impact">
+                                    <div class="impact-label">Impact</div>
+                                    <div class="impact-tags">
+                                        <span class="impact-tag">Early feedback</span>
+                                        <span class="impact-tag">Reduced rework</span>
+                                        <span class="impact-tag">Higher adoption</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 3 -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="accordion-left">
+                            <div class="accordion-number">03</div>
+                            <div class="accordion-icon">⚡</div>
+                            <div class="accordion-title-wrap">
+                                <h3 class="accordion-title">Coding &amp; Implementation</h3>
+                                <p class="accordion-subtitle">AI Co-pilot, Not Autopilot</p>
+                            </div>
+                        </div>
+                        <div class="accordion-toggle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion-body">
+                        <div class="accordion-content-grid">
+                            <div class="accordion-main">
+                                <p class="accordion-desc">During development, AI acts as an engineering co-pilot. AI accelerates execution, but engineering judgment remains human.</p>
+                                <div class="accordion-detail-section">
+                                    <h4>AI assists with:</h4>
+                                    <ul class="accordion-list">
+                                        <li>Scaffolding APIs and modules</li>
+                                        <li>Repetitive data-handling code</li>
+                                        <li>Refactoring existing codebases</li>
+                                        <li>Understanding unfamiliar libraries</li>
+                                        <li>Documenting logic</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordion-sidebar">
+                                <div class="accordion-badge">Human oversight</div>
+                                <p class="accordion-insight">Every change is still <strong>reviewed by engineers, tested, and integrated into a designed architecture.</strong></p>
+                                <div class="accordion-impact">
+                                    <div class="impact-label">Impact</div>
+                                    <div class="impact-tags">
+                                        <span class="impact-tag">Faster delivery</span>
+                                        <span class="impact-tag">Consistent code</span>
+                                        <span class="impact-tag">Focus on complexity</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 4 -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="accordion-left">
+                            <div class="accordion-number">04</div>
+                            <div class="accordion-icon">🔍</div>
+                            <div class="accordion-title-wrap">
+                                <h3 class="accordion-title">Code Reviews &amp; Quality Assurance</h3>
+                                <p class="accordion-subtitle">Higher Coverage, Faster Cycles</p>
+                            </div>
+                        </div>
+                        <div class="accordion-toggle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion-body">
+                        <div class="accordion-content-grid">
+                            <div class="accordion-main">
+                                <p class="accordion-desc">Code review is one of the most time-consuming parts of software development. AI helps us review more thoroughly and generate comprehensive tests.</p>
+                                <div class="accordion-detail-section">
+                                    <h4>AI helps by:</h4>
+                                    <ul class="accordion-list">
+                                        <li>Identifying potential logic errors</li>
+                                        <li>Flagging risky changes</li>
+                                        <li>Highlighting untested paths</li>
+                                        <li>Checking edge cases</li>
+                                        <li>Generating unit and integration tests</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordion-sidebar">
+                                <div class="accordion-badge">Thorough reviews</div>
+                                <p class="accordion-insight">Engineers perform the final review and decide what is correct. AI helps us review code more thoroughly.</p>
+                                <div class="accordion-impact">
+                                    <div class="impact-label">Impact</div>
+                                    <div class="impact-tags">
+                                        <span class="impact-tag">Higher test coverage</span>
+                                        <span class="impact-tag">Fewer regressions</span>
+                                        <span class="impact-tag">Faster releases</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 5 -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="accordion-left">
+                            <div class="accordion-number">05</div>
+                            <div class="accordion-icon">🔧</div>
+                            <div class="accordion-title-wrap">
+                                <h3 class="accordion-title">Bug Fixing &amp; Troubleshooting</h3>
+                                <p class="accordion-subtitle">Faster Resolution, Shorter Downtime</p>
+                            </div>
+                        </div>
+                        <div class="accordion-toggle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion-body">
+                        <div class="accordion-content-grid">
+                            <div class="accordion-main">
+                                <p class="accordion-desc">Bug fixing is often slow because reproducing a problem is harder than solving it. AI helps analyze stack traces, logs, and error patterns quickly.</p>
+                                <div class="accordion-detail-section">
+                                    <h4>AI helps analyze:</h4>
+                                    <ul class="accordion-list">
+                                        <li>Stack traces and error patterns</li>
+                                        <li>Logs and environment differences</li>
+                                        <li>Production anomalies</li>
+                                        <li>Abnormal behavior detection</li>
+                                        <li>Event correlation across services</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordion-sidebar">
+                                <div class="accordion-badge">Quick insights</div>
+                                <p class="accordion-insight">Instead of manually searching through logs, engineers can <strong>quickly narrow the probable cause and validate hypotheses.</strong></p>
+                                <div class="accordion-impact">
+                                    <div class="impact-label">Impact</div>
+                                    <div class="impact-tags">
+                                        <span class="impact-tag">Faster debugging</span>
+                                        <span class="impact-tag">Shorter downtime</span>
+                                        <span class="impact-tag">Quick resolution</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Summary Banner -->
+            <div class="approach-summary">
+                <div class="summary-content">
+                    <h3>What AI Does — and What It Doesn't</h3>
+                    <p>AI helps with pattern recognition, reasoning assistance, and analysis. It does <strong>not</strong> make product decisions, architecture choices, or trade-offs. Those remain the responsibility of experienced engineers.</p>
+                    <div class="summary-highlight">
+                        <span class="highlight-item">AI increases speed</span>
+                        <span class="highlight-divider">•</span>
+                        <span class="highlight-item">Engineering maintains correctness</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services section" id="services">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 64px;">
+                <div class="section-tag">WHAT WE DO</div>
+                <h2 class="section-title">Technology Services, Powered by AI</h2>
+                <p class="section-sub" style="margin: 0 auto;">We embed AI across every service we deliver — so you build faster, decide smarter, and scale with confidence.</p>
+            </div>
+
+            <div class="svc-grid">
+                <!-- Product Development -->
+                <a href="ProductDevelopmentPage.html" class="svc-card">
+                    <div class="svc-icon-wrap">
+                        <div class="svc-icon-box">
+                            <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <h3 class="svc-title">Product Development</h3>
+                        <p class="svc-desc">We accelerate product delivery by embedding AI across every stage — from discovery to deployment. Sharper requirements, cleaner architecture, and faster release cycles without compromising quality.</p>
+                        <span class="svc-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                    </div>
+                </a>
+
+                <!-- Digital Transformation -->
+                <a href="DigitalTransformationPage.html" class="svc-card">
+                    <div class="svc-icon-wrap">
+                        <div class="svc-icon-box">
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <h3 class="svc-title">Digital Transformation</h3>
+                        <p class="svc-desc">We help organizations modernize operations by applying AI to understand, redesign, and automate existing business processes — delivering smarter outcomes at every stage of the journey.</p>
+                        <span class="svc-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                    </div>
+                </a>
+
+                <!-- Enterprise Integration -->
+                <a href="EnterpriseIntegrationPage.html" class="svc-card">
+                    <div class="svc-icon-wrap">
+                        <div class="svc-icon-box">
+                            <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <h3 class="svc-title">Enterprise Integration</h3>
+                        <p class="svc-desc">We connect your enterprise systems — CRMs, ERPs, and third-party platforms — using AI-assisted engineering for faster connectors, smarter data mapping, and production-grade reliability.</p>
+                        <span class="svc-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                    </div>
+                </a>
+
+                <!-- AI & Machine Learning -->
+                <a href="AIAndMLPage.html" class="svc-card">
+                    <div class="svc-icon-wrap">
+                        <div class="svc-icon-box">
+                            <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <h3 class="svc-title">AI &amp; Machine Learning</h3>
+                        <p class="svc-desc">We design and deploy practical AI and ML solutions — from data preparation to production-ready models. Built for real-world performance, not just proof-of-concept outcomes.</p>
+                        <span class="svc-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                    </div>
+                </a>
+
+                <!-- CTO as a Service -->
+                <a href="CTOAsAServicePage.html" class="svc-card">
+                    <div class="svc-icon-wrap">
+                        <div class="svc-icon-box">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <h3 class="svc-title">CTO as a Service</h3>
+                        <p class="svc-desc">Access senior technology leadership on demand. We use AI to rapidly analyze architecture, audit codebases, and identify bottlenecks — so our guidance is backed by data, not just experience.</p>
+                        <span class="svc-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                    </div>
+                </a>
+
+                <!-- Performance Engineering -->
+                <a href="PerformanceEngineeringPage.html" class="svc-card">
+                    <div class="svc-icon-wrap">
+                        <div class="svc-icon-box">
+                            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <h3 class="svc-title">Performance Engineering</h3>
+                        <p class="svc-desc">We identify and eliminate performance bottlenecks before they impact your users. Using AI-assisted analysis, we optimize systems for speed, stability, and scale — proactively, not reactively.</p>
+                        <span class="svc-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why PragmaApps Section -->
+    <section class="why-pragma section">
+        <div class="container">
+            <div class="why-inner">
+                <div class="why-left">
+                    <div class="section-tag">WHY PRAGMAAPPS</div>
+                    <h2 class="section-title">Expert teams.<br>Right-sized solutions.<br>Exceptional value.</h2>
+                    <p class="section-sub">We don't believe in building large units of average programmers. We work with small, senior teams where every engineer is a partner — and AI makes each of them dramatically more productive.</p>
+                    <div class="why-quote">
+                        <div class="why-quote-mark">"</div>
+                        <div class="why-quote-text">Pragma is a professional organization that delivers very well. Not only do they provide well-engineered solutions, they are easy to work with and, above all, trustworthy. They have always come through for me — they not only care about good engineering, but also about the business of the product.</div>
+                        <div class="why-quote-author">— Long-term Client, Enterprise SaaS</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="why-pillars">
+                        <div class="why-pillar">
+                            <div class="why-pillar-icon">🏆</div>
+                            <div>
+                                <div class="why-pillar-title">Senior-Only Teams</div>
+                                <div class="why-pillar-text">Every engagement is staffed with senior engineers who own the outcome. No juniors padded in, no management overhead — just experts who ship.</div>
+                            </div>
+                        </div>
+                        <div class="why-pillar">
+                            <div class="why-pillar-icon">🤝</div>
+                            <div>
+                                <div class="why-pillar-title">Partner-Centric Culture</div>
+                                <div class="why-pillar-text">Every senior engineer is a partner in the business. Your success is our success. We're invested in long-term outcomes, not just closing tickets.</div>
+                            </div>
+                        </div>
+                        <div class="why-pillar">
+                            <div class="why-pillar-icon">📐</div>
+                            <div>
+                                <div class="why-pillar-title">Right-Sized Solutions</div>
+                                <div class="why-pillar-text">Whether you're an e-commerce startup or a SaaS company scaling a POC, we bring the right technology — not overkill — for your stage.</div>
+                            </div>
+                        </div>
+                        <div class="why-pillar">
+                            <div class="why-pillar-icon">⚡</div>
+                            <div>
+                                <div class="why-pillar-title">AI-Amplified Productivity</div>
+                                <div class="why-pillar-text">Our engineers use AI tools across every workflow — design, code, testing, and docs. One expert with AI delivers what used to require an entire team.</div>
+                            </div>
+                        </div>
+                        <div class="why-pillar">
+                            <div class="why-pillar-icon">🌍</div>
+                            <div>
+                                <div class="why-pillar-title">Global Reach, Hometown Roots</div>
+                                <div class="why-pillar-text">Founded in 2007, serving 350+ clients globally. Our distributed model keeps us nimble and cost-effective without sacrificing quality or communication.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Section -->
+    <section class="case-study section" id="case-study">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 24px;">
+                <div class="section-tag">CASE STUDIES</div>
+                <h2 class="section-title">Real Projects, Real Results</h2>
+                <p class="section-sub" style="margin: 0 auto;">See how we've applied our AI-first approach to solve complex challenges across industries.</p>
+            </div>
+
+            <!-- Case Study Card Container -->
+            <div class="case-study-card" id="caseStudyContainer">
+                <!-- Inscopix Case Study -->
+                <div class="case-study-inner case-study-slide" data-case="1" style="display: grid;">
+                    <div class="case-img-wrap" style="background: linear-gradient(145deg, #0f0c29 0%, #302b63 55%, #1a1634 100%);">
+                        <!-- Neural network pattern -->
+                        <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.22" viewBox="0 0 400 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="#a78bfa" stroke-width="1" fill="none">
+                                <line x1="60" y1="100" x2="180" y2="70"/><line x1="180" y1="70" x2="300" y2="120"/>
+                                <line x1="60" y1="100" x2="120" y2="220"/><line x1="180" y1="70" x2="240" y2="190"/>
+                                <line x1="300" y1="120" x2="360" y2="230"/><line x1="120" y1="220" x2="240" y2="190"/>
+                                <line x1="240" y1="190" x2="360" y2="230"/><line x1="120" y1="220" x2="80" y2="340"/>
+                                <line x1="240" y1="190" x2="200" y2="340"/><line x1="360" y1="230" x2="320" y2="380"/>
+                                <line x1="80" y1="340" x2="200" y2="340"/><line x1="200" y1="340" x2="320" y2="380"/>
+                            </g>
+                            <g fill="#c4b5fd">
+                                <circle cx="60" cy="100" r="5"/><circle cx="180" cy="70" r="7"/><circle cx="300" cy="120" r="5"/>
+                                <circle cx="120" cy="220" r="6"/><circle cx="240" cy="190" r="9"/><circle cx="360" cy="230" r="5"/>
+                                <circle cx="80" cy="340" r="6"/><circle cx="200" cy="340" r="5"/><circle cx="320" cy="380" r="7"/>
+                            </g>
+                        </svg>
+                        <!-- Hero icon -->
+                        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+                            <svg width="180" height="180" viewBox="0 0 24 24" fill="none" stroke="#e9d5ff" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.18">
+                                <rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/>
+                                <line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/>
+                                <line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/>
+                                <line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/>
+                                <line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/>
+                            </svg>
+                        </div>
+                        <div class="case-img-overlay"></div>
+                        <div class="case-img-badge">Case Study</div>
+                    </div>
+                    <div class="case-content">
+                        <div class="case-client">Neuroscience &amp; Research</div>
+                        <h3 class="case-title">CLIENT — Inscopix</h3>
+                        <h4 style="font-size: 18px; font-weight: 700; color: var(--black); margin-bottom: 20px;">AI-Powered Neuroscience Imaging Platform Processing 10TB Monthly</h4>
+                        <div class="case-section-label">The Challenge</div>
+                        <p class="case-section-text">Processing terabytes of neuroscience imaging data required a scalable architecture with real-time analysis capabilities. The platform needed to support multiple concurrent users while maintaining sub-second response times for data queries.</p>
+                        <div class="case-section-label">Our Solution</div>
+                        <p class="case-section-text">We architected a cloud-native solution using React for the frontend, Python microservices for data processing, and AWS infrastructure for scalability. AI-powered code generation accelerated development of complex data visualization components.</p>
+                        <div class="case-section-label">Technologies</div>
+                        <div class="tech-tags">
+                            <div class="tech-tag">React</div>
+                            <div class="tech-tag">Python</div>
+                            <div class="tech-tag">AWS</div>
+                            <div class="tech-tag">TensorFlow</div>
+                            <div class="tech-tag">PostgreSQL</div>
+                        </div>
+                        <div class="case-section-label">AI Impact Metrics</div>
+                        <div class="case-metrics">
+                            <div class="case-metric">
+                                <div class="case-metric-icon" style="background: var(--red-light);">⏱</div>
+                                <div class="case-metric-val">60% faster</div>
+                                <div class="case-metric-lbl">delivery vs traditional</div>
+                            </div>
+                            <div class="case-metric">
+                                <div class="case-metric-icon" style="background: var(--red-light);">💰</div>
+                                <div class="case-metric-val">35% cost</div>
+                                <div class="case-metric-lbl">reduction achieved</div>
+                            </div>
+                            <div class="case-metric">
+                                <div class="case-metric-icon" style="background: var(--red-light);">📈</div>
+                                <div class="case-metric-val">3x faster</div>
+                                <div class="case-metric-lbl">iteration cycles</div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 28px;">
+                            <a href="InscopixCaseStudyPage.html" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:var(--red);color:white;border-radius:8px;font-weight:700;font-size:14px;transition:all 0.22s;border:none;cursor:pointer;text-decoration:none;" onmouseover="this.style.background=&#39;var(--red-dark)&#39;;this.style.transform=&#39;translateY(-1px)&#39;" onmouseout="this.style.background=&#39;var(--red)&#39;;this.style.transform=&#39;translateY(0)&#39;">
+                                Read Full Case Study →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Govmates Case Study -->
+                <div class="case-study-inner case-study-slide" data-case="2" style="display:none;">
+                    <div class="case-img-wrap" style="background: linear-gradient(145deg, #0a1a0a 0%, #163a1a 55%, #0c2214 100%);">
+                        <!-- Connected network pattern -->
+                        <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.22" viewBox="0 0 400 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="#6ee7b7" stroke-width="1" fill="none">
+                                <line x1="200" y1="240" x2="80" y2="140"/><line x1="200" y1="240" x2="320" y2="140"/>
+                                <line x1="200" y1="240" x2="80" y2="340"/><line x1="200" y1="240" x2="320" y2="340"/>
+                                <line x1="80" y1="140" x2="200" y2="80"/><line x1="320" y1="140" x2="200" y2="80"/>
+                                <line x1="80" y1="340" x2="200" y2="400"/><line x1="320" y1="340" x2="200" y2="400"/>
+                                <line x1="40" y1="240" x2="80" y2="140"/><line x1="40" y1="240" x2="80" y2="340"/>
+                                <line x1="360" y1="240" x2="320" y2="140"/><line x1="360" y1="240" x2="320" y2="340"/>
+                                <line x1="80" y1="140" x2="320" y2="140"/><line x1="80" y1="340" x2="320" y2="340"/>
+                            </g>
+                            <g fill="#a7f3d0">
+                                <circle cx="200" cy="240" r="10"/><circle cx="80" cy="140" r="6"/><circle cx="320" cy="140" r="6"/>
+                                <circle cx="80" cy="340" r="6"/><circle cx="320" cy="340" r="6"/><circle cx="200" cy="80" r="5"/>
+                                <circle cx="200" cy="400" r="5"/><circle cx="40" cy="240" r="5"/><circle cx="360" cy="240" r="5"/>
+                            </g>
+                        </svg>
+                        <!-- Hero icon -->
+                        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+                            <svg width="180" height="180" viewBox="0 0 24 24" fill="none" stroke="#d1fae5" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.18">
+                                <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                            </svg>
+                        </div>
+                        <div class="case-img-overlay"></div>
+                        <div class="case-img-badge">Case Study</div>
+                    </div>
+                    <div class="case-content">
+                        <div class="case-client">Government Contracting &amp; B2G</div>
+                        <h3 class="case-title">CLIENT — Govmates</h3>
+                        <h4 style="font-size: 18px; font-weight: 700; color: var(--black); margin-bottom: 20px;">Transforming Manual Platform into AI-Powered Matchmaking Engine</h4>
+                        <div class="case-section-label">The Challenge</div>
+                        <p class="case-section-text">Incomplete organization profiles and manual data entry workflows were limiting matchmaking quality. Admins spent hours reading PDFs and manually typing information, while non-technical users struggled with complex search filters.</p>
+                        <div class="case-section-label">Our Solution</div>
+                        <p class="case-section-text">We embedded five agentic AI features: PDF and URL profile extraction with merge interfaces, natural language search layered on Elasticsearch, conversational Ask AI assistant, and continuous profile improvement — all integrated without disrupting existing infrastructure.</p>
+                        <div class="case-section-label">Technologies</div>
+                        <div class="tech-tags">
+                            <div class="tech-tag">Agentic AI</div>
+                            <div class="tech-tag">LLMs</div>
+                            <div class="tech-tag">PDF Parsing</div>
+                            <div class="tech-tag">Elasticsearch</div>
+                            <div class="tech-tag">RAG</div>
+                        </div>
+                        <div class="case-section-label">AI Impact Metrics</div>
+                        <div class="case-metrics">
+                            <div class="case-metric">
+                                <div class="case-metric-icon" style="background: var(--red-light);">🚀</div>
+                                <div class="case-metric-val">5 features</div>
+                                <div class="case-metric-lbl">designed &amp; delivered</div>
+                            </div>
+                            <div class="case-metric">
+                                <div class="case-metric-icon" style="background: var(--red-light);">⚡</div>
+                                <div class="case-metric-val">5× faster</div>
+                                <div class="case-metric-lbl">profile enrichment</div>
+                            </div>
+                            <div class="case-metric">
+                                <div class="case-metric-icon" style="background: var(--red-light);">🎯</div>
+                                <div class="case-metric-val">Instant</div>
+                                <div class="case-metric-lbl">operational answers</div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 28px;">
+                            <a href="GovmatesCaseStudyPage.html" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:var(--red);color:white;border-radius:8px;font-weight:700;font-size:14px;transition:all 0.22s;border:none;cursor:pointer;text-decoration:none;" onmouseover="this.style.background=&#39;var(--red-dark)&#39;;this.style.transform=&#39;translateY(-1px)&#39;" onmouseout="this.style.background=&#39;var(--red)&#39;;this.style.transform=&#39;translateY(0)&#39;">
+                                Read Full Case Study →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LifeSherpa Case Study -->
+                <div class="case-study-inner case-study-slide" data-case="3" style="display:none;">
+                    <div class="case-img-wrap" style="background: linear-gradient(145deg, #0a1628 0%, #1b3a5c 55%, #0d2140 100%);">
+                        <!-- Concentric rings pattern -->
+                        <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.2" viewBox="0 0 400 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="none" stroke="#7dd3fc" stroke-width="1.5">
+                                <circle cx="200" cy="240" r="190"/><circle cx="200" cy="240" r="145"/>
+                                <circle cx="200" cy="240" r="100"/><circle cx="200" cy="240" r="55"/>
+                            </g>
+                            <g fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="6 5">
+                                <circle cx="200" cy="240" r="168"/><circle cx="200" cy="240" r="123"/>
+                                <circle cx="200" cy="240" r="78"/>
+                            </g>
+                            <g fill="#7dd3fc">
+                                <circle cx="200" cy="50" r="4"/><circle cx="390" cy="240" r="4"/>
+                                <circle cx="200" cy="430" r="4"/><circle cx="10" cy="240" r="4"/>
+                                <circle cx="334" cy="106" r="3"/><circle cx="334" cy="374" r="3"/>
+                                <circle cx="66" cy="106" r="3"/><circle cx="66" cy="374" r="3"/>
+                            </g>
+                        </svg>
+                        <!-- Hero icon -->
+                        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+                            <svg width="180" height="180" viewBox="0 0 24 24" fill="none" stroke="#bae6fd" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.18">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                            </svg>
+                        </div>
+                        <div class="case-img-overlay"></div>
+                        <div class="case-img-badge">Case Study</div>
+                    </div>
+                    <div class="case-content">
+                        <div class="case-client">Behavioral Health &amp; SaaS</div>
+                        <h3 class="case-title">CLIENT — LifeSherpa</h3>
+                        <h4 style="font-size: 18px; font-weight: 700; color: var(--black); margin-bottom: 20px;">8-Year Partnership Building Enterprise-Ready SaaS Platform from MVP</h4>
+                        <div class="case-section-label">The Challenge</div>
+                        <p class="case-section-text">LifeSherpa needed to evolve from a basic MVP to an enterprise-grade platform. They required strict customer data separation, SSO support, business intelligence, web access for professionals, and scalable architecture — all while supporting thousands of active users.</p>
+                        <div class="case-section-label">Our Solution</div>
+                        <p class="case-section-text">We rebuilt the architecture from the ground up with enterprise-grade security, built a self-service admin dashboard, implemented Auth0 + Azure AD SSO, created a self-healing BI pipeline, launched a full web portal, and centralized logic in a serverless API — delivering 11 major capabilities over 8 years.</p>
+                        <div class="case-section-label">Technologies</div>
+                        <div class="tech-tags">
+                            <div class="tech-tag">React</div>
+                            <div class="tech-tag">Node.js</div>
+                            <div class="tech-tag">Firebase</div>
+                            <div class="tech-tag">Auth0</div>
+                            <div class="tech-tag">Zoho Analytics</div>
+                        </div>
+                        <div class="case-section-label">Partnership Metrics</div>
+                        <div class="case-metrics">
+                            <div class="case-metric">
+                                <div class="case-metric-icon" style="background: var(--red-light);">🤝</div>
+                                <div class="case-metric-val">8+ years</div>
+                                <div class="case-metric-lbl">continuous partnership</div>
+                            </div>
+                            <div class="case-metric">
+                                <div class="case-metric-icon" style="background: var(--red-light);">📊</div>
+                                <div class="case-metric-val">11 features</div>
+                                <div class="case-metric-lbl">major capabilities built</div>
+                            </div>
+                            <div class="case-metric">
+                                <div class="case-metric-icon" style="background: var(--red-light);">🌐</div>
+                                <div class="case-metric-val">3 platforms</div>
+                                <div class="case-metric-lbl">iOS, Android, Web</div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 28px;">
+                            <a href="LifeSherpaCaseStudyPage.html" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:var(--red);color:white;border-radius:8px;font-weight:700;font-size:14px;transition:all 0.22s;border:none;cursor:pointer;text-decoration:none;" onmouseover="this.style.background=&#39;var(--red-dark)&#39;;this.style.transform=&#39;translateY(-1px)&#39;" onmouseout="this.style.background=&#39;var(--red)&#39;;this.style.transform=&#39;translateY(0)&#39;">
+                                Read Full Case Study →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows Below Case Study Section -->
+            <div style="display:flex;justify-content:center;gap:12px;margin-top:40px;">
+                <button class="case-btn" onclick="previousCase()">←</button>
+                <button class="case-btn" onclick="nextCase()">→</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let currentCase = 1;
+        const totalCases = 3;
+
+        function showCase(caseNumber) {
+            const slides = document.querySelectorAll('.case-study-slide');
+            slides.forEach(slide => {
+                slide.style.display = 'none';
+            });
+
+            const targetSlide = document.querySelector('[data-case="' + caseNumber + '"]');
+            if (targetSlide) {
+                targetSlide.style.display = 'grid';
+            }
+            currentCase = caseNumber;
+        }
+
+        function nextCase() {
+            let nextCaseNum = currentCase + 1;
+            if (nextCaseNum > totalCases) {
+                nextCaseNum = 1;
+            }
+            showCase(nextCaseNum);
+        }
+
+        function previousCase() {
+            let prevCaseNum = currentCase - 1;
+            if (prevCaseNum < 1) {
+                prevCaseNum = totalCases;
+            }
+            showCase(prevCaseNum);
+        }
+
+        // Initialize to show first case
+        showCase(1);
+    </script>
+
+    <!-- Reviews Section -->
+    <section class="reviews section" id="reviews">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 24px;">
+                <div class="section-tag">TESTIMONIALS</div>
+                <h2 class="section-title">Client Reviews</h2>
+                <p class="section-sub" style="margin: 0 auto;">What Our Clients Say</p>
+                <p style="font-size: 15px; color: var(--gray-700); margin-top: 12px; max-width: 640px; margin-left: auto; margin-right: auto;">We measure success by the outcomes our clients achieve — here's what they say about working with PragmaApps.</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card" style="opacity: 0; transform: translateY(20px); transition: opacity 0.5s, transform 0.5s;">
+                    <div class="review-quote-icon">"</div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"PragmaApps delivered our MVP in half the time we expected. Their AI-accelerated approach didn't compromise quality — the code is clean, well-tested, and production-ready."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">SC</div>
+                        <div>
+                            <div class="reviewer-name">Sarah Chen</div>
+                            <div class="reviewer-role">CTO, MedFlow</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card featured" style="opacity: 0; transform: translateY(20px); transition: opacity 0.5s, transform 0.5s;">
+                    <div class="review-quote-icon">"</div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Pragma is a professional organization that delivers very well. Not only do they provide well-engineered solutions, they are easy to work with and, above all, trustworthy. They always come through."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">JM</div>
+                        <div>
+                            <div class="reviewer-name">James Morrison</div>
+                            <div class="reviewer-role">Founder, LifeSherpa</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card" style="opacity: 0; transform: translateY(20px); transition: opacity 0.5s, transform 0.5s;">
+                    <div class="review-quote-icon">"</div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Their AI architecture planning saved us months of redesign work. The system they designed scaled to 10x our initial load without any changes — that's pragmatic engineering at its best."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">AP</div>
+                        <div>
+                            <div class="reviewer-name">Anjali Patel</div>
+                            <div class="reviewer-role">VP Engineering, NeuroData Inc.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews-bottom">
+                <div class="reviews-stat">
+                    <div class="reviews-stat-num"><span>350+</span></div>
+                    <div class="reviews-stat-lbl">Happy clients</div>
+                </div>
+                <div class="reviews-divider"></div>
+                <div class="reviews-stat">
+                    <div class="reviews-stat-num"><span>4.9</span>/5</div>
+                    <div class="reviews-stat-lbl">Average rating</div>
+                </div>
+                <div class="reviews-divider"></div>
+                <div class="reviews-stat">
+                    <div class="reviews-stat-num"><span>15+</span></div>
+                    <div class="reviews-stat-lbl">Years delivering</div>
+                </div>
+                <div class="reviews-divider"></div>
+                <div class="reviews-stat">
+                    <div class="reviews-stat-num"><span>99</span>%</div>
+                    <div class="reviews-stat-lbl">Would recommend</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 24px;">
+                <div class="section-tag">GET IN TOUCH</div>
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-sub" style="margin: 0 auto;">Ready to Build Your Product?</p>
+                <p style="font-size: 15px; color: var(--gray-700); margin-top: 12px; max-width: 640px; margin-left: auto; margin-right: auto;">Let's talk about how our AI-accelerated development can take your idea from concept to launch — faster and smarter than you thought possible.</p>
+            </div>
+            <div class="contact-inner">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3 class="contact-card-title">Get in Touch</h3>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">✉️</div>
+                            <div>
+                                <div class="contact-item-label">Email</div>
+                                <div class="contact-item-val"><a href="mailto:info@pragmaapps.com">info@pragmaapps.com</a></div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📍</div>
+                            <div>
+                                <div class="contact-item-label">Location</div>
+                                <div class="contact-item-val">D-84, Sector 2, Noida, Uttar Pradesh 201301</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">🌐</div>
+                            <div>
+                                <div class="contact-item-label">Website</div>
+                                <div class="contact-item-val"><a href="https://pragmaapps.com/">pragmaapps.com</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <h3 class="contact-card-title">What to Expect</h3>
+                        <div class="expect-list">
+                            <div class="expect-item"><div class="expect-check">✓</div>Response within 24 hours</div>
+                            <div class="expect-item"><div class="expect-check">✓</div>Free technical consultation</div>
+                            <div class="expect-item"><div class="expect-check">✓</div>Detailed project proposal</div>
+                            <div class="expect-item"><div class="expect-check">✓</div>No obligation quote</div>
+                            <div class="expect-item"><div class="expect-check">✓</div>AI readiness assessment</div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label class="form-label">Name <span class="req">*</span></label>
+                        <input type="text" class="form-input" placeholder="Your name" required="">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Email <span class="req">*</span></label>
+                            <input type="email" class="form-input" placeholder="your@email.com" required="">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Company</label>
+                            <input type="text" class="form-input" placeholder="Your company">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Service Interested In</label>
+                        <select class="form-select">
+                            <option>Select a service...</option>
+                            <option>AI &amp; Machine Learning Integration</option>
+                            <option>Web Application Development</option>
+                            <option>Mobile App Development</option>
+                            <option>Enterprise System Integration</option>
+                            <option>AI Architecture Planning</option>
+                            <option>Product Development (MVP)</option>
+                            <option>Performance Optimization</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Project Description <span class="req">*</span></label>
+                        <textarea class="form-textarea" placeholder="Tell us about your project..." required=""></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary form-submit">Send Message ►</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="LandingPage.html" class="logo" style="color: white;">Pragma<span style="color: white;">Apps</span></a>
+                    <p>AI-first software development for startups and enterprises. Building great solutions at optimal cost since 2007.</p>
+                </div>
+                <div>
+                    <div class="footer-col-title">Services</div>
+                    <div class="footer-links">
+                        <a href="#">AI Architecture Planning</a>
+                        <a href="#">Web Development</a>
+                        <a href="#">Mobile Apps</a>
+                        <a href="#">Enterprise Integration</a>
+                        <a href="#">AI/ML Integration</a>
+                        <a href="#">Performance Optimization</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-col-title">Company</div>
+                    <div class="footer-links">
+                        <a href="#">Our Mission</a>
+                        <a href="#">How We Work</a>
+                        <a href="#">About Us</a>
+                        <a href="#">Case Studies</a>
+                        <a href="#">Client Reviews</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-col-title">Contact</div>
+                    <div class="footer-links">
+                        <a href="mailto:info@pragmaapps.com">info@pragmaapps.com</a>
+                        <a href="#">D-84, Sector 2, Noida, Uttar Pradesh 201301</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 PragmaApps. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-link">in</a>
+                    <a href="#" class="social-link">𝕏</a>
+                    <a href="#" class="social-link">Ⓥ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 10);
+        });
+
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            const isOpen = navLinks.style.display === 'flex';
+            navLinks.style.display = isOpen ? 'none' : 'flex';
+            if (!isOpen) {
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '70px';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'white';
+                navLinks.style.padding = '16px 24px 24px';
+                navLinks.style.borderBottom = '1px solid #e8e8e8';
+                navLinks.style.zIndex = '999';
+                navLinks.style.boxShadow = '0 8px 20px rgba(0,0,0,0.08)';
+            }
+        });
+
+        const steps = document.querySelectorAll('.pipeline-step');
+        let currentStep = 0;
+        setInterval(() => {
+            steps.forEach(s => s.classList.remove('active'));
+            steps[currentStep].classList.add('active');
+            currentStep = (currentStep + 1) % steps.length;
+        }, 1800);
+
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', e => {
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    if (window.innerWidth <= 768) navLinks.style.display = 'none';
+                }
+            });
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.approach-card, .review-card, .mission-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+
+        // Service Card Toggle Function
+        // Accordion Toggle Function
+        function toggleAccordion(header) {
+            const item = header.parentElement;
+            const allItems = document.querySelectorAll('.accordion-item');
+
+            // Close all other accordions
+            allItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                }
+            });
+
+            // Toggle current accordion
+            item.classList.toggle('active');
+        }
+
+        // Auto-open first accordion item on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            const firstAccordion = document.querySelector('.accordion-item');
+            if (firstAccordion) {
+                firstAccordion.classList.add('active');
+            }
+        });
+    </script>
+
+
+</body></html>

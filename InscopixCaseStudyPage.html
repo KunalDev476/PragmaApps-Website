@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<!-- saved from url=(0151)https://dede3phc22dgx.cloudfront.net/thread_output/46b84ba8-de3a-4c81-81f5-31626b6aae50/f8616390-3031-70a0-7b35-fa2bb2d556d8/InscopixCaseStudyPage.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscopix Case Study - Turning Brain Imaging Vision into Market-Ready Reality | PragmaApps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --black: #0a0a0a;
+            --black-soft: #1a1a1a;
+            --black-mid: #2c2c2c;
+            --red: #d72638;
+            --red-dark: #b01e2d;
+            --red-light: #f5e0e3;
+            --white: #ffffff;
+            --gray-50: #f9f9f9;
+            --gray-100: #f2f2f2;
+            --gray-200: #e8e8e8;
+            --gray-300: #d1d1d1;
+            --gray-500: #8a8a8a;
+            --gray-700: #4a4a4a;
+            --font: 'Plus Jakarta Sans', sans-serif;
+            --radius: 12px;
+            --radius-sm: 8px;
+            --shadow-sm: 0 1px 4px rgba(0,0,0,0.07);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.10);
+            --shadow-lg: 0 8px 40px rgba(0,0,0,0.13);
+        }
+
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font);
+            background: var(--white);
+            color: var(--black);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* ===== LAYOUT ===== */
+        .container {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== HEADER / NAV ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--gray-200);
+            transition: box-shadow 0.3s;
+        }
+
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--black);
+            letter-spacing: -0.5px;
+            flex-shrink: 0;
+        }
+
+        .logo span {
+            color: var(--red);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            margin-left: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-700);
+            transition: color 0.2s;
+            padding: 8px 14px;
+            border-radius: 6px;
+            transition: color 0.2s, background 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--red);
+            background: var(--red-light);
+        }
+
+        .nav-links a.active {
+            color: var(--red);
+            font-weight: 600;
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-login {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 9px 20px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            border: 1.5px solid var(--gray-300);
+            background: transparent;
+            color: var(--black);
+            transition: all 0.22s ease;
+        }
+
+        .btn-login:hover {
+            border-color: var(--black);
+            background: var(--black);
+            color: white;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--black);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        /* ===== HERO ===== */
+        .case-hero {
+            background: linear-gradient(135deg, var(--black) 0%, var(--black-soft) 50%, var(--black-mid) 100%);
+            color: var(--white);
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(215,38,56,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .case-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(215,38,56,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(215,38,56,0.15);
+            border: 1px solid rgba(215,38,56,0.3);
+            color: var(--red-light);
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .case-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+            max-width: 900px;
+            margin-bottom: 24px;
+        }
+
+        .case-hero h1 .highlight {
+            color: var(--red);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            color: rgba(255,255,255,0.8);
+            max-width: 720px;
+            line-height: 1.7;
+            margin-bottom: 48px;
+        }
+
+        .hero-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .hero-meta-item {
+            text-align: left;
+        }
+
+        .hero-meta-label {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 8px;
+        }
+
+        .hero-meta-value {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--white);
+            line-height: 1.4;
+        }
+
+        /* ===== STATS BAR ===== */
+        .stats-strip {
+            background: var(--red);
+            padding: 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .stat-box {
+            padding: 40px 24px;
+            text-align: center;
+            border-right: 1px solid rgba(255,255,255,0.15);
+            color: var(--white);
+        }
+
+        .stat-box:last-child {
+            border-right: none;
+        }
+
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.5;
+        }
+
+        /* ===== SECTION STYLES ===== */
+        .section {
+            padding: 96px 0;
+        }
+
+        .section-light {
+            background: var(--gray-50);
+        }
+
+        .section-white {
+            background: var(--white);
+        }
+
+        .section-tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--red);
+            background: var(--red-light);
+            border-radius: 40px;
+            padding: 6px 16px;
+            margin-bottom: 18px;
+        }
+
+        .section-title {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 800;
+            color: var(--black);
+            line-height: 1.2;
+            margin-bottom: 20px;
+            max-width: 800px;
+        }
+
+        .section-intro {
+            font-size: 17px;
+            color: var(--gray-700);
+            max-width: 720px;
+            line-height: 1.8;
+            margin-bottom: 56px;
+        }
+
+        /* ===== CHALLENGE CARDS ===== */
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .challenge-card {
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-left: 5px solid var(--red);
+            border-radius: var(--radius);
+            padding: 32px;
+            transition: all 0.3s ease;
+        }
+
+        .challenge-card:hover {
+            border-color: var(--red);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .challenge-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 12px;
+        }
+
+        .challenge-card p {
+            font-size: 15px;
+            color: var(--gray-700);
+            line-height: 1.7;
+        }
+
+        /* ===== VALUE ITEMS ===== */
+        .value-item {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 32px;
+            padding: 48px 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .value-item:last-child {
+            border-bottom: none;
+        }
+
+        .value-icon-box {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, var(--red), var(--red-dark));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        .value-content {
+            padding-top: 4px;
+        }
+
+        .value-badge {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .value-content h3 {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .value-content p {
+            font-size: 16px;
+            color: var(--gray-700);
+            line-height: 1.75;
+        }
+
+        /* ===== QUOTE SECTION ===== */
+        .quote-section {
+            background: linear-gradient(135deg, var(--black) 0%, var(--black-soft) 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quote-section::before {
+            content: '"';
+            position: absolute;
+            top: -40px;
+            left: 40px;
+            font-size: 200px;
+            line-height: 1;
+            color: rgba(215,38,56,0.1);
+            font-family: Georgia, serif;
+        }
+
+        .quote-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quote-content p {
+            font-size: 24px;
+            font-style: italic;
+            color: rgba(255,255,255,0.95);
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* ===== ACHIEVEMENTS ===== */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .achievement-item {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius);
+            padding: 24px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+
+        .achievement-item:hover {
+            border-color: var(--red);
+            box-shadow: var(--shadow-md);
+        }
+
+        .achievement-check {
+            width: 32px;
+            height: 32px;
+            background: #e8f5e9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2e7d32;
+            font-size: 16px;
+            flex-shrink: 0;
+            font-weight: 700;
+        }
+
+        .achievement-item p {
+            font-size: 15px;
+            color: var(--gray-700);
+            line-height: 1.6;
+        }
+
+        .achievement-item strong {
+            color: var(--black);
+            font-weight: 700;
+        }
+
+        /* ===== TECH SECTION ===== */
+        .tech-section {
+            background: var(--black);
+            padding: 64px 0;
+        }
+
+        .tech-section h2 {
+            color: var(--white);
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 32px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            opacity: 0.8;
+        }
+
+        .tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tech-item {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            color: rgba(255,255,255,0.9);
+            font-size: 14px;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .tech-item:hover {
+            background: var(--red);
+            border-color: var(--red);
+            transform: translateY(-2px);
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+            padding: 80px 0;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .cta-section h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 36px;
+        }
+
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            color: var(--red);
+            font-weight: 700;
+            font-size: 16px;
+            padding: 16px 36px;
+            border-radius: 40px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--black);
+            color: rgba(255,255,255,0.7);
+            padding: 64px 0 32px;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .footer-brand .logo { color: white; margin-bottom: 16px; }
+        .footer-brand p { font-size: 14px; line-height: 1.7; max-width: 280px; }
+        .footer-col-title { font-size: 13px; font-weight: 700; color: white; letter-spacing: 0.5px; margin-bottom: 18px; }
+
+        .footer-links { display: flex; flex-direction: column; gap: 10px; }
+
+        .footer-links a {
+            font-size: 13px;
+            color: rgba(255,255,255,0.55);
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: var(--red); }
+
+        .footer-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 28px;
+            font-size: 13px;
+        }
+
+        .footer-socials { display: flex; gap: 12px; }
+
+        .social-link {
+            width: 34px;
+            height: 34px;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+            transition: all 0.2s;
+        }
+
+        .social-link:hover { background: var(--red); border-color: var(--red); color: white; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .nav-cta .btn-login { display: none; }
+
+            .hero-meta-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .challenge-grid,
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .value-item {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .value-icon-box {
+                width: 60px;
+                height: 60px;
+            }
+
+            .footer-top { grid-template-columns: 1fr; }
+
+            .quote-content p {
+                font-size: 18px;
+            }
+
+            .case-hero {
+                padding: 100px 0 60px;
+            }
+        }
+
+        /* ===== NAV DROPDOWN ===== */
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .nav-dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .dropdown-arrow {
+            font-size: 8px;
+            display: inline-block;
+            transition: transform 0.25s ease;
+        }
+
+        .nav-dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .nav-dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(6px);
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-top: 3px solid var(--red);
+            border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+            box-shadow: var(--shadow-lg);
+            min-width: 220px;
+            z-index: 1000;
+            overflow: hidden;
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+            padding: 6px 0;
+        }
+
+        .nav-dropdown:hover .nav-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 11px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-700);
+            transition: background 0.15s ease, color 0.15s ease, padding-left 0.15s ease;
+            white-space: nowrap;
+        }
+
+        .nav-dropdown-menu a:hover {
+            background: var(--gray-50);
+            color: var(--black);
+            padding-left: 26px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="LandingPage.html" class="logo">Pragma<span>Apps</span></a>
+
+                <!-- Right-aligned navigation -->
+                <div class="nav-right">
+                    <div class="nav-links" id="navLinks">
+                        <a href="LandingPage.html">Home</a>
+                        <div class="nav-dropdown">
+                            <a href="#" class="nav-dropdown-toggle">Services <span class="dropdown-arrow">&#9660;</span></a>
+                            <div class="nav-dropdown-menu">
+                                <a href="ProductDevelopmentPage.html">Product Development</a>
+                                <a href="DigitalTransformationPage.html">Digital Transformation</a>
+                                <a href="EnterpriseIntegrationPage.html">Enterprise Integration</a>
+                                <a href="AIAndMLPage.html">AI &amp; Machine Learning</a>
+                                <a href="CTOAsAServicePage.html">CTO as a Service</a>
+                                <a href="PerformanceEngineeringPage.html">Performance Engineering</a>
+                            </div>
+                        </div>
+                        <a href="#">Products</a>
+                        <a href="#">About</a>
+                        <a href="#">Blog</a>
+                    </div>
+                    <div class="nav-cta">
+                        <a href="#" class="btn-login">Login</a>
+                        <div class="hamburger" id="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="case-hero">
+        <div class="container">
+            <div class="hero-inner">
+                <div class="hero-badge">Neuroscience Technology · Long-Term Partnership</div>
+                <h1>Turning Inscopix's Brain Imaging Vision into <span class="highlight">Market-Ready Reality</span></h1>
+                <p class="hero-subtitle">
+                    How Pragma Apps helped a neuroscience pioneer modernize its platform, unify its product line, and ship competitive features faster — while keeping the science front and center.
+                </p>
+                <div class="hero-meta-grid">
+                    <div class="hero-meta-item">
+                        <div class="hero-meta-label">Client</div>
+                        <div class="hero-meta-value">Inscopix<br>(A Bruker Company)</div>
+                    </div>
+                    <div class="hero-meta-item">
+                        <div class="hero-meta-label">Domain</div>
+                        <div class="hero-meta-value">Neuroscience /<br>Brain Imaging</div>
+                    </div>
+                    <div class="hero-meta-item">
+                        <div class="hero-meta-label">Engagement</div>
+                        <div class="hero-meta-value">Ongoing<br>Since 2019</div>
+                    </div>
+                    <div class="hero-meta-item">
+                        <div class="hero-meta-label">Products</div>
+                        <div class="hero-meta-value">nVista · nVoke<br>nVue · Behavior</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="stats-strip">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number">3→1</div>
+                    <div class="stat-label">Product lines unified under single codebase</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Years of continuous partnership &amp; delivery</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">~0</div>
+                    <div class="stat-label">Manual steps for software upgrades</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">4×</div>
+                    <div class="stat-label">Simultaneous features in flexible dashboard</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Challenge Section -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-tag">The Challenge</div>
+            <h2 class="section-title">A World-Class Product Held Back by Its Own Technology</h2>
+            <p class="section-intro">
+                Inscopix had built the world's smallest brain observatory — a miniaturized microscope enabling researchers to map thousands of individual neurons in real time. But their software platform wasn't keeping pace. Fragile legacy code, siloed products, and a difficult customer experience were limiting Inscopix's ability to grow, compete, and serve the research community.
+            </p>
+            <div class="challenge-grid">
+                <div class="challenge-card">
+                    <h3>Stagnant, Fragile Codebase</h3>
+                    <p>Every new feature risked breaking existing functionality. jQuery-based architecture scattered state management across the browser, making development slow, expensive, and error-prone.</p>
+                </div>
+                <div class="challenge-card">
+                    <h3>Three Products, Three Separate UI Burdens</h3>
+                    <p>The nVista, nVoke, and nVue miniscopes each had diverging interfaces. Bug fixes and improvements had to be repeated for each product, tripling maintenance cost and testing effort.</p>
+                </div>
+                <div class="challenge-card">
+                    <h3>Poor Customer Experience</h3>
+                    <p>Users were locked to specific desktop resolutions, couldn't view multiple features simultaneously, and had to follow lengthy manual steps just to upgrade the software.</p>
+                </div>
+                <div class="challenge-card">
+                    <h3>Slow Time to Market</h3>
+                    <p>Building complex neuroscience features from scratch — live streaming, cropping, hardware control — took too long. Competitors were launching comparable features faster.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Value Section -->
+    <section class="section section-white">
+        <div class="container">
+            <div class="section-tag">Business Value Delivered</div>
+            <h2 class="section-title">What We Actually Changed for Inscopix</h2>
+            <p class="section-intro">
+                We didn't just write code. We solved the business problems that were holding Inscopix back — enabling faster shipping, lower maintenance costs, a better customer experience, and a platform that can grow with them.
+            </p>
+
+            <div class="value-item">
+                <div class="value-icon-box">🚀</div>
+                <div class="value-content">
+                    <div class="value-badge">Faster Time to Market</div>
+                    <h3>Rebuilt the Platform to Ship Features Fast — Without Breaking What Works</h3>
+                    <p>
+                        We migrated Inscopix's UI from a tangled jQuery codebase to a modern React architecture. The result: a component-based system where new features can be added confidently without risking existing functionality. What previously required weeks of careful dependency management now takes a fraction of the time. This directly enabled Inscopix to launch competitive features earlier than rival products.
+                    </p>
+                </div>
+            </div>
+
+            <div class="value-item">
+                <div class="value-icon-box">💰</div>
+                <div class="value-content">
+                    <div class="value-badge">Reduced Operating Cost</div>
+                    <h3>One Codebase for All Products — Slash Duplication, Cut Maintenance Cost</h3>
+                    <p>
+                        Three miniscope products (nVista, nVoke, nVue) plus a separate Behavior platform previously meant duplicating every improvement across codebases. We engineered a smart platform switcher that serves all products from a single codebase — meaning every UI improvement, bug fix, and feature ships across the entire product line automatically. Maintenance and QA effort dropped dramatically.
+                    </p>
+                </div>
+            </div>
+
+            <div class="value-item">
+                <div class="value-icon-box">🧑‍🔬</div>
+                <div class="value-content">
+                    <div class="value-badge">Improved Customer Experience</div>
+                    <h3>Researchers Can Now Do More, Faster, Without Friction</h3>
+                    <p>
+                        We introduced a four-panel flexible dashboard that lets researchers run multiple features simultaneously — for example, watching a live brain imaging stream while adjusting MIRA settings in parallel. Combine that with automatic live streaming on page load (replacing a cumbersome manual process) and full responsive support across devices and screen sizes, and Inscopix's customers now have a dramatically more productive daily experience.
+                    </p>
+                </div>
+            </div>
+
+            <div class="value-item">
+                <div class="value-icon-box">☁️</div>
+                <div class="value-content">
+                    <div class="value-badge">Eliminated Customer Pain Points</div>
+                    <h3>Software Upgrades Go From a Multi-Step Ordeal to a Few Clicks</h3>
+                    <p>
+                        Customers were so put off by the old offline upgrade process that many simply stayed on old versions — missing out on new capabilities and exposing Inscopix to support liability. We replaced this with a cloud-powered upgrade system (via AWS S3) that handles all connectivity scenarios: cloud-connected, air-gapped, or hybrid. Customers can now upgrade in minutes with confidence, and Inscopix can deploy improvements at the speed the market demands.
+                    </p>
+                </div>
+            </div>
+
+            <div class="value-item">
+                <div class="value-icon-box">🔗</div>
+                <div class="value-content">
+                    <div class="value-badge">Hardware–Software Integration</div>
+                    <h3>Real-Time Hardware Control That Just Works</h3>
+                    <p>
+                        Inscopix's value comes from controlling real hardware — LEDs, cameras, GPIO triggers, sensors — in real time. We built the integration layer between the UI and embedded backend using MQTT and Redux, ensuring that hardware state is always accurately reflected on screen, even as multiple users or browser tabs interact simultaneously. Researchers can trust what they see.
+                    </p>
+                </div>
+            </div>
+
+            <div class="value-item">
+                <div class="value-icon-box">⏱️</div>
+                <div class="value-content">
+                    <div class="value-badge">Cost-Effective Feature Delivery</div>
+                    <h3>Leveraged Open Source Strategically to Hit Deadlines and Budgets</h3>
+                    <p>
+                        Rather than building complex neuroscience UI capabilities (live streaming, image manipulation, cropping) from scratch at high cost, we identified the best-fit open source libraries and customized them to Inscopix's exact requirements. This approach cut development time significantly, keeping the project on budget while hitting market windows that would have otherwise been missed.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote-content">
+                <p>
+                    Inscopix needed more than developers — they needed a partner who understood that software delay means research delay. From day one, Pragma aligned with their roadmap, not just their ticket queue. That's why we've been building together since 2019.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-tag">Headline Outcomes</div>
+            <h2 class="section-title">What Inscopix Got</h2>
+            <p class="section-intro">A summary of the concrete, measurable outcomes delivered across the engagement.</p>
+
+            <div class="achievements-grid">
+                <div class="achievement-item">
+                    <div class="achievement-check">✓</div>
+                    <p><strong>Unified platform</strong> — nVista, nVoke, nVue, and Behavior products served from one maintainable codebase.</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-check">✓</div>
+                    <p><strong>Fully responsive UI</strong> — researchers access the platform on any device or screen resolution, no longer restricted to specific desktop setups.</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-check">✓</div>
+                    <p><strong>Earlier feature launches</strong> — strategic use of open source libraries allowed Inscopix to beat competitors to market on key research capabilities.</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-check">✓</div>
+                    <p><strong>One-click cloud upgrades</strong> — replaced a painful manual upgrade process, driving adoption of new versions and reducing field support burden.</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-check">✓</div>
+                    <p><strong>Complex neuroscience features delivered</strong> — Multiplane imaging, blood flow analysis, live streaming, flexible workflows, and more — built reliably and on schedule.</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-check">✓</div>
+                    <p><strong>Reliable real-time hardware sync</strong> — MQTT + Redux integration ensures the UI always reflects true hardware state, critical for research integrity.</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-check">✓</div>
+                    <p><strong>Ongoing QA partnership</strong> — embedded QA support catches regressions before they reach customers, protecting Inscopix's reputation for stability.</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-check">✓</div>
+                    <p><strong>5+ year trusted partnership</strong> — not a one-off engagement; Pragma continues to be Inscopix's development arm as the product evolves.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-section">
+        <div class="container">
+            <h2>Technologies &amp; Tools</h2>
+            <div class="tech-grid">
+                <span class="tech-item">React.js</span>
+                <span class="tech-item">Redux</span>
+                <span class="tech-item">Context API</span>
+                <span class="tech-item">Node.js</span>
+                <span class="tech-item">Sails.js</span>
+                <span class="tech-item">Material UI</span>
+                <span class="tech-item">Bootstrap</span>
+                <span class="tech-item">Janus (WebRTC)</span>
+                <span class="tech-item">MQTT</span>
+                <span class="tech-item">MySQL</span>
+                <span class="tech-item">SQLite</span>
+                <span class="tech-item">AWS S3</span>
+                <span class="tech-item">CI/CD Pipeline</span>
+                <span class="tech-item">Git / GitHub</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Building something that needs to work at the pace of science?</h2>
+            <p>Tell us about your product. We'll tell you how we can help you ship it.</p>
+            <a href="LandingPage.html#contact" class="btn-cta">Start a Conversation →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="LandingPage.html" class="logo" style="color: white;">Pragma<span style="color: white;">Apps</span></a>
+                    <p>AI-first software development for startups and enterprises. Building great solutions at optimal cost since 2007.</p>
+                </div>
+                <div>
+                    <div class="footer-col-title">Services</div>
+                    <div class="footer-links">
+                        <a href="LandingPage.html#services">AI Architecture Planning</a>
+                        <a href="LandingPage.html#services">Web Development</a>
+                        <a href="LandingPage.html#services">Mobile Apps</a>
+                        <a href="LandingPage.html#services">Enterprise Integration</a>
+                        <a href="LandingPage.html#services">AI/ML Integration</a>
+                        <a href="LandingPage.html#services">Performance Optimization</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-col-title">Company</div>
+                    <div class="footer-links">
+                        <a href="LandingPage.html#mission">Our Mission</a>
+                        <a href="LandingPage.html#approach">How We Work</a>
+                        <a href="#">About Us</a>
+                        <a href="LandingPage.html#case-study">Case Studies</a>
+                        <a href="LandingPage.html#reviews">Client Reviews</a>
+                        <a href="LandingPage.html#contact">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-col-title">Contact</div>
+                    <div class="footer-links">
+                        <a href="mailto:info@pragmaapps.com">info@pragmaapps.com</a>
+                        <a href="#">D-84, Sector 2, Noida, Uttar Pradesh 201301</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 PragmaApps. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-link">in</a>
+                    <a href="#" class="social-link">𝕏</a>
+                    <a href="#" class="social-link">Ⓥ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 10);
+        });
+
+        // Mobile hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            const isOpen = navLinks.style.display === 'flex';
+            navLinks.style.display = isOpen ? 'none' : 'flex';
+            if (!isOpen) {
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '70px';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'white';
+                navLinks.style.padding = '16px 24px 24px';
+                navLinks.style.borderBottom = '1px solid #e8e8e8';
+                navLinks.style.zIndex = '999';
+                navLinks.style.boxShadow = '0 8px 20px rgba(0,0,0,0.08)';
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', e => {
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    if (window.innerWidth <= 768) navLinks.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+
+</body></html>

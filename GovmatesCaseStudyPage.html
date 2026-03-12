@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<!-- saved from url=(0151)https://dede3phc22dgx.cloudfront.net/thread_output/46b84ba8-de3a-4c81-81f5-31626b6aae50/f8616390-3031-70a0-7b35-fa2bb2d556d8/GovmatesCaseStudyPage.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Govmates Case Study - AI-Powered Matchmaking Engine | PragmaApps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --black: #0a0a0a;
+            --black-soft: #1a1a1a;
+            --black-mid: #2c2c2c;
+            --red: #d72638;
+            --red-dark: #b01e2d;
+            --red-light: #f5e0e3;
+            --white: #ffffff;
+            --gray-50: #f9f9f9;
+            --gray-100: #f2f2f2;
+            --gray-200: #e8e8e8;
+            --gray-300: #d1d1d1;
+            --gray-500: #8a8a8a;
+            --gray-700: #4a4a4a;
+            --font: 'Plus Jakarta Sans', sans-serif;
+            --radius: 12px;
+            --radius-sm: 8px;
+            --shadow-sm: 0 1px 4px rgba(0,0,0,0.07);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.10);
+            --shadow-lg: 0 8px 40px rgba(0,0,0,0.13);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font);
+            background: var(--white);
+            color: var(--black);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* ===== LAYOUT ===== */
+        .container {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== HEADER / NAV ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--gray-200);
+            transition: box-shadow 0.3s;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--black);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span { color: var(--red); }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            margin-left: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-700);
+            padding: 8px 14px;
+            border-radius: 6px;
+            transition: color 0.2s, background 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--red);
+            background: var(--red-light);
+        }
+
+        .btn-login {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 9px 20px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            border: 1.5px solid var(--gray-300);
+            background: transparent;
+            color: var(--black);
+            transition: all 0.22s ease;
+        }
+
+        .btn-login:hover {
+            border-color: var(--black);
+            background: var(--black);
+            color: white;
+        }
+
+        /* ===== HERO ===== */
+        .case-hero {
+            background: linear-gradient(135deg, var(--black) 0%, var(--black-soft) 50%, var(--black-mid) 100%);
+            color: var(--white);
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(215,38,56,0.12) 0%, transparent 70%);
+        }
+
+        .hero-eyebrow {
+            display: inline-block;
+            background: rgba(215,38,56,0.2);
+            border: 1px solid rgba(215,38,56,0.4);
+            color: var(--red-light);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .case-hero h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            line-height: 1.15;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+
+        .case-hero h1 span { color: var(--red); }
+
+        .hero-sub {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.75);
+            max-width: 680px;
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .hero-meta-item {
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.65);
+        }
+
+        .hero-meta-item strong {
+            display: block;
+            color: white;
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        /* ===== STATS BAR ===== */
+        .stats-bar {
+            background: var(--red);
+            padding: 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .stat-item {
+            padding: 36px 24px;
+            text-align: center;
+            border-right: 1px solid rgba(255,255,255,0.15);
+            color: white;
+        }
+
+        .stat-item:last-child { border-right: none; }
+
+        .stat-number {
+            font-size: 2.4rem;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.4;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section--soft {
+            background: var(--gray-50);
+        }
+
+        .section--white {
+            background: var(--white);
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 12px;
+        }
+
+        .section h2 {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 18px;
+            line-height: 1.25;
+        }
+
+        .section-intro {
+            font-size: 1.05rem;
+            color: var(--gray-700);
+            max-width: 720px;
+            margin-bottom: 50px;
+            line-height: 1.75;
+        }
+
+        /* ===== CHALLENGE CARDS ===== */
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .challenge-card {
+            background: white;
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius);
+            padding: 32px 28px;
+            border-left: 4px solid var(--red);
+            transition: all 0.3s ease;
+        }
+
+        .challenge-card:hover {
+            border-color: var(--red);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .challenge-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 10px;
+        }
+
+        .challenge-card p {
+            font-size: 0.95rem;
+            color: var(--gray-700);
+            line-height: 1.7;
+        }
+
+        /* ===== VALUE ITEMS ===== */
+        .value-item {
+            display: grid;
+            grid-template-columns: 70px 1fr;
+            gap: 0 32px;
+            align-items: start;
+            margin-bottom: 50px;
+            padding-bottom: 50px;
+            border-bottom: 2px solid var(--gray-200);
+        }
+
+        .value-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--red), var(--red-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .value-content h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+
+        .value-outcome {
+            display: inline-block;
+            background: var(--red-light);
+            color: var(--red-dark);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .value-content p {
+            font-size: 0.98rem;
+            color: var(--gray-700);
+            line-height: 1.75;
+        }
+
+        /* ===== QUOTE ===== */
+        .pull-quote {
+            background: linear-gradient(135deg, var(--black) 0%, var(--black-soft) 100%);
+            border-radius: 16px;
+            padding: 50px 60px;
+            color: white;
+            position: relative;
+            margin: 70px 0;
+        }
+
+        .pull-quote::before {
+            content: '\201C';
+            font-size: 9rem;
+            line-height: 0.6;
+            color: rgba(215,38,56,0.15);
+            position: absolute;
+            top: 32px;
+            left: 40px;
+            font-family: Georgia, serif;
+        }
+
+        .pull-quote p {
+            font-size: 1.25rem;
+            font-style: italic;
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+            max-width: 750px;
+        }
+
+        /* ===== ACHIEVEMENTS ===== */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .achievement-card {
+            background: white;
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius);
+            padding: 26px;
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            border-color: var(--red);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .achievement-check {
+            width: 34px;
+            height: 34px;
+            background: var(--red-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--red);
+            font-size: 1.05rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .achievement-card p {
+            font-size: 0.95rem;
+            color: var(--black);
+            line-height: 1.65;
+        }
+
+        .achievement-card strong {
+            color: var(--red-dark);
+        }
+
+        /* ===== TECH STRIP ===== */
+        .tech-strip {
+            padding: 60px 0;
+            background: var(--black);
+        }
+
+        .tech-strip h2 {
+            color: white;
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 32px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            opacity: 0.75;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tech-tag {
+            background: rgba(215,38,56,0.15);
+            border: 1px solid rgba(215,38,56,0.3);
+            color: rgba(255,255,255,0.85);
+            font-size: 0.88rem;
+            padding: 8px 18px;
+            border-radius: 24px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .tech-tag:hover {
+            background: var(--red);
+            border-color: var(--red);
+            color: white;
+        }
+
+        /* ===== CTA ===== */
+        .cta {
+            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .cta p {
+            font-size: 1.08rem;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 36px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: white;
+            color: var(--red-dark);
+            font-weight: 700;
+            font-size: 0.98rem;
+            padding: 15px 40px;
+            border-radius: 40px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--black);
+            color: rgba(255,255,255,0.65);
+            padding: 72px 0 32px;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 56px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-brand {
+            max-width: 340px;
+        }
+
+        .footer-brand .logo {
+            font-size: 22px;
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.55);
+        }
+
+        .footer-col-title {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            font-size: 14px;
+            color: rgba(255,255,255,0.65);
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--red);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .footer-bottom p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.45);
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: rgba(255,255,255,0.65);
+            transition: all 0.2s;
+        }
+
+        .social-link:hover {
+            background: var(--red);
+            border-color: var(--red);
+            color: white;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--black);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .challenge-grid { grid-template-columns: 1fr; }
+            .achievements-grid { grid-template-columns: 1fr; }
+            .value-item { grid-template-columns: 1fr; gap: 20px 0; }
+            .value-icon { width: 50px; height: 50px; }
+            .pull-quote { padding: 40px 30px; }
+            .pull-quote::before { font-size: 6rem; }
+            .footer-top { grid-template-columns: 1fr; gap: 36px; }
+            .hamburger { display: flex; }
+            .nav-links { display: none; }
+        }
+
+        /* ===== NAV DROPDOWN ===== */
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .nav-dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .dropdown-arrow {
+            font-size: 8px;
+            display: inline-block;
+            transition: transform 0.25s ease;
+        }
+
+        .nav-dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .nav-dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(6px);
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-top: 3px solid var(--red);
+            border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+            box-shadow: var(--shadow-lg);
+            min-width: 220px;
+            z-index: 1000;
+            overflow: hidden;
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+            padding: 6px 0;
+        }
+
+        .nav-dropdown:hover .nav-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 11px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-700);
+            transition: background 0.15s ease, color 0.15s ease, padding-left 0.15s ease;
+            white-space: nowrap;
+        }
+
+        .nav-dropdown-menu a:hover {
+            background: var(--gray-50);
+            color: var(--black);
+            padding-left: 26px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header / Navigation -->
+<header class="header scrolled" id="header">
+    <div class="container">
+        <nav class="nav">
+            <a href="LandingPage.html" class="logo">Pragma<span>Apps</span></a>
+
+            <!-- Right-aligned navigation -->
+            <div class="nav-right">
+                <div class="nav-links" id="navLinks">
+                    <a href="LandingPage.html">Home</a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-dropdown-toggle">Services <span class="dropdown-arrow">&#9660;</span></a>
+                        <div class="nav-dropdown-menu">
+                            <a href="ProductDevelopmentPage.html">Product Development</a>
+                            <a href="DigitalTransformationPage.html">Digital Transformation</a>
+                            <a href="EnterpriseIntegrationPage.html">Enterprise Integration</a>
+                            <a href="AIAndMLPage.html">AI &amp; Machine Learning</a>
+                            <a href="CTOAsAServicePage.html">CTO as a Service</a>
+                            <a href="PerformanceEngineeringPage.html">Performance Engineering</a>
+                        </div>
+                    </div>
+                    <a href="#">Products</a>
+                    <a href="#">About</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="nav-cta">
+                    <a href="#" class="btn-login">Login</a>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="case-hero">
+    <div class="container">
+        <div class="hero-eyebrow">Government Contracting · Agentic AI Integration</div>
+        <h1>How Govmates Transformed a Manual Platform into an <span>AI-Powered Matchmaking Engine</span></h1>
+        <p class="hero-sub">
+            Pragma Apps embedded five agentic AI features into Govmates' existing product — automating profile enrichment, unlocking natural language search, and giving admins instant intelligence across their entire platform.
+        </p>
+        <div class="hero-meta">
+            <div class="hero-meta-item">
+                <strong>Client</strong>
+                Govmates
+            </div>
+            <div class="hero-meta-item">
+                <strong>Domain</strong>
+                Government Contracting &amp; B2G Matchmaking
+            </div>
+            <div class="hero-meta-item">
+                <strong>Engagement</strong>
+                May 2025
+            </div>
+            <div class="hero-meta-item">
+                <strong>Features</strong>
+                PDF Extraction · URL Extraction · AI Search · Ask AI · Profile Improvement
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">5</div>
+                <div class="stat-label">AI features designed, built &amp; delivered</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5×</div>
+                <div class="stat-label">Faster profile enrichment vs. manual entry</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">~0</div>
+                <div class="stat-label">Manual data re-entry required after launch</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">Instant</div>
+                <div class="stat-label">Operational answers that once required custom reports</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CHALLENGE -->
+<section class="section section--soft">
+    <div class="container">
+        <div class="section-label">The Challenge</div>
+        <h2>Incomplete Data and Manual Workflows Were Limiting Matchmaking Quality</h2>
+        <p class="section-intro">
+            Govmates connects small businesses with government buyers at procurement events and matchmaking conferences. But the quality of every match depends entirely on the quality of the underlying profile data — and that data had a serious problem.
+        </p>
+        <div class="challenge-grid">
+            <div class="challenge-card">
+                <h3>Profiles Were Routinely Incomplete</h3>
+                <p>Hundreds of organization profiles had empty or missing capability fields. Every incomplete profile was a missed match opportunity — directly degrading the platform's core value proposition.</p>
+            </div>
+            <div class="challenge-card">
+                <h3>Manual Data Entry Was a Bottleneck</h3>
+                <p>Admins spent significant time manually reading uploaded capability PDFs and typing extracted information into profile fields. The process was slow, error-prone, and impossible to scale.</p>
+            </div>
+            <div class="challenge-card">
+                <h3>Search Excluded Non-Technical Users</h3>
+                <p>Elasticsearch-powered search required structured filter queries. Admins and buyers without technical knowledge struggled to find the right organizations, reducing the effectiveness of the platform for its primary audience.</p>
+            </div>
+            <div class="challenge-card">
+                <h3>Operational Reporting Was Slow and Fragmented</h3>
+                <p>Answering basic questions — how many buyers are registered for a conference, which sellers have zero meetings scheduled — required manual report runs rather than simple queries, slowing event operations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- VALUE DELIVERED -->
+<section class="section section--white">
+    <div class="container">
+        <div class="section-label">Business Value Delivered</div>
+        <h2>What We Actually Changed for Govmates</h2>
+        <p class="section-intro">
+            We didn't bolt AI onto the product as a gimmick. Each feature was designed to eliminate a specific operational burden — reducing manual work, improving data quality, and giving every type of user a faster, smarter experience.
+        </p>
+
+        <div class="value-item">
+            <div class="value-icon">📄</div>
+            <div class="value-content">
+                <div class="value-outcome">Eliminated Manual Data Entry</div>
+                <h3>PDF Profile Extraction — From Documents to Structured Data in Seconds</h3>
+                <p>
+                    Most Govmates organizations upload a capability statement PDF when they register. We built an agentic extraction pipeline that reads those PDFs and pulls out structured profile data — capabilities, NAICS codes, set-aside preferences, past performance, and more. Admins review the extracted fields in a clean merge interface, approve or skip each one, and push the data into the live profile with a single click. Bulk extraction lets a single admin enrich hundreds of incomplete profiles in the time it previously took to do one — turning a paralyzing backlog into a manageable queue.
+                </p>
+            </div>
+        </div>
+
+        <div class="value-item">
+            <div class="value-icon">🔗</div>
+            <div class="value-content">
+                <div class="value-outcome">Extended Coverage Across the Entire User Base</div>
+                <h3>URL Profile Extraction — Enrich Profiles Even Without a PDF</h3>
+                <p>
+                    Not every organization uploads a capability PDF — but nearly all have a website. We introduced a URL extraction agent that crawls company websites and public-facing URLs stored on each profile, extracts relevant organizational data, and surfaces it through the same trusted merge-field interface. This doubled the pool of profiles eligible for AI enrichment, ensuring that no organization is left behind simply because they didn't upload a document. Bulk URL extraction allows admins to run enrichment across large filtered sets in a single action.
+                </p>
+            </div>
+        </div>
+
+        <div class="value-item">
+            <div class="value-icon">🔍</div>
+            <div class="value-content">
+                <div class="value-outcome">Made Search Accessible to Everyone</div>
+                <h3>AI Request Search — Find the Right Organizations by Just Describing Them</h3>
+                <p>
+                    We layered a natural language search interface directly on top of Govmates' existing Elasticsearch infrastructure — no migration required. A floating chat widget lets any user search in plain English: "small businesses in aerospace with SBIR experience and past federal contracts." The AI interprets intent, returns smart results, and lets users continue refining through conversation. Once satisfied, users can export matched results or create a formal procurement request directly from the chat interface. Search becomes a dialogue — not a filter form that rewards only technical users.
+                </p>
+            </div>
+        </div>
+
+        <div class="value-item">
+            <div class="value-icon">🧠</div>
+            <div class="value-content">
+                <div class="value-outcome">Replaced Manual Reporting with Instant Answers</div>
+                <h3>Ask AI — A Conversational Intelligence Layer Across the Whole Platform</h3>
+                <p>
+                    We built a conversational assistant trained on Govmates' internal data that allows admins to query the platform as if talking to a knowledgeable colleague. Questions like "How many buyers are registered for the NASA LIFT conference?" or "Which organizations have zero scheduled meetings in live conferences?" return immediate, human-readable answers. The assistant retains conversation context, handles multi-step queries, and surfaces operational insights that previously required custom-built reports or database queries. It's accessible directly from the navigation bar — meaning every admin has an analyst on call at all times.
+                </p>
+            </div>
+        </div>
+
+        <div class="value-item">
+            <div class="value-icon">✨</div>
+            <div class="value-content">
+                <div class="value-outcome">Sustained Data Quality at Scale</div>
+                <h3>AI Profile Improvement — Clean Data That Keeps Pace With Platform Growth</h3>
+                <p>
+                    Beyond enriching new data, we built an AI layer that continuously improves existing profile content — correcting typos, resolving duplicate entries, standardising formatting, and improving the readability of capability descriptions. As Govmates scales its user base, data quality no longer degrades over time. Admins can trigger improvement passes on individual profiles or in bulk, ensuring the platform consistently presents the high-quality data that government buyers rely on to make procurement decisions.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- PULL QUOTE -->
+<div class="container">
+    <div class="pull-quote">
+        <p>
+            Govmates needed more than an AI integration — they needed a team that understood that every incomplete profile is a missed match, and every missed match is a missed contract. We designed each feature around that reality, not around what was technically interesting to build.
+        </p>
+    </div>
+</div>
+
+<!-- ACHIEVEMENTS -->
+<section class="section section--soft">
+    <div class="container">
+        <div class="section-label">Headline Outcomes</div>
+        <h2>What Govmates Got</h2>
+        <p class="section-intro">A summary of the concrete outcomes delivered across all five AI features.</p>
+        <div class="achievements-grid">
+            <div class="achievement-card">
+                <div class="achievement-check">✓</div>
+                <p><strong>Bulk PDF extraction</strong> — admins can enrich hundreds of incomplete profiles from uploaded capability documents in a single workflow.</p>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-check">✓</div>
+                <p><strong>URL-based enrichment</strong> — organizations without PDFs can now be enriched from their public websites, doubling coverage.</p>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-check">✓</div>
+                <p><strong>Admin-controlled merge interface</strong> — every AI extraction goes through a human review step, ensuring data accuracy before it hits live profiles.</p>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-check">✓</div>
+                <p><strong>Natural language search</strong> — any user can find the right organizations by describing them in plain English, no filter expertise required.</p>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-check">✓</div>
+                <p><strong>Conversational request creation</strong> — matched search results can be saved directly as procurement requests from within the chat interface.</p>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-check">✓</div>
+                <p><strong>Ask AI assistant</strong> — instant answers to complex operational questions, available from the navigation bar to every admin on the platform.</p>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-check">✓</div>
+                <p><strong>AI profile improvement</strong> — continuous cleanup of typos, duplicate entries, and inconsistent formatting across all organisation records.</p>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-check">✓</div>
+                <p><strong>Zero disruption to existing infrastructure</strong> — all five features were integrated into the live platform without replacing or migrating existing search or data systems.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TECH STRIP -->
+<div class="tech-strip">
+    <div class="container">
+        <h2>Technologies &amp; Capabilities</h2>
+        <div class="tech-tags">
+            <span class="tech-tag">Agentic AI Pipelines</span>
+            <span class="tech-tag">Large Language Models</span>
+            <span class="tech-tag">PDF Parsing &amp; Extraction</span>
+            <span class="tech-tag">Web Crawling &amp; Scraping</span>
+            <span class="tech-tag">Natural Language Processing</span>
+            <span class="tech-tag">Elasticsearch Integration</span>
+            <span class="tech-tag">Conversational AI</span>
+            <span class="tech-tag">RAG (Retrieval-Augmented Generation)</span>
+            <span class="tech-tag">Merge Field UI</span>
+            <span class="tech-tag">Bulk Processing Workflows</span>
+            <span class="tech-tag">REST API Integration</span>
+            <span class="tech-tag">Data Quality Automation</span>
+        </div>
+    </div>
+</div>
+
+<!-- CTA -->
+<section class="cta">
+    <div class="container">
+        <h2>Ready to embed AI that actually moves the needle?</h2>
+        <p>Tell us about your product. We'll show you what's possible — and build it.</p>
+        <a href="LandingPage.html#contact" class="btn-cta">Start a Conversation →</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="LandingPage.html" class="logo" style="color: white;">Pragma<span style="color: white;">Apps</span></a>
+                <p>AI-first software development for startups and enterprises. Building great solutions at optimal cost since 2007.</p>
+            </div>
+            <div>
+                <div class="footer-col-title">Services</div>
+                <div class="footer-links">
+                    <a href="LandingPage.html#services">AI Architecture Planning</a>
+                    <a href="LandingPage.html#services">Web Development</a>
+                    <a href="LandingPage.html#services">Mobile Apps</a>
+                    <a href="LandingPage.html#services">Enterprise Integration</a>
+                    <a href="LandingPage.html#services">AI/ML Integration</a>
+                    <a href="LandingPage.html#services">Performance Optimization</a>
+                </div>
+            </div>
+            <div>
+                <div class="footer-col-title">Company</div>
+                <div class="footer-links">
+                    <a href="LandingPage.html#mission">Our Mission</a>
+                    <a href="LandingPage.html#approach">How We Work</a>
+                    <a href="LandingPage.html#about">About Us</a>
+                    <a href="LandingPage.html#case-study">Case Studies</a>
+                    <a href="LandingPage.html#reviews">Client Reviews</a>
+                    <a href="LandingPage.html#contact">Contact</a>
+                </div>
+            </div>
+            <div>
+                <div class="footer-col-title">Contact</div>
+                <div class="footer-links">
+                    <a href="mailto:info@pragmaapps.com">info@pragmaapps.com</a>
+                    <a href="#">D-84, Sector 2, Noida, Uttar Pradesh 201301</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 PragmaApps. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="#" class="social-link">in</a>
+                <a href="#" class="social-link">𝕏</a>
+                <a href="#" class="social-link">Ⓥ</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            const isOpen = navLinks.style.display === 'flex';
+            navLinks.style.display = isOpen ? 'none' : 'flex';
+            if (!isOpen) {
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '70px';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'white';
+                navLinks.style.padding = '16px 24px 24px';
+                navLinks.style.borderBottom = '1px solid #e8e8e8';
+                navLinks.style.zIndex = '999';
+                navLinks.style.boxShadow = '0 8px 20px rgba(0,0,0,0.08)';
+            }
+        });
+</script>
+
+
+
+</body></html>

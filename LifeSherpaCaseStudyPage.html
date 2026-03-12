@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<!-- saved from url=(0153)https://dede3phc22dgx.cloudfront.net/thread_output/46b84ba8-de3a-4c81-81f5-31626b6aae50/f8616390-3031-70a0-7b35-fa2bb2d556d8/LifeSherpaCaseStudyPage.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeSherpa Case Study - Building the Platform That Helps Thousands Reach Their Goals | PragmaApps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --black: #0a0a0a;
+            --black-soft: #1a1a1a;
+            --black-mid: #2c2c2c;
+            --red: #d72638;
+            --red-dark: #b01e2d;
+            --red-light: #f5e0e3;
+            --white: #ffffff;
+            --gray-50: #f9f9f9;
+            --gray-100: #f2f2f2;
+            --gray-200: #e8e8e8;
+            --gray-300: #d1d1d1;
+            --gray-500: #8a8a8a;
+            --gray-700: #4a4a4a;
+            --font: 'Plus Jakarta Sans', sans-serif;
+            --radius: 12px;
+            --radius-sm: 8px;
+            --shadow-sm: 0 1px 4px rgba(0,0,0,0.07);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.10);
+            --shadow-lg: 0 8px 40px rgba(0,0,0,0.13);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font);
+            background: var(--white);
+            color: var(--black);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* ===== LAYOUT ===== */
+        .container {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== HEADER / NAV ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--gray-200);
+            transition: box-shadow 0.3s;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--black);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span { color: var(--red); }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            margin-left: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-700);
+            padding: 8px 14px;
+            border-radius: 6px;
+            transition: color 0.2s, background 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--red);
+            background: var(--red-light);
+        }
+
+        .btn-login {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 9px 20px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            border: 1.5px solid var(--gray-300);
+            background: transparent;
+            color: var(--black);
+            transition: all 0.22s ease;
+        }
+
+        .btn-login:hover {
+            border-color: var(--black);
+            background: var(--black);
+            color: white;
+        }
+
+        /* ===== HERO ===== */
+        .case-hero {
+            background: linear-gradient(135deg, var(--black) 0%, var(--black-soft) 50%, var(--black-mid) 100%);
+            color: var(--white);
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(215,38,56,0.12) 0%, transparent 70%);
+        }
+
+        .hero-eyebrow {
+            display: inline-block;
+            background: rgba(215,38,56,0.2);
+            border: 1px solid rgba(215,38,56,0.4);
+            color: var(--red-light);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .case-hero h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            line-height: 1.15;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+
+        .case-hero h1 span { color: var(--red); }
+
+        .hero-sub {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.75);
+            max-width: 680px;
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .hero-meta-item {
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.65);
+        }
+
+        .hero-meta-item strong {
+            display: block;
+            color: white;
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        /* ===== STATS BAR ===== */
+        .stats-bar {
+            background: var(--red);
+            padding: 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .stat-item {
+            padding: 36px 24px;
+            text-align: center;
+            border-right: 1px solid rgba(255,255,255,0.15);
+            color: white;
+        }
+
+        .stat-item:last-child { border-right: none; }
+
+        .stat-number {
+            font-size: 2.4rem;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.4;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section--soft {
+            background: var(--gray-50);
+        }
+
+        .section--white {
+            background: var(--white);
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 12px;
+        }
+
+        .section h2 {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 18px;
+            line-height: 1.25;
+        }
+
+        .section-intro {
+            font-size: 1.05rem;
+            color: var(--gray-700);
+            max-width: 720px;
+            margin-bottom: 50px;
+            line-height: 1.75;
+        }
+
+        /* ===== CHALLENGE CARDS ===== */
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .challenge-card {
+            background: white;
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius);
+            padding: 32px 28px;
+            border-left: 4px solid var(--red);
+            transition: all 0.3s ease;
+        }
+
+        .challenge-card:hover {
+            border-color: var(--red);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .challenge-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 10px;
+        }
+
+        .challenge-card p {
+            font-size: 0.95rem;
+            color: var(--gray-700);
+            line-height: 1.7;
+        }
+
+        /* ===== TIMELINE ===== */
+        .timeline-strip {
+            background: var(--red-light);
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius);
+            padding: 40px 44px;
+            margin-bottom: 60px;
+            display: flex;
+            gap: 0;
+            align-items: stretch;
+        }
+
+        .timeline-step {
+            flex: 1;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .timeline-step:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--red);
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .timeline-step .year {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--red-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 6px;
+        }
+
+        .timeline-step .milestone {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--black);
+            line-height: 1.4;
+        }
+
+        /* ===== VALUE ITEMS ===== */
+        .value-item {
+            display: grid;
+            grid-template-columns: 70px 1fr;
+            gap: 0 32px;
+            align-items: start;
+            margin-bottom: 50px;
+            padding-bottom: 50px;
+            border-bottom: 2px solid var(--gray-200);
+        }
+
+        .value-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--red), var(--red-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .value-content h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+
+        .value-outcome {
+            display: inline-block;
+            background: var(--red-light);
+            color: var(--red-dark);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .value-content p {
+            font-size: 0.98rem;
+            color: var(--gray-700);
+            line-height: 1.75;
+        }
+
+        /* ===== QUOTE ===== */
+        .pull-quote {
+            background: linear-gradient(135deg, var(--black) 0%, var(--black-soft) 100%);
+            border-radius: 16px;
+            padding: 50px 60px;
+            color: white;
+            position: relative;
+            margin: 70px 0;
+        }
+
+        .pull-quote::before {
+            content: '\201C';
+            font-size: 9rem;
+            line-height: 0.6;
+            color: rgba(215,38,56,0.15);
+            position: absolute;
+            top: 32px;
+            left: 40px;
+            font-family: Georgia, serif;
+        }
+
+        .pull-quote p {
+            font-size: 1.25rem;
+            font-style: italic;
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+            max-width: 750px;
+        }
+
+        /* ===== ACHIEVEMENTS ===== */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .achievement-card {
+            background: white;
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius);
+            padding: 26px;
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            border-color: var(--red);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .achievement-check {
+            width: 34px;
+            height: 34px;
+            background: var(--red-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--red);
+            font-size: 1.05rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .achievement-card p {
+            font-size: 0.95rem;
+            color: var(--black);
+            line-height: 1.65;
+        }
+
+        .achievement-card strong {
+            color: var(--red-dark);
+        }
+
+        /* ===== TECH STRIP ===== */
+        .tech-strip {
+            padding: 60px 0;
+            background: var(--black);
+        }
+
+        .tech-strip h2 {
+            color: white;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 28px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            opacity: 0.75;
+        }
+
+        .tech-categories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .tech-cat h3 {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--red-light);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 14px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tech-tag {
+            background: rgba(215,38,56,0.15);
+            border: 1px solid rgba(215,38,56,0.3);
+            color: rgba(255,255,255,0.85);
+            font-size: 0.85rem;
+            padding: 6px 16px;
+            border-radius: 24px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .tech-tag:hover {
+            background: var(--red);
+            border-color: var(--red);
+            color: white;
+        }
+
+        /* ===== CTA ===== */
+        .cta {
+            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .cta p {
+            font-size: 1.08rem;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 36px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: white;
+            color: var(--red-dark);
+            font-weight: 700;
+            font-size: 0.98rem;
+            padding: 15px 40px;
+            border-radius: 40px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--black);
+            color: rgba(255,255,255,0.65);
+            padding: 72px 0 32px;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 56px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-brand {
+            max-width: 340px;
+        }
+
+        .footer-brand .logo {
+            font-size: 22px;
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.55);
+        }
+
+        .footer-col-title {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            font-size: 14px;
+            color: rgba(255,255,255,0.65);
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--red);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .footer-bottom p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.45);
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: rgba(255,255,255,0.65);
+            transition: all 0.2s;
+        }
+
+        .social-link:hover {
+            background: var(--red);
+            border-color: var(--red);
+            color: white;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--black);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .challenge-grid { grid-template-columns: 1fr; }
+            .achievements-grid { grid-template-columns: 1fr; }
+            .tech-categories { grid-template-columns: 1fr; }
+            .value-item { grid-template-columns: 1fr; gap: 20px 0; }
+            .value-icon { width: 50px; height: 50px; }
+            .pull-quote { padding: 40px 30px; }
+            .pull-quote::before { font-size: 6rem; }
+            .timeline-strip { flex-direction: column; gap: 24px; }
+            .timeline-step:not(:last-child)::after { display: none; }
+            .footer-top { grid-template-columns: 1fr; gap: 36px; }
+            .hamburger { display: flex; }
+            .nav-links { display: none; }
+        }
+
+        /* ===== NAV DROPDOWN ===== */
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .nav-dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .dropdown-arrow {
+            font-size: 8px;
+            display: inline-block;
+            transition: transform 0.25s ease;
+        }
+
+        .nav-dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .nav-dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(6px);
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-top: 3px solid var(--red);
+            border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+            box-shadow: var(--shadow-lg);
+            min-width: 220px;
+            z-index: 1000;
+            overflow: hidden;
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+            padding: 6px 0;
+        }
+
+        .nav-dropdown:hover .nav-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 11px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-700);
+            transition: background 0.15s ease, color 0.15s ease, padding-left 0.15s ease;
+            white-space: nowrap;
+        }
+
+        .nav-dropdown-menu a:hover {
+            background: var(--gray-50);
+            color: var(--black);
+            padding-left: 26px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header / Navigation -->
+<header class="header scrolled" id="header">
+    <div class="container">
+        <nav class="nav">
+            <a href="LandingPage.html" class="logo">Pragma<span>Apps</span></a>
+
+            <!-- Right-aligned navigation -->
+            <div class="nav-right">
+                <div class="nav-links" id="navLinks">
+                    <a href="LandingPage.html">Home</a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-dropdown-toggle">Services <span class="dropdown-arrow">&#9660;</span></a>
+                        <div class="nav-dropdown-menu">
+                            <a href="ProductDevelopmentPage.html">Product Development</a>
+                            <a href="DigitalTransformationPage.html">Digital Transformation</a>
+                            <a href="EnterpriseIntegrationPage.html">Enterprise Integration</a>
+                            <a href="AIAndMLPage.html">AI &amp; Machine Learning</a>
+                            <a href="CTOAsAServicePage.html">CTO as a Service</a>
+                            <a href="PerformanceEngineeringPage.html">Performance Engineering</a>
+                        </div>
+                    </div>
+                    <a href="#">Products</a>
+                    <a href="#">About</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="nav-cta">
+                    <a href="#" class="btn-login">Login</a>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="case-hero">
+    <div class="container">
+        <div class="hero-eyebrow">Behavioral Health · SaaS Platform · 8-Year Partnership</div>
+        <h1>Building the Platform That Helps <span>Thousands of People Reach Their Goals</span></h1>
+        <p class="hero-sub">
+            How Pragma Apps took LifeSherpa from a simple MVP to a full-featured, enterprise-ready SaaS platform — complete with BI, scheduling, video, SSO, and a web portal — over an 8-year collaboration.
+        </p>
+        <div class="hero-meta">
+            <div class="hero-meta-item">
+                <strong>Client</strong>
+                LifeSherpa
+            </div>
+            <div class="hero-meta-item">
+                <strong>Domain</strong>
+                Behavioral Training / Mental Well-being
+            </div>
+            <div class="hero-meta-item">
+                <strong>Engagement</strong>
+                Ongoing since 2017
+            </div>
+            <div class="hero-meta-item">
+                <strong>Scope</strong>
+                Full Platform — Mobile · Web · BI · API
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">8+</div>
+                <div class="stat-label">Years of continuous platform partnership</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">0→∞</div>
+                <div class="stat-label">Built from scratch to thousands of users</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">11</div>
+                <div class="stat-label">Major platform capabilities delivered end-to-end</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">iOS+Android+Web</div>
+                <div class="stat-label">Every surface covered across one integrated platform</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CHALLENGE -->
+<section class="section section--soft">
+    <div class="container">
+        <div class="section-label">The Challenge</div>
+        <h2>A Mission-Driven Startup Needed a Platform Equal to Its Ambitions</h2>
+        <p class="section-intro">
+            LifeSherpa set out to solve something genuinely hard: using technology to help people — especially those with behavioral and developmental challenges — build better habits, stay accountable, and reach their goals. They had the vision and the market need. They needed a technical partner who could build it, scale it, and evolve it as the market demanded.
+        </p>
+        <div class="challenge-grid">
+            <div class="challenge-card">
+                <h3>No Platform — Just an MVP</h3>
+                <p>LifeSherpa started with a basic mobile app and Firebase backend. It lacked the architecture to handle growing complexity, multiple clients, or enterprise security requirements.</p>
+            </div>
+            <div class="challenge-card">
+                <h3>Enterprise Clients Required Enterprise-Grade Security</h3>
+                <p>As LifeSherpa targeted larger organizations, customers demanded strict data separation, SSO support, and proof that one client's data could never bleed into another's.</p>
+            </div>
+            <div class="challenge-card">
+                <h3>No Insights, No Accountability Loop</h3>
+                <p>Without a robust BI solution, neither LifeSherpa nor its customers could see who was progressing, where people were dropping off, or whether the platform was actually working.</p>
+            </div>
+            <div class="challenge-card">
+                <h3>Mobile-Only Limited the Audience</h3>
+                <p>With only iOS and Android apps, instructors and administrators were forced to manage complex workflows on small screens. There was no web access, limiting adoption in professional settings.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- VALUE DELIVERED -->
+<section class="section section--white">
+    <div class="container">
+        <div class="section-label">Business Value Delivered</div>
+        <h2>How We Grew LifeSherpa From MVP to Market Leader</h2>
+        <p class="section-intro">
+            Over 8 years, Pragma didn't just build features — we made strategic decisions that de-risked LifeSherpa's growth, unlocked new revenue segments, and kept the platform competitive as the market evolved.
+        </p>
+
+        <!-- Partnership Timeline -->
+        <div class="timeline-strip">
+            <div class="timeline-step">
+                <div class="year">2017</div>
+                <div class="milestone">Partnership begins — MVP assessment &amp; architecture redesign</div>
+            </div>
+            <div class="timeline-step">
+                <div class="year">2018–19</div>
+                <div class="milestone">Configurator dashboard, scheduler &amp; serverless API launched</div>
+            </div>
+            <div class="timeline-step">
+                <div class="year">2020–21</div>
+                <div class="milestone">BI platform, web portal &amp; video/chat features shipped</div>
+            </div>
+            <div class="timeline-step">
+                <div class="year">2022+</div>
+                <div class="milestone">Enterprise SSO, LMS integration &amp; custom client integrations</div>
+            </div>
+        </div>
+
+        <div class="value-item">
+            <div class="value-icon">🏗️</div>
+            <div class="value-content">
+                <div class="value-outcome">Platform Foundation</div>
+                <h3>Rebuilt the Architecture to Support Scale — Before LifeSherpa Needed It</h3>
+                <p>
+                    Rather than patching the existing MVP, Pragma led a thorough architectural review and designed a new database and permission system from the ground up. Strict customer data separation was enforced at the schema level — not bolted on later — meaning LifeSherpa could onboard enterprise clients with confidence that their data was completely isolated. This proactive investment prevented the costly and disruptive re-platforming that many fast-growing SaaS companies face.
+                </p>
+            </div>
+        </div>
+
+        <div class="value-item">
+            <div class="value-icon">🎛️</div>
+            <div class="value-content">
+                <div class="value-outcome">Operational Efficiency</div>
+                <h3>The "Configurator" — Giving Admins Power Without Engineering Support</h3>
+                <p>
+                    We built a full-featured administrative dashboard that lets LifeSherpa's team and their customers manage users, create training activities, assign courses, configure rewards, and track progress — all without touching code. This reduced reliance on engineering for routine operations, cut support overhead, and gave LifeSherpa a self-service product they could demo confidently to enterprise buyers.
+                </p>
+            </div>
+        </div>
+
+        <div class="value-item">
+            <div class="value-icon">💼</div>
+            <div class="value-content">
+                <div class="value-outcome">Enterprise Revenue Unlocked</div>
+                <h3>Auth0 + Azure AD SSO — Removed the #1 Blocker to Enterprise Sales</h3>
+                <p>
+                    Enterprise clients won't onboard without SSO. LifeSherpa was losing or delaying deals because Firebase Authentication alone couldn't meet enterprise security standards. We researched and implemented Auth0 — migrating all existing users seamlessly without disruption — then added Azure AD SSO support with minimal required permissions. The result: LifeSherpa could now close enterprise deals that were previously out of reach.
+                </p>
+            </div>
+        </div>
+
+        <div class="value-item">
+            <div class="value-icon">📊</div>
+            <div class="value-content">
+                <div class="value-outcome">Data-Driven Growth</div>
+                <h3>A Self-Healing BI System That Turns Activity Data Into Business Intelligence</h3>
+                <p>
+                    We built an end-to-end data pipeline: Firebase → MySQL → Zoho Analytics, with real-time incremental sync, automatic error recovery, and per-customer isolated dashboards. Every new LifeSherpa customer gets their own reporting workspace cloned from a reference template — meaning LifeSherpa can onboard clients with working dashboards from day one. Administrators can track user progress, spot engagement drops, and prove the platform's impact. This BI capability became a key differentiator in enterprise sales conversations.
+                </p>
+            </div>
+        </div>
+
+        <div class="value-item">
+            <div class="value-icon">🌐</div>
+            <div class="value-content">
+                <div class="value-outcome">Market Expansion</div>
+                <h3>The LS Portal — Opening LifeSherpa to Users Who Don't Use Mobile</h3>
+                <p>
+                    We recognized that instructors, case workers, and administrators needed to manage complex workflows on full-size screens — not phones. We built the LS Portal, a full web version of the mobile app, giving users real-time client status views, chat and video calling, and rich activity charts — all in a browser. This expanded LifeSherpa's addressable market and dramatically improved the experience for the professionals who drive platform adoption.
+                </p>
+            </div>
+        </div>
+
+        <div class="value-item">
+            <div class="value-icon">⚙️</div>
+            <div class="value-content">
+                <div class="value-outcome">Development Velocity</div>
+                <h3>Serverless API — Cut Mobile Development Time in Half</h3>
+                <p>
+                    When LifeSherpa's iOS and Android teams had to implement every new feature independently — duplicating logic across two codebases — development was slow and bugs were frequent. We designed and built a serverless API in Node.js using Firebase Functions, centralizing business logic in one place. Both mobile apps now call the same API, eliminating duplication. Feature development accelerated, and the coordinated QA process we ran with the Romania-based mobile team ensured releases were stable.
+                </p>
+            </div>
+        </div>
+
+        <div class="value-item">
+            <div class="value-icon">📅</div>
+            <div class="value-content">
+                <div class="value-outcome">User Engagement</div>
+                <h3>Google Calendar-Style Scheduling — Because Habit Formation Requires Precision</h3>
+                <p>
+                    LifeSherpa's effectiveness depends on activities reaching users at exactly the right time. Basic cron-based scheduling wasn't flexible enough. We built an RRule-based scheduling engine — the same standard used by Google Calendar — giving administrators fine-grained control over recurring activity schedules, including user-specific customizations. More precise reminders mean better completion rates, which means better outcomes for LifeSherpa's clients and stronger renewal conversations.
+                </p>
+            </div>
+        </div>
+
+        <div class="value-item">
+            <div class="value-icon">🤝</div>
+            <div class="value-content">
+                <div class="value-outcome">Customer Stickiness</div>
+                <h3>Custom Integrations + LMS — Making LifeSherpa Indispensable to Enterprise Clients</h3>
+                <p>
+                    Enterprise customers don't want another siloed tool — they want a platform that fits into their existing workflows. We built custom integrations for LifeSherpa customers who needed to connect their own data sources to the BI platform, and integrated TalentLMS with full SSO to support advanced course delivery. Every integration deepened the relationship with that customer, increased switching costs, and gave LifeSherpa additional value to justify premium pricing.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- PULL QUOTE -->
+<div class="container">
+    <div class="pull-quote">
+        <p>
+            LifeSherpa didn't need a vendor who could write code. They needed a partner who could think ahead — who would design for scale before scale arrived, and build for enterprise before the first enterprise deal closed. That's the kind of pragmatic, proactive partnership Pragma has provided since 2017.
+        </p>
+    </div>
+</div>
+
+<!-- ACHIEVEMENTS -->
+<section class="section section--soft">
+    <div class="container">
+        <div class="section-label">Headline Outcomes</div>
+        <h2>What LifeSherpa Got</h2>
+        <p class="section-intro">Concrete, measurable outcomes delivered across the 8-year engagement.</p>
+        <div class="achievements-grid">
+            <div class="achievement-card">
+                <div class="achievement-check">✓</div>
+                <p><strong>Full platform built from scratch</strong> — from initial MVP to a production-grade SaaS platform serving thousands of users across mobile, web, and enterprise.</p>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-check">✓</div>
+                <p><strong>Enterprise deals unblocked</strong> — Auth0 + Azure AD SSO integration removed the single biggest blocker to closing large organizational clients.</p>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-check">✓</div>
+                <p><strong>Zero data leakage risk</strong> — ACL-based architecture and per-customer data separation enforced at the database level, not patched on after the fact.</p>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-check">✓</div>
+                <p><strong>Real-time business intelligence</strong> — self-healing BI pipeline with per-customer dashboards, enabling LifeSherpa to demonstrate and prove platform ROI to buyers.</p>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-check">✓</div>
+                <p><strong>Web portal expanded the user base</strong> — professional users (instructors, administrators, case workers) can now manage clients from laptops and desktops.</p>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-check">✓</div>
+                <p><strong>Serverless infrastructure</strong> — minimal downtime, elastic scale, and no server maintenance overhead. Cost-efficient architecture that grows with the business.</p>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-check">✓</div>
+                <p><strong>End-to-end QA support</strong> — coordinated QA with the global mobile team ensured stable, bug-free releases and protected LifeSherpa's reputation with clients.</p>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-check">✓</div>
+                <p><strong>8+ year trusted partnership</strong> — continuous, agile delivery with backwards compatibility focus, enabling LifeSherpa to evolve without disrupting existing customers.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TECH STRIP -->
+<div class="tech-strip">
+    <div class="container">
+        <h2>Technologies &amp; Tools</h2>
+        <div class="tech-categories">
+            <div class="tech-cat">
+                <h3>Frontend &amp; Mobile</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">React.js</span>
+                    <span class="tech-tag">AngularJS</span>
+                    <span class="tech-tag">WordPress</span>
+                </div>
+            </div>
+            <div class="tech-cat">
+                <h3>Backend &amp; Infrastructure</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">Firebase Functions</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Google Cloud</span>
+                    <span class="tech-tag">EasyCron</span>
+                    <span class="tech-tag">Twilio</span>
+                    <span class="tech-tag">Auth0</span>
+                    <span class="tech-tag">Azure AD SSO</span>
+                </div>
+            </div>
+            <div class="tech-cat">
+                <h3>Data, BI &amp; DevOps</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">Firebase Realtime DB</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">Zoho Analytics</span>
+                    <span class="tech-tag">TalentLMS</span>
+                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">CI/CD</span>
+                    <span class="tech-tag">Bitbucket</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CTA -->
+<section class="cta">
+    <div class="container">
+        <h2>Ready to build a platform that grows with your mission?</h2>
+        <p>Whether you're starting from an idea or scaling what you've already built — let's talk.</p>
+        <a href="LandingPage.html#contact" class="btn-cta">Start a Conversation →</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="LandingPage.html" class="logo" style="color: white;">Pragma<span style="color: white;">Apps</span></a>
+                <p>AI-first software development for startups and enterprises. Building great solutions at optimal cost since 2007.</p>
+            </div>
+            <div>
+                <div class="footer-col-title">Services</div>
+                <div class="footer-links">
+                    <a href="LandingPage.html#services">AI Architecture Planning</a>
+                    <a href="LandingPage.html#services">Web Development</a>
+                    <a href="LandingPage.html#services">Mobile Apps</a>
+                    <a href="LandingPage.html#services">Enterprise Integration</a>
+                    <a href="LandingPage.html#services">AI/ML Integration</a>
+                    <a href="LandingPage.html#services">Performance Optimization</a>
+                </div>
+            </div>
+            <div>
+                <div class="footer-col-title">Company</div>
+                <div class="footer-links">
+                    <a href="LandingPage.html#mission">Our Mission</a>
+                    <a href="LandingPage.html#approach">How We Work</a>
+                    <a href="LandingPage.html#about">About Us</a>
+                    <a href="LandingPage.html#case-study">Case Studies</a>
+                    <a href="LandingPage.html#reviews">Client Reviews</a>
+                    <a href="LandingPage.html#contact">Contact</a>
+                </div>
+            </div>
+            <div>
+                <div class="footer-col-title">Contact</div>
+                <div class="footer-links">
+                    <a href="mailto:info@pragmaapps.com">info@pragmaapps.com</a>
+                    <a href="#">D-84, Sector 2, Noida, Uttar Pradesh 201301</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 PragmaApps. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="#" class="social-link">in</a>
+                <a href="#" class="social-link">𝕏</a>
+                <a href="#" class="social-link">Ⓥ</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            const isOpen = navLinks.style.display === 'flex';
+            navLinks.style.display = isOpen ? 'none' : 'flex';
+            if (!isOpen) {
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '70px';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'white';
+                navLinks.style.padding = '16px 24px 24px';
+                navLinks.style.borderBottom = '1px solid #e8e8e8';
+                navLinks.style.zIndex = '999';
+                navLinks.style.boxShadow = '0 8px 20px rgba(0,0,0,0.08)';
+            }
+        });
+    }
+</script>
+
+
+
+
+
+</body></html>
