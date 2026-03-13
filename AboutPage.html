@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us – PragmaApps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --black: #0a0a0a;
+            --black-soft: #1a1a1a;
+            --black-mid: #2c2c2c;
+            --red: #d72638;
+            --red-dark: #b01e2d;
+            --red-light: #f5e0e3;
+            --white: #ffffff;
+            --gray-50: #f9f9f9;
+            --gray-100: #f2f2f2;
+            --gray-200: #e8e8e8;
+            --gray-300: #d1d1d1;
+            --gray-500: #8a8a8a;
+            --gray-700: #4a4a4a;
+            --font: 'Plus Jakarta Sans', sans-serif;
+            --radius: 12px;
+            --radius-sm: 8px;
+            --shadow-sm: 0 1px 4px rgba(0,0,0,0.07);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.10);
+            --shadow-lg: 0 8px 40px rgba(0,0,0,0.13);
+        }
+
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font);
+            background: var(--white);
+            color: var(--black);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* ===== LAYOUT ===== */
+        .container {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section { padding: 96px 0; }
+        .section-sm { padding: 64px 0; }
+
+        .section-tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--red);
+            background: var(--red-light);
+            border-radius: 40px;
+            padding: 6px 16px;
+            margin-bottom: 18px;
+        }
+
+        .section-title {
+            font-size: clamp(28px, 4vw, 48px);
+            font-weight: 800;
+            color: var(--black);
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        .section-sub {
+            font-size: 17px;
+            color: var(--gray-700);
+            max-width: 560px;
+            line-height: 1.7;
+        }
+
+        .section-center { text-align: center; }
+        .section-center .section-sub { margin: 0 auto; }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 28px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.22s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--red);
+            color: var(--white);
+            border-color: var(--red);
+        }
+
+        .btn-primary:hover {
+            background: var(--red-dark);
+            border-color: var(--red-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(215,38,56,0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--black);
+            border-color: var(--gray-300);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--black);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.25);
+        }
+
+        .btn-outline-white:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.5);
+            transform: translateY(-1px);
+        }
+
+        /* ===== HEADER / NAV ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--gray-200);
+            transition: box-shadow 0.3s;
+        }
+
+        .header.scrolled { box-shadow: var(--shadow-md); }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--black);
+            letter-spacing: -0.5px;
+            flex-shrink: 0;
+        }
+
+        .logo span { color: var(--red); }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            margin-left: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-700);
+            padding: 8px 14px;
+            border-radius: 6px;
+            transition: color 0.2s, background 0.2s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--red);
+            background: var(--red-light);
+        }
+
+        .nav-links a.active { font-weight: 600; }
+
+        /* Dropdown */
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .nav-dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .dropdown-arrow {
+            font-size: 8px;
+            display: inline-block;
+            transition: transform 0.25s ease;
+        }
+
+        .nav-dropdown:hover .dropdown-arrow { transform: rotate(180deg); }
+
+        .nav-dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(6px);
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-top: 3px solid var(--red);
+            border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+            box-shadow: var(--shadow-lg);
+            min-width: 220px;
+            z-index: 1000;
+            overflow: hidden;
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+            padding: 6px 0;
+        }
+
+        .nav-dropdown:hover .nav-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 11px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-700);
+            transition: background 0.15s ease, color 0.15s ease, padding-left 0.15s ease;
+            white-space: nowrap;
+        }
+
+        .nav-dropdown-menu a:hover {
+            background: var(--gray-50);
+            color: var(--black);
+            padding-left: 26px;
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-login {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 9px 20px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            border: 1.5px solid var(--gray-300);
+            background: transparent;
+            color: var(--black);
+            transition: all 0.22s ease;
+        }
+
+        .btn-login:hover {
+            border-color: var(--black);
+            background: var(--black);
+            color: white;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--black);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        /* ===== HERO (DARK) ===== */
+        .hero {
+            background: var(--black);
+            min-height: 94vh;
+            padding-top: 100px;
+            padding-bottom: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(215,38,56,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 360px;
+            height: 360px;
+            background: radial-gradient(circle, rgba(215,38,56,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 72px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(215,38,56,0.15);
+            color: #f87485;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .hero-badge-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--red);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.3); }
+        }
+
+        .hero-title {
+            font-size: clamp(36px, 5vw, 62px);
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.08;
+            letter-spacing: -1.5px;
+            margin-bottom: 24px;
+        }
+
+        .hero-title .accent { color: var(--red); }
+
+        .hero-sub {
+            font-size: 18px;
+            color: rgba(255,255,255,0.65);
+            line-height: 1.7;
+            max-width: 480px;
+            margin-bottom: 40px;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* Hero right — visual stats */
+        .hero-visual {
+            position: relative;
+            height: 460px;
+        }
+
+        .hv-card {
+            position: absolute;
+            background: #131313;
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 14px;
+            padding: 18px 22px;
+            box-shadow: 0 24px 64px rgba(0,0,0,0.55);
+        }
+
+        /* Top — founding card */
+        .hv-founding {
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .hv-founding-logo {
+            width: 44px;
+            height: 44px;
+            background: var(--red);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 900;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .hv-founding-label {
+            font-size: 11px;
+            color: rgba(255,255,255,0.4);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+        }
+
+        .hv-founding-text {
+            font-size: 15px;
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        .hv-founding-pipeline {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hv-pipe-step {
+            padding: 4px 10px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 6px;
+            font-size: 11px;
+            color: rgba(255,255,255,0.5);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .hv-pipe-step.active {
+            background: rgba(215,38,56,0.2);
+            color: #f87485;
+        }
+
+        .hv-pipe-arrow {
+            color: rgba(255,255,255,0.2);
+            font-size: 10px;
+        }
+
+        /* Mid-left — stats card */
+        .hv-stats {
+            top: 110px;
+            left: 0;
+            width: 58%;
+        }
+
+        .hv-stats-label {
+            font-size: 11px;
+            color: rgba(255,255,255,0.4);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .hv-stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .hv-stat-item {}
+
+        .hv-stat-value {
+            font-size: 26px;
+            font-weight: 900;
+            color: var(--white);
+            letter-spacing: -0.5px;
+            line-height: 1;
+        }
+
+        .hv-stat-value .hv-accent { color: var(--red); }
+
+        .hv-stat-desc {
+            font-size: 11px;
+            color: rgba(255,255,255,0.45);
+            margin-top: 3px;
+        }
+
+        /* Mid-right — AI badge card */
+        .hv-aifirst {
+            top: 116px;
+            right: 0;
+            width: 38%;
+            text-align: center;
+        }
+
+        .hv-ai-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+            border-radius: 10px;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .hv-ai-label {
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 4px;
+        }
+
+        .hv-ai-sub {
+            font-size: 11px;
+            color: rgba(255,255,255,0.4);
+            line-height: 1.5;
+        }
+
+        /* Bottom-left — delivery record */
+        .hv-delivery {
+            bottom: 0;
+            left: 0;
+            width: 54%;
+        }
+
+        .hv-delivery-label {
+            font-size: 11px;
+            color: rgba(255,255,255,0.4);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .hv-delivery-list {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .hv-delivery-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .hv-delivery-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--red);
+            flex-shrink: 0;
+        }
+
+        .hv-delivery-dot.green { background: #34d399; }
+        .hv-delivery-dot.yellow { background: #fbbf24; }
+
+        /* Bottom-right — globe card */
+        .hv-global {
+            bottom: 0;
+            right: 0;
+            width: 40%;
+            text-align: center;
+        }
+
+        .hv-global-num {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1;
+            letter-spacing: -1px;
+        }
+
+        .hv-global-accent { color: var(--red); }
+
+        .hv-global-label {
+            font-size: 11px;
+            color: rgba(255,255,255,0.4);
+            margin-top: 4px;
+            line-height: 1.5;
+        }
+
+        /* ===== STORY SECTION (WHITE) ===== */
+        .story-section {
+            background: var(--white);
+        }
+
+        .story-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .story-text p {
+            font-size: 16px;
+            color: var(--gray-700);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .story-text p:last-child { margin-bottom: 0; }
+
+        .story-text p strong {
+            color: var(--black);
+            font-weight: 700;
+        }
+
+        .story-milestones {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            border-left: 2px solid var(--gray-200);
+            padding-left: 28px;
+            margin-top: 12px;
+        }
+
+        .story-milestone {
+            position: relative;
+            padding-bottom: 32px;
+        }
+
+        .story-milestone:last-child { padding-bottom: 0; }
+
+        .story-milestone::before {
+            content: '';
+            position: absolute;
+            left: -37px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            background: var(--white);
+            border: 2.5px solid var(--red);
+            border-radius: 50%;
+        }
+
+        .story-milestone.active::before {
+            background: var(--red);
+        }
+
+        .milestone-year {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--red);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .milestone-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 5px;
+        }
+
+        .milestone-desc {
+            font-size: 14px;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+
+        /* Stat pills */
+        .story-stats {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 36px;
+        }
+
+        .story-stat {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            text-align: center;
+            flex: 1;
+            min-width: 100px;
+        }
+
+        .story-stat-value {
+            font-size: 30px;
+            font-weight: 900;
+            color: var(--black);
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+
+        .story-stat-value span { color: var(--red); }
+
+        .story-stat-label {
+            font-size: 12px;
+            color: var(--gray-500);
+            margin-top: 5px;
+            font-weight: 500;
+        }
+
+        /* ===== WHY US (GRAY-50) ===== */
+        .whyus-section {
+            background: var(--gray-50);
+        }
+
+        .whyus-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 56px;
+        }
+
+        .whyus-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius);
+            padding: 36px 32px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .whyus-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--red) 0%, var(--red-dark) 100%);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.35s ease;
+        }
+
+        .whyus-card:hover {
+            border-color: transparent;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .whyus-card:hover::before { transform: scaleX(1); }
+
+        .whyus-icon {
+            width: 52px;
+            height: 52px;
+            background: var(--red-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .whyus-card-title {
+            font-size: 19px;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 10px;
+            line-height: 1.25;
+        }
+
+        .whyus-card-body {
+            font-size: 15px;
+            color: var(--gray-700);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .whyus-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .whyus-tag {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--red);
+            background: var(--red-light);
+            padding: 4px 10px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== LEADERSHIP (WHITE) ===== */
+        .leadership-section {
+            background: var(--white);
+        }
+
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-top: 56px;
+        }
+
+        .leader-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow 0.35s ease, transform 0.35s ease, border-color 0.35s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .leader-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-6px);
+            border-color: var(--gray-300);
+        }
+
+        /* Full-width photo strip */
+        .leader-photo {
+            width: 100%;
+            background: var(--gray-50);
+            flex-shrink: 0;
+            padding: 20px 20px 0;
+        }
+
+        .leader-photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        /* Content area */
+        .leader-content {
+            padding: 24px 28px 28px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .leader-name {
+            font-size: 19px;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 3px;
+        }
+
+        .leader-role {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--red);
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .leader-divider {
+            width: 28px;
+            height: 2px;
+            background: var(--gray-200);
+            margin-bottom: 16px;
+        }
+
+        .leader-bio {
+            font-size: 14px;
+            color: var(--gray-700);
+            line-height: 1.75;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .leader-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 20px;
+        }
+
+        .leader-tag {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--gray-700);
+            background: var(--gray-100);
+            border: 1px solid var(--gray-200);
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        /* LinkedIn row */
+        .leader-linkedin {
+            padding-top: 18px;
+            border-top: 1px solid var(--gray-200);
+            margin-top: auto;
+        }
+
+        .leader-linkedin a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #0a66c2;
+            transition: gap 0.2s ease;
+        }
+
+        .leader-linkedin a:hover {
+            gap: 10px;
+        }
+
+        .linkedin-arrow {
+            font-size: 15px;
+            line-height: 1;
+        }
+
+        /* ===== CULTURE SECTION (DARK) ===== */
+        .culture-section {
+            background: var(--black);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .culture-section::before {
+            content: '';
+            position: absolute;
+            top: -120px;
+            right: -120px;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(215,38,56,0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .culture-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .culture-left .section-tag {
+            background: rgba(215,38,56,0.15);
+            color: #f87485;
+        }
+
+        .culture-title {
+            font-size: clamp(28px, 3.5vw, 44px);
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .culture-sub {
+            font-size: 16px;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+            max-width: 420px;
+            margin-bottom: 36px;
+        }
+
+        .culture-pillars {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .culture-pillar {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: var(--radius);
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .culture-pillar:hover {
+            background: rgba(255,255,255,0.07);
+            border-color: rgba(215,38,56,0.25);
+        }
+
+        .culture-pillar-icon {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .culture-pillar-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 5px;
+        }
+
+        .culture-pillar-desc {
+            font-size: 13px;
+            color: rgba(255,255,255,0.45);
+            line-height: 1.5;
+        }
+
+        /* ===== CONTACT SECTION (GRAY-50) ===== */
+        .contact {
+            background: var(--gray-50);
+        }
+
+        .contact-inner {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .contact-card-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 18px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+
+        .contact-item:last-child { margin-bottom: 0; }
+
+        .contact-item-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--red-light);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            flex-shrink: 0;
+        }
+
+        .contact-item-label {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 3px;
+        }
+
+        .contact-item-val {
+            font-size: 14px;
+            color: var(--black);
+            font-weight: 500;
+        }
+
+        .contact-item-val a {
+            color: var(--red);
+            transition: opacity 0.2s;
+        }
+
+        .contact-item-val a:hover { opacity: 0.75; }
+
+        .expect-list { display: flex; flex-direction: column; gap: 10px; }
+
+        .expect-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--gray-700);
+        }
+
+        .expect-check {
+            width: 20px;
+            height: 20px;
+            background: var(--red-light);
+            color: var(--red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .contact-form {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius);
+            padding: 36px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .form-group { margin-bottom: 20px; }
+        .form-group:last-child { margin-bottom: 0; }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 7px;
+        }
+
+        .req { color: var(--red); }
+
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 11px 14px;
+            border: 1.5px solid var(--gray-200);
+            border-radius: var(--radius-sm);
+            font-family: var(--font);
+            font-size: 14px;
+            color: var(--black);
+            background: var(--white);
+            transition: border-color 0.2s;
+            outline: none;
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            border-color: var(--red);
+        }
+
+        .form-textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--black);
+            padding: 64px 0 32px;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.7;
+            margin-top: 16px;
+            max-width: 260px;
+        }
+
+        .footer-col-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.35);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: var(--white); }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-bottom p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.3);
+        }
+
+        .footer-socials { display: flex; gap: 10px; }
+
+        .social-link {
+            width: 34px;
+            height: 34px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+            transition: all 0.2s;
+        }
+
+        .social-link:hover {
+            background: var(--red);
+            border-color: var(--red);
+            color: white;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 960px) {
+            .hero-inner { grid-template-columns: 1fr; gap: 56px; }
+            .hero-visual { display: none; }
+            .hero { min-height: auto; padding-bottom: 64px; }
+
+            .story-inner { grid-template-columns: 1fr; gap: 48px; }
+            .whyus-grid { grid-template-columns: 1fr; }
+            .leadership-grid { grid-template-columns: 1fr 1fr; }
+            .culture-inner { grid-template-columns: 1fr; gap: 48px; }
+            .contact-inner { grid-template-columns: 1fr; }
+            .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+        }
+
+        @media (max-width: 768px) {
+            .section { padding: 64px 0; }
+
+            .hamburger { display: flex; }
+            .nav-links { display: none; }
+            .btn-login { display: none; }
+
+            .leadership-grid { grid-template-columns: 1fr; }
+            .whyus-grid { grid-template-columns: 1fr; }
+            .story-stats { flex-direction: column; }
+            .story-stat { min-width: unset; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-top { grid-template-columns: 1fr; gap: 28px; }
+            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+
+            .culture-pillars { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .hero-title { letter-spacing: -0.5px; }
+            .hero-actions { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header scrolled" id="header">
+    <div class="container">
+        <nav class="nav">
+            <a href="LandingPage.html" class="logo">Pragma<span>Apps</span></a>
+            <div class="nav-right">
+                <div class="nav-links" id="navLinks">
+                    <a href="LandingPage.html">Home</a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-dropdown-toggle">Services <span class="dropdown-arrow">&#9660;</span></a>
+                        <div class="nav-dropdown-menu">
+                            <a href="ProductDevelopmentPage.html">Product Development</a>
+                            <a href="DigitalTransformationPage.html">Digital Transformation</a>
+                            <a href="EnterpriseIntegrationPage.html">Enterprise Integration</a>
+                            <a href="AIAndMLPage.html">AI &amp; Machine Learning</a>
+                            <a href="CTOAsAServicePage.html">CTO as a Service</a>
+                            <a href="PerformanceEngineeringPage.html">Performance Engineering</a>
+                        </div>
+                    </div>
+                    <a href="#">Products</a>
+                    <a href="AboutPage.html" class="active">About</a>
+                    <a href="BlogPage.html">Blog</a>
+                </div>
+                <div class="nav-cta">
+                    <a href="#" class="btn-login">Login</a>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+    <div class="container">
+        <div class="hero-inner">
+            <!-- Left -->
+            <div class="hero-left">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    AI-First Engineering Partner
+                </div>
+                <h1 class="hero-title">
+                    Deep Engineering.<br>
+                    <span class="accent">AI-Driven</span><br>
+                    Execution.
+                </h1>
+                <p class="hero-sub">
+                    Since 2007, we have helped startups and global enterprises build platforms that scale. Today, we combine that legacy with the full power of AI — delivering faster, smarter and leaner than ever before.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Work With Us &#9658;</a>
+                    <a href="#story" class="btn btn-outline-white">Our Story</a>
+                </div>
+            </div>
+
+            <!-- Right — visual cards -->
+            <div class="hero-visual">
+                <!-- Founding / pipeline bar -->
+                <div class="hv-card hv-founding">
+                    <div class="hv-founding-logo">P</div>
+                    <div>
+                        <div class="hv-founding-label">Established</div>
+                        <div class="hv-founding-text">PragmaApps · Since 2007</div>
+                    </div>
+                    <div class="hv-founding-pipeline">
+                        <span class="hv-pipe-step">Assess</span>
+                        <span class="hv-pipe-arrow">›</span>
+                        <span class="hv-pipe-step">Design</span>
+                        <span class="hv-pipe-arrow">›</span>
+                        <span class="hv-pipe-step active">Build</span>
+                        <span class="hv-pipe-arrow">›</span>
+                        <span class="hv-pipe-step">Scale</span>
+                    </div>
+                </div>
+
+                <!-- Stats card -->
+                <div class="hv-card hv-stats">
+                    <div class="hv-stats-label">Delivery track record</div>
+                    <div class="hv-stats-grid">
+                        <div class="hv-stat-item">
+                            <div class="hv-stat-value">350<span class="hv-accent">+</span></div>
+                            <div class="hv-stat-desc">Clients served</div>
+                        </div>
+                        <div class="hv-stat-item">
+                            <div class="hv-stat-value">15<span class="hv-accent">+</span></div>
+                            <div class="hv-stat-desc">Years of delivery</div>
+                        </div>
+                        <div class="hv-stat-item">
+                            <div class="hv-stat-value">12<span class="hv-accent">+</span></div>
+                            <div class="hv-stat-desc">Countries reached</div>
+                        </div>
+                        <div class="hv-stat-item">
+                            <div class="hv-stat-value">40<span class="hv-accent">%</span></div>
+                            <div class="hv-stat-desc">Faster with AI tooling</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI-First badge -->
+                <div class="hv-card hv-aifirst">
+                    <div class="hv-ai-icon">&#129302;</div>
+                    <div class="hv-ai-label">AI-First</div>
+                    <div class="hv-ai-sub">Every workflow<br>augmented by AI</div>
+                </div>
+
+                <!-- Delivery milestones -->
+                <div class="hv-card hv-delivery">
+                    <div class="hv-delivery-label">Recent Wins</div>
+                    <div class="hv-delivery-list">
+                        <div class="hv-delivery-item">
+                            <span class="hv-delivery-dot green"></span>
+                            Govmates — Federal AI Integration
+                        </div>
+                        <div class="hv-delivery-item">
+                            <span class="hv-delivery-dot green"></span>
+                            Inscopix — Neuro SaaS Platform
+                        </div>
+                        <div class="hv-delivery-item">
+                            <span class="hv-delivery-dot yellow"></span>
+                            LifeSherpa — FinTech Scale-up
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Global reach -->
+                <div class="hv-card hv-global">
+                    <div class="hv-global-num">12<span class="hv-global-accent">+</span></div>
+                    <div class="hv-global-label">Countries<br>Delivered To</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== COMPANY STORY ===== -->
+<section class="story-section section" id="story">
+    <div class="container">
+        <div class="story-inner">
+            <!-- Left narrative -->
+            <div class="story-text">
+                <div class="section-tag">Our Story</div>
+                <h2 class="section-title">Built on 15+ Years of Engineering Credibility</h2>
+
+                <p>PragmaApps was founded in 2007 with a single conviction: that <strong>great software is an outcome of engineering discipline, not headcount</strong>. We began by partnering with early-stage startups to build foundational platforms — systems that needed to survive scale, attract investors, and enter competitive global markets.</p>
+
+                <p>Over the next decade, our work expanded globally. We built and scaled products across the <strong>US, UK, Europe and the Asia-Pacific</strong> — working alongside CxOs, product teams and engineering leads at companies ranging from seed-stage startups to Fortune 500 enterprises. We helped several of these companies achieve <strong>successful exits and funding milestones</strong>.</p>
+
+                <p>In 2022, we made a deliberate pivot. We embedded AI into the core of every delivery workflow — from architecture to code review to deployment automation. The result was not just faster delivery. It was <strong>fundamentally better software, built with leaner teams, at a fraction of the legacy cost</strong>.</p>
+
+                <p>Today, PragmaApps is an <strong>AI-First digital engineering and consulting partner</strong> — combining the hard-won wisdom of 15+ years with the velocity of modern AI-assisted execution. We do not sell hours. We engineer outcomes.</p>
+
+                <!-- Stat pills -->
+                <div class="story-stats">
+                    <div class="story-stat">
+                        <div class="story-stat-value">2007<span></span></div>
+                        <div class="story-stat-label">Founded</div>
+                    </div>
+                    <div class="story-stat">
+                        <div class="story-stat-value">350<span>+</span></div>
+                        <div class="story-stat-label">Clients</div>
+                    </div>
+                    <div class="story-stat">
+                        <div class="story-stat-value">12<span>+</span></div>
+                        <div class="story-stat-label">Countries</div>
+                    </div>
+                    <div class="story-stat">
+                        <div class="story-stat-value">5<span>+</span></div>
+                        <div class="story-stat-label">Exits Supported</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right timeline -->
+            <div>
+                <div class="story-milestones">
+                    <div class="story-milestone">
+                        <div class="milestone-year">2007</div>
+                        <div class="milestone-title">Foundation & Early Builds</div>
+                        <div class="milestone-desc">Started as a lean product engineering studio. Delivered first SaaS platforms for US-based startups entering Series A.</div>
+                    </div>
+                    <div class="story-milestone">
+                        <div class="milestone-year">2010 – 2014</div>
+                        <div class="milestone-title">Enterprise Expansion</div>
+                        <div class="milestone-desc">Grew into enterprise integration and digital transformation — partnering with global organizations on complex, high-stakes migrations.</div>
+                    </div>
+                    <div class="story-milestone">
+                        <div class="milestone-year">2015 – 2019</div>
+                        <div class="milestone-title">Global Delivery Scale</div>
+                        <div class="milestone-desc">Expanded delivery footprint to 10+ countries. Supported multiple clients through M&amp;A events, platform exits and Series B/C fundraises.</div>
+                    </div>
+                    <div class="story-milestone">
+                        <div class="milestone-year">2020 – 2021</div>
+                        <div class="milestone-title">Remote-First Transformation</div>
+                        <div class="milestone-desc">Built and refined high-velocity remote delivery models. Onboarded AI-assisted tools across the engineering workflow for the first time.</div>
+                    </div>
+                    <div class="story-milestone active">
+                        <div class="milestone-year">2022 – Present</div>
+                        <div class="milestone-title">AI-First Engineering Partner</div>
+                        <div class="milestone-desc">Fully embedded AI across ideation, architecture, development and QA. Helping clients move from concept to production 40% faster with smaller, elite teams.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== WHY US ===== -->
+<section class="whyus-section section" id="why-us">
+    <div class="container">
+        <div class="section-center">
+            <div class="section-tag">Why PragmaApps</div>
+            <h2 class="section-title">What Sets Us Apart</h2>
+            <p class="section-sub">We do not compete on scale or rate cards. We compete on the quality of our thinking, the speed of our execution, and the depth of our accountability.</p>
+        </div>
+
+        <div class="whyus-grid">
+            <!-- Card 1 -->
+            <div class="whyus-card">
+                <div class="whyus-icon">&#127775;</div>
+                <div class="whyus-card-title">Elite Engineering Talent</div>
+                <div class="whyus-card-body">
+                    An expert programmer outperforms an entire team of average ones. Every person at PragmaApps is handpicked — a top-tier talent with a track record of consistent, high-quality delivery. We hold an uncompromising bar because software delivery failures have a cost most companies never fully recover from.
+                </div>
+                <div class="whyus-tags">
+                    <span class="whyus-tag">Senior-Only Teams</span>
+                    <span class="whyus-tag">System Thinkers</span>
+                    <span class="whyus-tag">Production-Ready</span>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="whyus-card">
+                <div class="whyus-icon">&#9881;&#65039;</div>
+                <div class="whyus-card-title">Technology-Agnostic Architecture</div>
+                <div class="whyus-card-body">
+                    Our focus is always on performance, scalability and flexibility — not on pushing a preferred stack. Every team member is an expert across multiple technologies. We choose the right tool for your context, not the trendiest one in the room.
+                </div>
+                <div class="whyus-tags">
+                    <span class="whyus-tag">Right-Fit Stack</span>
+                    <span class="whyus-tag">Outcome-Driven Design</span>
+                    <span class="whyus-tag">Scalable Foundations</span>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="whyus-card">
+                <div class="whyus-icon">&#9889;</div>
+                <div class="whyus-card-title">Lean, High-Velocity Delivery</div>
+                <div class="whyus-card-body">
+                    We work in small, highly efficient teams where management overhead is minimal. Small teams spend less time coordinating and more time building. We run tight one-to-two week sprints and put working software in front of clients — every cycle, without exception.
+                </div>
+                <div class="whyus-tags">
+                    <span class="whyus-tag">AI-Augmented</span>
+                    <span class="whyus-tag">Sprint Discipline</span>
+                    <span class="whyus-tag">40% Faster Delivery</span>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="whyus-card">
+                <div class="whyus-icon">&#128200;</div>
+                <div class="whyus-card-title">Pragmatic, Cost-Optimized Innovation</div>
+                <div class="whyus-card-body">
+                    If an open-source or third-party solution genuinely fits your needs, we will tell you upfront — rather than build for billing. Even when we write custom software, we leverage best-of-breed open source foundations. Great solutions at optimal cost is not a slogan. It is our operating standard.
+                </div>
+                <div class="whyus-tags">
+                    <span class="whyus-tag">Value-First</span>
+                    <span class="whyus-tag">No Vendor Lock-in</span>
+                    <span class="whyus-tag">Lean Overhead</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== LEADERSHIP ===== -->
+<section class="leadership-section section" id="leadership">
+    <div class="container">
+        <div class="section-center">
+            <div class="section-tag">Leadership</div>
+            <h2 class="section-title">The People Behind the Work</h2>
+            <p class="section-sub">Our leadership brings decades of hands-on experience across product engineering, enterprise scale and entrepreneurial ventures — across global markets.</p>
+        </div>
+
+        <div class="leadership-grid">
+            <!-- Vishal Singla -->
+            <div class="leader-card">
+                <div class="leader-photo">
+                    <img src="images/Vishal-Singla.png" alt="Vishal Singla">
+                </div>
+                <div class="leader-content">
+                    <div class="leader-name">Vishal Singla</div>
+                    <div class="leader-role">Director — Business Leadership</div>
+                    <div class="leader-divider"></div>
+                    <div class="leader-bio">
+                        Vishal is a business leader with ~25 years of experience spanning technology and international trade. He founded and scaled a product development company to 300+ people across 3 countries before a successful exit. A strong believer in delivering exceptional value — to clients and to the team — a philosophy that defines everything at Pragma.
+                    </div>
+                    <div class="leader-tags">
+                        <span class="leader-tag">Global Scale</span>
+                        <span class="leader-tag">300+ Team Built</span>
+                        <span class="leader-tag">Successful Exit</span>
+                    </div>
+                    <div class="leader-linkedin">
+                        <a href="https://www.linkedin.com/in/vishalsingla/" target="_blank" rel="noopener noreferrer">
+                            LinkedIn <span class="linkedin-arrow">&#8594;</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Abhinav Maheshwari -->
+            <div class="leader-card">
+                <div class="leader-photo">
+                    <img src="images/Abhinav-Maheshwari.jpeg" alt="Abhinav Maheshwari">
+                </div>
+                <div class="leader-content">
+                    <div class="leader-name">Abhinav Maheshwari</div>
+                    <div class="leader-role">Director — Technology</div>
+                    <div class="leader-divider"></div>
+                    <div class="leader-bio">
+                        Abhinav is a proven technology leader with ~25 years of experience building SaaS and enterprise-class software products. He has instilled in the Pragma team a mindset of pragmatic solutions — great software at optimal cost. Hands-on across almost all major technology stacks, he also leads Pragma's active contributions to open source.
+                    </div>
+                    <div class="leader-tags">
+                        <span class="leader-tag">SaaS &amp; Enterprise</span>
+                        <span class="leader-tag">Multi-Stack Expert</span>
+                        <span class="leader-tag">Open Source</span>
+                    </div>
+                    <div class="leader-linkedin">
+                        <a href="https://www.linkedin.com/in/abhinavmaheshwari/" target="_blank" rel="noopener noreferrer">
+                            LinkedIn <span class="linkedin-arrow">&#8594;</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Raj Singhal -->
+            <div class="leader-card">
+                <div class="leader-photo">
+                    <img src="images/Raj-Singhal.jpeg" alt="Raj Singhal">
+                </div>
+                <div class="leader-content">
+                    <div class="leader-name">Raj Singhal</div>
+                    <div class="leader-role">Advisor — Innovation &amp; Strategy</div>
+                    <div class="leader-divider"></div>
+                    <div class="leader-bio">
+                        Raj is a seasoned entrepreneur who has taken multiple businesses to successful exits. Passionate about innovation, he advises companies on how to think differently. He sits on the boards of several companies across food tech, education and technology, and is currently CEO of Footprints — the well-known playschool chain.
+                    </div>
+                    <div class="leader-tags">
+                        <span class="leader-tag">Serial Entrepreneur</span>
+                        <span class="leader-tag">Multiple Exits</span>
+                        <span class="leader-tag">Board Advisor</span>
+                    </div>
+                    <div class="leader-linkedin">
+                        <a href="https://www.linkedin.com/in/singhalraj/" target="_blank" rel="noopener noreferrer">
+                            LinkedIn <span class="linkedin-arrow">&#8594;</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CULTURE & CAREERS ===== -->
+<section class="culture-section section" id="careers">
+    <div class="container">
+        <div class="culture-inner">
+            <!-- Left -->
+            <div class="culture-left">
+                <div class="section-tag">Culture &amp; Careers</div>
+                <h2 class="culture-title">Life at<br>Pragma</h2>
+                <p class="culture-sub">
+                    This is what makes us different. A culture built for growth, flexibility and impact — where you work on meaningful products, grow as a partner, and build a long-term future. We call it the Pragma way of life.
+                </p>
+                <a href="mailto:info@pragmaapps.com?subject=Career%20Enquiry%20at%20PragmaApps" class="btn btn-primary">Join Our Team &#9658;</a>
+            </div>
+
+            <!-- Right — culture pillars -->
+            <div class="culture-pillars">
+                <div class="culture-pillar">
+                    <div class="culture-pillar-icon">&#128214;</div>
+                    <div class="culture-pillar-title">Learning &amp; Excellence</div>
+                    <div class="culture-pillar-desc">Seniors and peers help you grow beyond your current stack. We challenge you to develop pragmatic solutions to real business problems — not just stay in your lane.</div>
+                </div>
+                <div class="culture-pillar">
+                    <div class="culture-pillar-icon">&#127968;</div>
+                    <div class="culture-pillar-title">Remote, Close to Family</div>
+                    <div class="culture-pillar-desc">90% of our team works remotely from across India, close to their families. We pioneered this before it became mainstream — because a balanced life makes better engineers.</div>
+                </div>
+                <div class="culture-pillar">
+                    <div class="culture-pillar-icon">&#127919;</div>
+                    <div class="culture-pillar-title">Opportunity for Impact</div>
+                    <div class="culture-pillar-desc">Our clients are building technology that advances people's lives. From neuro-diverse employment platforms to cutting-edge brain research — your work here genuinely matters.</div>
+                </div>
+                <div class="culture-pillar">
+                    <div class="culture-pillar-icon">&#127760;</div>
+                    <div class="culture-pillar-title">Global Perspective</div>
+                    <div class="culture-pillar-desc">Work directly with clients across the US, UK and Europe — building a worldview and getting exposed to ideas that are shaping the future, from your hometown.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact section" id="contact">
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 56px;">
+            <div class="section-tag">GET IN TOUCH</div>
+            <h2 class="section-title">Let's Build Something Together</h2>
+            <p class="section-sub" style="margin: 0 auto; margin-top: 8px;">Have a product idea, a transformation initiative, or just want to explore how AI-First engineering can accelerate your roadmap? We'd love to hear from you.</p>
+        </div>
+        <div class="contact-inner">
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h3 class="contact-card-title">Get in Touch</h3>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">&#x2709;&#xFE0F;</div>
+                        <div>
+                            <div class="contact-item-label">Email</div>
+                            <div class="contact-item-val"><a href="mailto:info@pragmaapps.com">info@pragmaapps.com</a></div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">&#x1F4CD;</div>
+                        <div>
+                            <div class="contact-item-label">Location</div>
+                            <div class="contact-item-val">D-84, Sector 2, Noida, Uttar Pradesh 201301</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">&#x1F310;</div>
+                        <div>
+                            <div class="contact-item-label">Website</div>
+                            <div class="contact-item-val"><a href="https://pragmaapps.com/">pragmaapps.com</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <h3 class="contact-card-title">What to Expect</h3>
+                    <div class="expect-list">
+                        <div class="expect-item"><div class="expect-check">&#10003;</div>Response within 24 hours</div>
+                        <div class="expect-item"><div class="expect-check">&#10003;</div>Free technical consultation</div>
+                        <div class="expect-item"><div class="expect-check">&#10003;</div>Detailed project proposal</div>
+                        <div class="expect-item"><div class="expect-check">&#10003;</div>No obligation quote</div>
+                        <div class="expect-item"><div class="expect-check">&#10003;</div>AI readiness assessment</div>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label class="form-label">Name <span class="req">*</span></label>
+                    <input type="text" class="form-input" placeholder="Your name" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Email <span class="req">*</span></label>
+                        <input type="email" class="form-input" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Company</label>
+                        <input type="text" class="form-input" placeholder="Your company">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">How can we help?</label>
+                    <select class="form-select">
+                        <option>Select a topic...</option>
+                        <option>Product Development</option>
+                        <option>Digital Transformation</option>
+                        <option>AI &amp; Machine Learning Integration</option>
+                        <option>Enterprise Integration</option>
+                        <option>CTO as a Service</option>
+                        <option>Career &amp; Hiring Enquiry</option>
+                        <option>Partnership Opportunity</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Message <span class="req">*</span></label>
+                    <textarea class="form-textarea" placeholder="Tell us about your project, challenge or opportunity..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary form-submit">Send Message &#9658;</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="LandingPage.html" class="logo" style="color: white;">Pragma<span style="color: white;">Apps</span></a>
+                <p>AI-first software development for startups and enterprises. Building great solutions at optimal cost since 2007.</p>
+            </div>
+            <div>
+                <div class="footer-col-title">Services</div>
+                <div class="footer-links">
+                    <a href="ProductDevelopmentPage.html">Product Development</a>
+                    <a href="DigitalTransformationPage.html">Digital Transformation</a>
+                    <a href="EnterpriseIntegrationPage.html">Enterprise Integration</a>
+                    <a href="AIAndMLPage.html">AI/ML Integration</a>
+                    <a href="CTOAsAServicePage.html">CTO as a Service</a>
+                </div>
+            </div>
+            <div>
+                <div class="footer-col-title">Company</div>
+                <div class="footer-links">
+                    <a href="AboutPage.html">About Us</a>
+                    <a href="GovmatesCaseStudyPage.html">Case Studies</a>
+                    <a href="BlogPage.html">Blog</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div>
+                <div class="footer-col-title">Contact</div>
+                <div class="footer-links">
+                    <a href="mailto:info@pragmaapps.com">info@pragmaapps.com</a>
+                    <a href="#">D-84, Sector 2, Noida, Uttar Pradesh 201301</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&#169; 2025 PragmaApps. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="#" class="social-link">in</a>
+                <a href="#" class="social-link">&#120143;</a>
+                <a href="#" class="social-link">&#9651;</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+    // Header scroll shadow
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+        const isOpen = navLinks.style.display === 'flex';
+        navLinks.style.display = isOpen ? 'none' : 'flex';
+        if (!isOpen) {
+            navLinks.style.flexDirection = 'column';
+            navLinks.style.position = 'absolute';
+            navLinks.style.top = '70px';
+            navLinks.style.left = '0';
+            navLinks.style.right = '0';
+            navLinks.style.background = 'white';
+            navLinks.style.padding = '16px 24px 24px';
+            navLinks.style.borderBottom = '1px solid #e8e8e8';
+            navLinks.style.zIndex = '999';
+            navLinks.style.boxShadow = '0 8px 20px rgba(0,0,0,0.08)';
+        }
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', e => {
+            const target = document.querySelector(link.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if (window.innerWidth <= 768) navLinks.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
