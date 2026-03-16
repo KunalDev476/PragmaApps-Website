@@ -751,258 +751,243 @@
 
         .mission-value-text { font-size: 13px; color: var(--gray-700); }
 
-        /* ===== APPROACH ===== */
+        /* ===== APPROACH (How We Work) ===== */
         .approach { background: var(--gray-50); }
 
-        .approach-accordion {
+        /* Tab Navigation */
+        .hww-tabs {
+            display: flex;
+            gap: 0;
+            border-bottom: 2px solid var(--gray-200);
+            margin-top: 56px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .hww-tabs::-webkit-scrollbar { display: none; }
+
+        .hww-tab {
             display: flex;
             flex-direction: column;
-            gap: 16px;
-            margin-top: 48px;
-            max-width: 1100px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .accordion-item {
-            background: var(--white);
-            border: 2px solid var(--gray-200);
-            border-radius: var(--radius);
-            overflow: hidden;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .accordion-item:hover {
-            border-color: var(--red);
-            box-shadow: var(--shadow-md);
-        }
-
-        .accordion-item.active {
-            border-color: var(--red);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .accordion-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 24px 32px;
+            align-items: flex-start;
+            gap: 4px;
+            padding: 20px 28px;
             cursor: pointer;
-            user-select: none;
+            border: none;
+            background: transparent;
+            font-family: var(--font);
+            white-space: nowrap;
+            position: relative;
             transition: background 0.2s ease;
-        }
-
-        .accordion-header:hover {
-            background: var(--gray-50);
-        }
-
-        .accordion-left {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            flex: 1;
-        }
-
-        .accordion-number {
-            font-size: 32px;
-            font-weight: 900;
-            color: var(--red);
-            line-height: 1;
-            min-width: 48px;
-        }
-
-        .accordion-icon {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, var(--red-light) 0%, #fef0f2 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
             flex-shrink: 0;
+            text-align: left;
         }
 
-        .accordion-title-wrap {
-            flex: 1;
+        .hww-tab:hover { background: rgba(215,38,56,0.04); }
+
+        .hww-tab::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--red);
+            transform: scaleX(0);
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .accordion-title {
-            font-size: 20px;
+        .hww-tab.active::after { transform: scaleX(1); }
+
+        .hww-tab-num {
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            color: var(--gray-500);
+            text-transform: uppercase;
+        }
+
+        .hww-tab.active .hww-tab-num { color: var(--red); }
+
+        .hww-tab-label {
+            font-size: 14px;
             font-weight: 700;
-            color: var(--black);
-            margin: 0 0 4px 0;
+            color: var(--gray-700);
             line-height: 1.3;
         }
 
-        .accordion-subtitle {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--red);
+        .hww-tab.active .hww-tab-label { color: var(--black); }
+
+        /* Panel Wrapper */
+        .hww-panels { position: relative; min-height: 420px; }
+
+        .hww-panel { display: none; }
+
+        .hww-panel.active {
+            display: block;
+            animation: hwwFadeIn 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes hwwFadeIn {
+            from { opacity: 0; transform: translateY(14px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Panel header */
+        .hww-panel-header {
+            padding: 40px 0 32px;
+            max-width: 680px;
+        }
+
+        .hww-panel-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            color: var(--red);
+            background: var(--red-light);
+            border-radius: 40px;
+            padding: 5px 14px;
+            margin-bottom: 14px;
+        }
+
+        .hww-panel-title {
+            font-size: clamp(20px, 2.5vw, 28px);
+            font-weight: 800;
+            color: var(--black);
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .hww-panel-desc {
+            font-size: 15px;
+            color: var(--gray-700);
+            line-height: 1.75;
             margin: 0;
         }
 
-        .accordion-toggle {
-            color: var(--gray-500);
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s;
+        /* Card grid */
+        .hww-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .hww-card {
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: hwwCardIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hww-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 3px;
+            height: 100%;
+            background: var(--red);
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hww-card:hover {
+            border-color: var(--red);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-3px);
+        }
+
+        .hww-card:hover::before { transform: scaleY(1); }
+
+        .hww-card:nth-child(1) { animation-delay: 0.05s; }
+        .hww-card:nth-child(2) { animation-delay: 0.12s; }
+        .hww-card:nth-child(3) { animation-delay: 0.19s; }
+        .hww-card:nth-child(4) { animation-delay: 0.26s; }
+
+        @keyframes hwwCardIn {
+            from { opacity: 0; transform: translateY(16px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .hww-card-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--red-light) 0%, #fef0f2 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
             flex-shrink: 0;
         }
 
-        .accordion-item.active .accordion-toggle {
-            transform: rotate(180deg);
-            color: var(--red);
-        }
-
-        .accordion-body {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            padding: 0 32px;
-        }
-
-        .accordion-item.active .accordion-body {
-            max-height: 1000px;
-            padding: 0 32px 32px 32px;
-        }
-
-        .accordion-content-grid {
-            display: grid;
-            grid-template-columns: 1.3fr 0.7fr;
-            gap: 32px;
-            padding-top: 20px;
-        }
-
-        .accordion-main {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .accordion-desc {
+        .hww-card-title {
             font-size: 15px;
-            color: var(--gray-700);
-            line-height: 1.7;
-            margin: 0;
-        }
-
-        .accordion-detail-section h4 {
-            font-size: 13px;
             font-weight: 700;
             color: var(--black);
-            margin: 0 0 12px 0;
-        }
-
-        .accordion-list {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            padding-left: 0;
+            line-height: 1.3;
             margin: 0;
-            list-style: none;
         }
 
-        .accordion-list li {
-            font-size: 14px;
+        .hww-card-desc {
+            font-size: 13px;
             color: var(--gray-700);
-            line-height: 1.6;
-            padding-left: 24px;
-            position: relative;
+            line-height: 1.65;
+            margin: 0;
+            flex: 1;
         }
 
-        .accordion-list li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--red);
-            font-weight: 700;
-            font-size: 14px;
-        }
-
-        .accordion-sidebar {
-            background: linear-gradient(135deg, var(--black) 0%, var(--black-soft) 100%);
-            border-radius: var(--radius-sm);
-            padding: 28px;
-            color: var(--white);
+        /* Footer microline */
+        .hww-microline {
             display: flex;
-            flex-direction: column;
-            gap: 16px;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 20px;
+            background: linear-gradient(90deg, var(--black) 0%, var(--black-soft) 100%);
+            border-radius: var(--radius-sm);
             position: relative;
             overflow: hidden;
+            margin-bottom: 0;
         }
 
-        .accordion-sidebar::before {
+        .hww-microline::before {
             content: '';
             position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(215,38,56,0.15) 0%, transparent 70%);
+            top: -50%; right: -30%;
+            width: 60%; height: 200%;
+            background: radial-gradient(circle, rgba(215,38,56,0.18) 0%, transparent 70%);
             pointer-events: none;
         }
 
-        .accordion-badge {
-            display: inline-block;
+        .hww-microline-dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
             background: var(--red);
-            color: var(--white);
-            font-size: 10px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            padding: 6px 10px;
-            border-radius: 6px;
-            width: fit-content;
+            flex-shrink: 0;
             position: relative;
             z-index: 1;
         }
 
-        .accordion-insight {
-            font-size: 14px;
-            line-height: 1.6;
-            color: rgba(255, 255, 255, 0.95);
-            margin: 0;
-            position: relative;
-            z-index: 1;
-        }
-
-        .accordion-insight strong {
-            color: var(--white);
-            font-weight: 700;
-        }
-
-        .accordion-impact {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: var(--radius-sm);
-            padding: 16px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .impact-label {
-            font-size: 10px;
-            font-weight: 800;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 10px;
-        }
-
-        .impact-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-
-        .impact-tag {
-            background: rgba(255, 255, 255, 0.2);
-            color: var(--white);
-            font-size: 12px;
+        .hww-microline-text {
+            font-size: 13px;
             font-weight: 600;
-            padding: 5px 12px;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: rgba(255,255,255,0.9);
+            letter-spacing: 0.2px;
+            position: relative;
+            z-index: 1;
         }
 
         .approach-summary {
@@ -1474,6 +1459,7 @@
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
             .approach-grid { grid-template-columns: repeat(2, 1fr); }
+            .hww-cards { grid-template-columns: repeat(2, 1fr); }
             .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
         }
 
@@ -1496,18 +1482,9 @@
             .reviews-divider { width: 40px; height: 1px; }
             .why-inner { grid-template-columns: 1fr; gap: 40px; }
             .nav-cta .btn-login { display: none; }
-            .accordion-header { padding: 20px 20px; }
-            .accordion-left { flex-direction: column; align-items: flex-start; gap: 12px; }
-            .accordion-number { font-size: 24px; min-width: auto; }
-            .accordion-icon { width: 40px; height: 40px; font-size: 20px; }
-            .accordion-title { font-size: 18px; }
-            .accordion-subtitle { font-size: 12px; }
-            .accordion-body { padding: 0 20px; }
-            .accordion-item.active .accordion-body { padding: 0 20px 24px 20px; }
-            .accordion-content-grid { grid-template-columns: 1fr; gap: 20px; }
-            .accordion-sidebar { padding: 20px; }
-            .accordion-desc { font-size: 14px; }
-            .accordion-list li { font-size: 13px; }
+            .hww-tab { padding: 16px 18px; }
+            .hww-tab-label { font-size: 12px; }
+            .hww-cards { grid-template-columns: 1fr; }
             .summary-content h3 { font-size: 22px; }
             .summary-content p { font-size: 14px; }
             .highlight-item { font-size: 16px; }
@@ -1794,253 +1771,217 @@
     <!-- How We Work / Approach Section -->
     <section class="approach section" id="approach">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 64px;">
+            <div style="text-align: center;">
                 <div class="section-tag">OUR PROCESS</div>
                 <h2 class="section-title">How We Work</h2>
                 <p class="section-sub" style="margin: 0 auto;">Software Built Faster — Without Cutting Corners</p>
                 <p style="font-size: 15px; color: var(--gray-700); margin-top: 12px; max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.7;">At Pragma Apps, AI does not replace engineering — it removes friction. We use AI to assist engineers in repetitive cognitive tasks so they can focus on architecture, correctness, and long-term reliability. The result is earlier clarity, better decisions, and fewer surprises.</p>
             </div>
 
-            <div class="approach-accordion">
-                <!-- Accordion Item 1 -->
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <div class="accordion-left">
-                            <div class="accordion-number">01</div>
-                            <div class="accordion-icon">🎯</div>
-                            <div class="accordion-title-wrap">
-                                <h3 class="accordion-title">Requirement Analysis &amp; Scoping</h3>
-                                <p class="accordion-subtitle">Discover Missing Requirements Early</p>
-                            </div>
-                        </div>
-                        <div class="accordion-toggle">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="accordion-body">
-                        <div class="accordion-content-grid">
-                            <div class="accordion-main">
-                                <p class="accordion-desc">Many project delays originate at the very beginning: incomplete or ambiguous requirements. We use AI as a structured analysis assistant during discovery.</p>
-                                <div class="accordion-detail-section">
-                                    <h4>AI helps our team:</h4>
-                                    <ul class="accordion-list">
-                                        <li>Transform informal business ideas into structured requirements</li>
-                                        <li>Generate user stories and acceptance criteria</li>
-                                        <li>Identify edge cases and failure scenarios</li>
-                                        <li>Surface hidden assumptions</li>
-                                        <li>Anticipate integration and data-flow issues</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="accordion-sidebar">
-                                <div class="accordion-badge">Why this matters</div>
-                                <p class="accordion-insight">Traditional projects discover missing requirements during testing or after launch. <strong>We discover them during planning.</strong></p>
-                                <div class="accordion-impact">
-                                    <div class="impact-label">Impact</div>
-                                    <div class="impact-tags">
-                                        <span class="impact-tag">Clearer scope</span>
-                                        <span class="impact-tag">Accurate estimates</span>
-                                        <span class="impact-tag">Fewer change requests</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Accordion Item 2 -->
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <div class="accordion-left">
-                            <div class="accordion-number">02</div>
-                            <div class="accordion-icon">🎨</div>
-                            <div class="accordion-title-wrap">
-                                <h3 class="accordion-title">Rapid Prototyping &amp; UX Validation</h3>
-                                <p class="accordion-subtitle">Validate Workflows Before Building</p>
-                            </div>
-                        </div>
-                        <div class="accordion-toggle">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="accordion-body">
-                        <div class="accordion-content-grid">
-                            <div class="accordion-main">
-                                <p class="accordion-desc">Before writing production code, we validate workflows. AI accelerates prototyping so you see results faster.</p>
-                                <div class="accordion-detail-section">
-                                    <h4>AI helps us:</h4>
-                                    <ul class="accordion-list">
-                                        <li>Explore alternate user flows</li>
-                                        <li>Draft UI structures</li>
-                                        <li>Simulate interaction scenarios</li>
-                                        <li>Prepare testable mock workflows</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="accordion-sidebar">
-                                <div class="accordion-badge">Early validation</div>
-                                <p class="accordion-insight">Stakeholders can react to a working model early rather than reviewing static specifications.</p>
-                                <div class="accordion-impact">
-                                    <div class="impact-label">Impact</div>
-                                    <div class="impact-tags">
-                                        <span class="impact-tag">Early feedback</span>
-                                        <span class="impact-tag">Reduced rework</span>
-                                        <span class="impact-tag">Higher adoption</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Accordion Item 3 -->
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <div class="accordion-left">
-                            <div class="accordion-number">03</div>
-                            <div class="accordion-icon">⚡</div>
-                            <div class="accordion-title-wrap">
-                                <h3 class="accordion-title">Coding &amp; Implementation</h3>
-                                <p class="accordion-subtitle">AI Co-pilot, Not Autopilot</p>
-                            </div>
-                        </div>
-                        <div class="accordion-toggle">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="accordion-body">
-                        <div class="accordion-content-grid">
-                            <div class="accordion-main">
-                                <p class="accordion-desc">During development, AI acts as an engineering co-pilot. AI accelerates execution, but engineering judgment remains human.</p>
-                                <div class="accordion-detail-section">
-                                    <h4>AI assists with:</h4>
-                                    <ul class="accordion-list">
-                                        <li>Scaffolding APIs and modules</li>
-                                        <li>Repetitive data-handling code</li>
-                                        <li>Refactoring existing codebases</li>
-                                        <li>Understanding unfamiliar libraries</li>
-                                        <li>Documenting logic</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="accordion-sidebar">
-                                <div class="accordion-badge">Human oversight</div>
-                                <p class="accordion-insight">Every change is still <strong>reviewed by engineers, tested, and integrated into a designed architecture.</strong></p>
-                                <div class="accordion-impact">
-                                    <div class="impact-label">Impact</div>
-                                    <div class="impact-tags">
-                                        <span class="impact-tag">Faster delivery</span>
-                                        <span class="impact-tag">Consistent code</span>
-                                        <span class="impact-tag">Focus on complexity</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Accordion Item 4 -->
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <div class="accordion-left">
-                            <div class="accordion-number">04</div>
-                            <div class="accordion-icon">🔍</div>
-                            <div class="accordion-title-wrap">
-                                <h3 class="accordion-title">Code Reviews &amp; Quality Assurance</h3>
-                                <p class="accordion-subtitle">Higher Coverage, Faster Cycles</p>
-                            </div>
-                        </div>
-                        <div class="accordion-toggle">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="accordion-body">
-                        <div class="accordion-content-grid">
-                            <div class="accordion-main">
-                                <p class="accordion-desc">Code review is one of the most time-consuming parts of software development. AI helps us review more thoroughly and generate comprehensive tests.</p>
-                                <div class="accordion-detail-section">
-                                    <h4>AI helps by:</h4>
-                                    <ul class="accordion-list">
-                                        <li>Identifying potential logic errors</li>
-                                        <li>Flagging risky changes</li>
-                                        <li>Highlighting untested paths</li>
-                                        <li>Checking edge cases</li>
-                                        <li>Generating unit and integration tests</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="accordion-sidebar">
-                                <div class="accordion-badge">Thorough reviews</div>
-                                <p class="accordion-insight">Engineers perform the final review and decide what is correct. AI helps us review code more thoroughly.</p>
-                                <div class="accordion-impact">
-                                    <div class="impact-label">Impact</div>
-                                    <div class="impact-tags">
-                                        <span class="impact-tag">Higher test coverage</span>
-                                        <span class="impact-tag">Fewer regressions</span>
-                                        <span class="impact-tag">Faster releases</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Accordion Item 5 -->
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <div class="accordion-left">
-                            <div class="accordion-number">05</div>
-                            <div class="accordion-icon">🔧</div>
-                            <div class="accordion-title-wrap">
-                                <h3 class="accordion-title">Bug Fixing &amp; Troubleshooting</h3>
-                                <p class="accordion-subtitle">Faster Resolution, Shorter Downtime</p>
-                            </div>
-                        </div>
-                        <div class="accordion-toggle">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="accordion-body">
-                        <div class="accordion-content-grid">
-                            <div class="accordion-main">
-                                <p class="accordion-desc">Bug fixing is often slow because reproducing a problem is harder than solving it. AI helps analyze stack traces, logs, and error patterns quickly.</p>
-                                <div class="accordion-detail-section">
-                                    <h4>AI helps analyze:</h4>
-                                    <ul class="accordion-list">
-                                        <li>Stack traces and error patterns</li>
-                                        <li>Logs and environment differences</li>
-                                        <li>Production anomalies</li>
-                                        <li>Abnormal behavior detection</li>
-                                        <li>Event correlation across services</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="accordion-sidebar">
-                                <div class="accordion-badge">Quick insights</div>
-                                <p class="accordion-insight">Instead of manually searching through logs, engineers can <strong>quickly narrow the probable cause and validate hypotheses.</strong></p>
-                                <div class="accordion-impact">
-                                    <div class="impact-label">Impact</div>
-                                    <div class="impact-tags">
-                                        <span class="impact-tag">Faster debugging</span>
-                                        <span class="impact-tag">Shorter downtime</span>
-                                        <span class="impact-tag">Quick resolution</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Tab Navigation -->
+            <div class="hww-tabs" role="tablist" aria-label="How We Work capability areas">
+                <button class="hww-tab active" role="tab" aria-selected="true" aria-controls="hww-panel-1" onclick="hwwSwitch(this, 'hww-panel-1')">
+                    <span class="hww-tab-num">01</span>
+                    <span class="hww-tab-label">AI-Accelerated<br>Prototyping</span>
+                </button>
+                <button class="hww-tab" role="tab" aria-selected="false" aria-controls="hww-panel-2" onclick="hwwSwitch(this, 'hww-panel-2')">
+                    <span class="hww-tab-num">02</span>
+                    <span class="hww-tab-label">Requirement<br>Analysis</span>
+                </button>
+                <button class="hww-tab" role="tab" aria-selected="false" aria-controls="hww-panel-3" onclick="hwwSwitch(this, 'hww-panel-3')">
+                    <span class="hww-tab-num">03</span>
+                    <span class="hww-tab-label">AI-Accelerated<br>Testing</span>
+                </button>
+                <button class="hww-tab" role="tab" aria-selected="false" aria-controls="hww-panel-4" onclick="hwwSwitch(this, 'hww-panel-4')">
+                    <span class="hww-tab-num">04</span>
+                    <span class="hww-tab-label">AI-Assisted<br>Documentation</span>
+                </button>
+                <button class="hww-tab" role="tab" aria-selected="false" aria-controls="hww-panel-5" onclick="hwwSwitch(this, 'hww-panel-5')">
+                    <span class="hww-tab-num">05</span>
+                    <span class="hww-tab-label">AI-Accelerated<br>Implementation</span>
+                </button>
             </div>
+
+            <!-- Panels -->
+            <div class="hww-panels">
+
+                <!-- Panel 1: AI-Accelerated Prototyping -->
+                <div class="hww-panel active" id="hww-panel-1" role="tabpanel" aria-labelledby="hww-tab-1">
+                    <div class="hww-panel-header">
+                        <div class="hww-panel-tag">⚡ Prototyping</div>
+                        <h3 class="hww-panel-title">AI-Accelerated Prototyping</h3>
+                        <p class="hww-panel-desc">We use AI to turn functional requirements, existing product behavior, and early wireframes into clear prototype flows that teams can validate before development begins.</p>
+                    </div>
+                    <div class="hww-cards">
+                        <div class="hww-card">
+                            <div class="hww-card-icon">🗺️</div>
+                            <h4 class="hww-card-title">From Requirements to Flows</h4>
+                            <p class="hww-card-desc">Convert feature descriptions into structured user journeys, screen flows, and interaction logic ready for design exploration.</p>
+                        </div>
+                        <div class="hww-card">
+                            <div class="hww-card-icon">⚡</div>
+                            <h4 class="hww-card-title">Faster Feature Prototyping</h4>
+                            <p class="hww-card-desc">Quickly define how new features should behave across screens, user actions, validations, and alternate states.</p>
+                        </div>
+                        <div class="hww-card">
+                            <div class="hww-card-icon">🔗</div>
+                            <h4 class="hww-card-title">Smarter Use of Existing UX</h4>
+                            <p class="hww-card-desc">Map new features to existing screens, components, and navigation patterns so prototypes stay consistent with the current product.</p>
+                        </div>
+                        <div class="hww-card">
+                            <div class="hww-card-icon">📋</div>
+                            <h4 class="hww-card-title">Richer Design Handoffs</h4>
+                            <p class="hww-card-desc">Generate prototype notes with validations, edge cases, screen states, and interaction details that reduce ambiguity for engineering.</p>
+                        </div>
+                    </div>
+                    <div class="hww-microline">
+                        <div class="hww-microline-dot"></div>
+                        <span class="hww-microline-text">Clearer flows • Better UX decisions • Faster handoff to engineering</span>
+                    </div>
+                </div>
+
+                <!-- Panel 2: AI-Accelerated Requirement Analysis -->
+                <div class="hww-panel" id="hww-panel-2" role="tabpanel" aria-labelledby="hww-tab-2">
+                    <div class="hww-panel-header">
+                        <div class="hww-panel-tag">🎯 Requirements</div>
+                        <h3 class="hww-panel-title">AI-Accelerated Requirement Analysis</h3>
+                        <p class="hww-panel-desc">We use AI to transform scattered ideas, meeting notes, emails, and raw discussions into clear, structured requirements that teams can execute with confidence.</p>
+                    </div>
+                    <div class="hww-cards">
+                        <div class="hww-card">
+                            <div class="hww-card-icon">🗂️</div>
+                            <h4 class="hww-card-title">Structure Unclear Inputs</h4>
+                            <p class="hww-card-desc">Convert unstructured discussions, client notes, and rough ideas into organized functional requirements, user stories, and acceptance criteria.</p>
+                        </div>
+                        <div class="hww-card">
+                            <div class="hww-card-icon">🔍</div>
+                            <h4 class="hww-card-title">Find Gaps Early</h4>
+                            <p class="hww-card-desc">AI helps uncover missing flows, edge cases, validation rules, exception handling, and integration needs before development begins.</p>
+                        </div>
+                        <div class="hww-card">
+                            <div class="hww-card-icon">📄</div>
+                            <h4 class="hww-card-title">Delivery-Ready Outputs</h4>
+                            <p class="hww-card-desc">Generate structured requirement documents, user stories, acceptance criteria, test scenarios, and feature breakdowns ready for execution.</p>
+                        </div>
+                        <div class="hww-card">
+                            <div class="hww-card-icon">🔄</div>
+                            <h4 class="hww-card-title">Business to Engineering</h4>
+                            <p class="hww-card-desc">Turn business expectations into actionable inputs for design and development, including workflows, APIs, data entities, and implementation tasks.</p>
+                        </div>
+                    </div>
+                    <div class="hww-microline">
+                        <div class="hww-microline-dot"></div>
+                        <span class="hww-microline-text">Clearer requirements • Fewer gaps • Faster delivery</span>
+                    </div>
+                </div>
+
+                <!-- Panel 3: AI-Accelerated Testing -->
+                <div class="hww-panel" id="hww-panel-3" role="tabpanel" aria-labelledby="hww-tab-3">
+                    <div class="hww-panel-header">
+                        <div class="hww-panel-tag">🔍 Testing</div>
+                        <h3 class="hww-panel-title">AI-Accelerated Testing</h3>
+                        <p class="hww-panel-desc">We combine AI and intelligent automation to transform testing from a manual bottleneck into a fast, scalable quality process.</p>
+                    </div>
+                    <div class="hww-cards">
+                        <div class="hww-card">
+                            <div class="hww-card-icon">🧪</div>
+                            <h4 class="hww-card-title">AI-Generated Test Cases</h4>
+                            <p class="hww-card-desc">Automatically generate test cases from requirements, workflows, and user stories, helping teams quickly expand coverage and identify edge cases.</p>
+                        </div>
+                        <div class="hww-card">
+                            <div class="hww-card-icon">⚙️</div>
+                            <h4 class="hww-card-title">Manual to Automated Tests</h4>
+                            <p class="hww-card-desc">Convert existing manual test cases into automated test suites, preserving QA knowledge while reducing repetitive effort.</p>
+                        </div>
+                        <div class="hww-card">
+                            <div class="hww-card-icon">🚀</div>
+                            <h4 class="hww-card-title">Faster Test Automation</h4>
+                            <p class="hww-card-desc">AI-assisted frameworks allow teams to create automated tests from natural language descriptions and application workflows.</p>
+                        </div>
+                        <div class="hww-card">
+                            <div class="hww-card-icon">👁️</div>
+                            <h4 class="hww-card-title">Visual AI Validation</h4>
+                            <p class="hww-card-desc">Detect UI regressions automatically. AI identifies layout shifts, missing elements, and visual inconsistencies across releases.</p>
+                        </div>
+                    </div>
+                    <div class="hww-microline">
+                        <div class="hww-microline-dot"></div>
+                        <span class="hww-microline-text">Faster releases • Higher coverage • Reduced manual testing</span>
+                    </div>
+                </div>
+
+                <!-- Panel 4: AI-Assisted Documentation -->
+                <div class="hww-panel" id="hww-panel-4" role="tabpanel" aria-labelledby="hww-tab-4">
+                    <div class="hww-panel-header">
+                        <div class="hww-panel-tag">📝 Documentation</div>
+                        <h3 class="hww-panel-title">AI-Assisted Documentation</h3>
+                        <p class="hww-panel-desc">We use AI to generate structured documentation as features evolve, helping engineers and users understand how systems work.</p>
+                    </div>
+                    <div class="hww-cards">
+                        <div class="hww-card">
+                            <div class="hww-card-icon">🏗️</div>
+                            <h4 class="hww-card-title">Design Documentation</h4>
+                            <p class="hww-card-desc">Generate structured documentation covering feature design, architecture, data flows, and system interactions.</p>
+                        </div>
+                        <div class="hww-card">
+                            <div class="hww-card-icon">💻</div>
+                            <h4 class="hww-card-title">Developer Documentation</h4>
+                            <p class="hww-card-desc">Produce API descriptions, configuration guides, and integration notes directly from implementation and architecture details.</p>
+                        </div>
+                        <div class="hww-card">
+                            <div class="hww-card-icon">📖</div>
+                            <h4 class="hww-card-title">User Manuals</h4>
+                            <p class="hww-card-desc">Automatically generate step-by-step guides explaining how features work and how users should interact with them.</p>
+                        </div>
+                        <div class="hww-card">
+                            <div class="hww-card-icon">💡</div>
+                            <h4 class="hww-card-title">Knowledge Base</h4>
+                            <p class="hww-card-desc">Create FAQs, troubleshooting guides, and support documentation to help teams and users resolve issues quickly.</p>
+                        </div>
+                    </div>
+                    <div class="hww-microline">
+                        <div class="hww-microline-dot"></div>
+                        <span class="hww-microline-text">Clear knowledge • Faster onboarding • Better support</span>
+                    </div>
+                </div>
+
+                <!-- Panel 5: AI-Accelerated Implementation -->
+                <div class="hww-panel" id="hww-panel-5" role="tabpanel" aria-labelledby="hww-tab-5">
+                    <div class="hww-panel-header">
+                        <div class="hww-panel-tag">⚡ Implementation</div>
+                        <h3 class="hww-panel-title">AI-Accelerated Implementation</h3>
+                        <p class="hww-panel-desc">We use AI to help engineering teams move faster from approved requirements and prototype flows to production-ready implementation.</p>
+                    </div>
+                    <div class="hww-cards">
+                        <div class="hww-card">
+                            <div class="hww-card-icon">🏎️</div>
+                            <h4 class="hww-card-title">Faster Code Delivery</h4>
+                            <p class="hww-card-desc">Generate implementation scaffolds for components, services, APIs, and business logic to reduce repetitive engineering effort.</p>
+                        </div>
+                        <div class="hww-card">
+                            <div class="hww-card-icon">🏛️</div>
+                            <h4 class="hww-card-title">Built Around Your Codebase</h4>
+                            <p class="hww-card-desc">AI works with your existing architecture, coding standards, and reusable components so new development stays consistent.</p>
+                        </div>
+                        <div class="hww-card">
+                            <div class="hww-card-icon">🧠</div>
+                            <h4 class="hww-card-title">Smarter Business Logic</h4>
+                            <p class="hww-card-desc">From validations and workflows to edge cases and error states, AI helps teams implement features more completely from the start.</p>
+                        </div>
+                        <div class="hww-card">
+                            <div class="hww-card-icon">✅</div>
+                            <h4 class="hww-card-title">Better Quality During Development</h4>
+                            <p class="hww-card-desc">Use AI to assist with refactoring, test scaffolding, and debugging so teams can maintain speed without sacrificing quality.</p>
+                        </div>
+                    </div>
+                    <div class="hww-microline">
+                        <div class="hww-microline-dot"></div>
+                        <span class="hww-microline-text">Faster builds • Better consistency • Less rework in development</span>
+                    </div>
+                </div>
+
+            </div>
+
             <!-- Summary Banner -->
             <div class="approach-summary">
                 <div class="summary-content">
@@ -2747,30 +2688,17 @@
             observer.observe(el);
         });
 
-        // Service Card Toggle Function
-        // Accordion Toggle Function
-        function toggleAccordion(header) {
-            const item = header.parentElement;
-            const allItems = document.querySelectorAll('.accordion-item');
-
-            // Close all other accordions
-            allItems.forEach(otherItem => {
-                if (otherItem !== item && otherItem.classList.contains('active')) {
-                    otherItem.classList.remove('active');
-                }
+        // How We Work tab switching
+        function hwwSwitch(clickedTab, panelId) {
+            document.querySelectorAll('.hww-tab').forEach(t => {
+                t.classList.remove('active');
+                t.setAttribute('aria-selected', 'false');
             });
-
-            // Toggle current accordion
-            item.classList.toggle('active');
+            document.querySelectorAll('.hww-panel').forEach(p => p.classList.remove('active'));
+            clickedTab.classList.add('active');
+            clickedTab.setAttribute('aria-selected', 'true');
+            document.getElementById(panelId).classList.add('active');
         }
-
-        // Auto-open first accordion item on page load
-        window.addEventListener('DOMContentLoaded', () => {
-            const firstAccordion = document.querySelector('.accordion-item');
-            if (firstAccordion) {
-                firstAccordion.classList.add('active');
-            }
-        });
     </script>
 
 
