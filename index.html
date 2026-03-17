@@ -1776,62 +1776,27 @@
             <!-- Tab Navigation -->
             <div class="hww-tabs" role="tablist" aria-label="How We Work capability areas">
                 <button class="hww-tab active" role="tab" aria-selected="true" aria-controls="hww-panel-1" onclick="hwwSwitch(this, 'hww-panel-1')">
-                    <span class="hww-tab-label">AI-Accelerated<br>Prototyping</span>
-                </button>
-                <button class="hww-tab" role="tab" aria-selected="false" aria-controls="hww-panel-2" onclick="hwwSwitch(this, 'hww-panel-2')">
                     <span class="hww-tab-label">Requirement<br>Analysis</span>
                 </button>
+                <button class="hww-tab" role="tab" aria-selected="false" aria-controls="hww-panel-2" onclick="hwwSwitch(this, 'hww-panel-2')">
+                    <span class="hww-tab-label">AI-Accelerated<br>Prototyping</span>
+                </button>
                 <button class="hww-tab" role="tab" aria-selected="false" aria-controls="hww-panel-3" onclick="hwwSwitch(this, 'hww-panel-3')">
-                    <span class="hww-tab-label">AI-Accelerated<br>Testing</span>
+                    <span class="hww-tab-label">AI-Accelerated<br>Implementation</span>
                 </button>
                 <button class="hww-tab" role="tab" aria-selected="false" aria-controls="hww-panel-4" onclick="hwwSwitch(this, 'hww-panel-4')">
-                    <span class="hww-tab-label">AI-Assisted<br>Documentation</span>
+                    <span class="hww-tab-label">AI-Accelerated<br>Testing</span>
                 </button>
                 <button class="hww-tab" role="tab" aria-selected="false" aria-controls="hww-panel-5" onclick="hwwSwitch(this, 'hww-panel-5')">
-                    <span class="hww-tab-label">AI-Accelerated<br>Implementation</span>
+                    <span class="hww-tab-label">AI-Assisted<br>Documentation</span>
                 </button>
             </div>
 
             <!-- Panels -->
             <div class="hww-panels">
 
-                <!-- Panel 1: AI-Accelerated Prototyping -->
+                <!-- Panel 1: AI-Accelerated Requirement Analysis -->
                 <div class="hww-panel active" id="hww-panel-1" role="tabpanel" aria-labelledby="hww-tab-1">
-                    <div class="hww-panel-header">
-                        <div class="hww-panel-tag">⚡ Prototyping</div>
-                        <h3 class="hww-panel-title">AI-Accelerated Prototyping</h3>
-                        <p class="hww-panel-desc">We use AI to turn functional requirements, existing product behavior, and early wireframes into clear prototype flows that teams can validate before development begins.</p>
-                    </div>
-                    <div class="hww-cards">
-                        <div class="hww-card">
-                            <div class="hww-card-icon">🗺️</div>
-                            <h4 class="hww-card-title">From Requirements to Flows</h4>
-                            <p class="hww-card-desc">Convert feature descriptions into structured user journeys, screen flows, and interaction logic ready for design exploration.</p>
-                        </div>
-                        <div class="hww-card">
-                            <div class="hww-card-icon">⚡</div>
-                            <h4 class="hww-card-title">Faster Feature Prototyping</h4>
-                            <p class="hww-card-desc">Quickly define how new features should behave across screens, user actions, validations, and alternate states.</p>
-                        </div>
-                        <div class="hww-card">
-                            <div class="hww-card-icon">🔗</div>
-                            <h4 class="hww-card-title">Smarter Use of Existing UX</h4>
-                            <p class="hww-card-desc">Map new features to existing screens, components, and navigation patterns so prototypes stay consistent with the current product.</p>
-                        </div>
-                        <div class="hww-card">
-                            <div class="hww-card-icon">📋</div>
-                            <h4 class="hww-card-title">Richer Design Handoffs</h4>
-                            <p class="hww-card-desc">Generate prototype notes with validations, edge cases, screen states, and interaction details that reduce ambiguity for engineering.</p>
-                        </div>
-                    </div>
-                    <div class="hww-microline">
-                        <div class="hww-microline-dot"></div>
-                        <span class="hww-microline-text">Clearer flows • Better UX decisions • Faster handoff to engineering</span>
-                    </div>
-                </div>
-
-                <!-- Panel 2: AI-Accelerated Requirement Analysis -->
-                <div class="hww-panel" id="hww-panel-2" role="tabpanel" aria-labelledby="hww-tab-2">
                     <div class="hww-panel-header">
                         <div class="hww-panel-tag">🎯 Requirements</div>
                         <h3 class="hww-panel-title">AI-Accelerated Requirement Analysis</h3>
@@ -1865,8 +1830,78 @@
                     </div>
                 </div>
 
-                <!-- Panel 3: AI-Accelerated Testing -->
+                <!-- Panel 2: AI-Accelerated Prototyping -->
+                <div class="hww-panel" id="hww-panel-2" role="tabpanel" aria-labelledby="hww-tab-2">
+                    <div class="hww-panel-header">
+                        <div class="hww-panel-tag">⚡ Prototyping</div>
+                        <h3 class="hww-panel-title">AI-Accelerated Prototyping</h3>
+                        <p class="hww-panel-desc">We use AI to turn functional requirements, existing product behavior, and early wireframes into clear prototype flows that teams can validate before development begins.</p>
+                    </div>
+                    <div class="hww-cards">
+                        <div class="hww-card">
+                            <div class="hww-card-icon">🗺️</div>
+                            <h4 class="hww-card-title">From Requirements to Flows</h4>
+                            <p class="hww-card-desc">Convert feature descriptions into structured user journeys, screen flows, and interaction logic ready for design exploration.</p>
+                        </div>
+                        <div class="hww-card">
+                            <div class="hww-card-icon">⚡</div>
+                            <h4 class="hww-card-title">Faster Feature Prototyping</h4>
+                            <p class="hww-card-desc">Quickly define how new features should behave across screens, user actions, validations, and alternate states.</p>
+                        </div>
+                        <div class="hww-card">
+                            <div class="hww-card-icon">🔗</div>
+                            <h4 class="hww-card-title">Smarter Use of Existing UX</h4>
+                            <p class="hww-card-desc">Map new features to existing screens, components, and navigation patterns so prototypes stay consistent with the current product.</p>
+                        </div>
+                        <div class="hww-card">
+                            <div class="hww-card-icon">📋</div>
+                            <h4 class="hww-card-title">Richer Design Handoffs</h4>
+                            <p class="hww-card-desc">Generate prototype notes with validations, edge cases, screen states, and interaction details that reduce ambiguity for engineering.</p>
+                        </div>
+                    </div>
+                    <div class="hww-microline">
+                        <div class="hww-microline-dot"></div>
+                        <span class="hww-microline-text">Clearer flows • Better UX decisions • Faster handoff to engineering</span>
+                    </div>
+                </div>
+
+                <!-- Panel 3: AI-Accelerated Implementation -->
                 <div class="hww-panel" id="hww-panel-3" role="tabpanel" aria-labelledby="hww-tab-3">
+                    <div class="hww-panel-header">
+                        <div class="hww-panel-tag">⚡ Implementation</div>
+                        <h3 class="hww-panel-title">AI-Accelerated Implementation</h3>
+                        <p class="hww-panel-desc">We use AI to help engineering teams move faster from approved requirements and prototype flows to production-ready implementation.</p>
+                    </div>
+                    <div class="hww-cards">
+                        <div class="hww-card">
+                            <div class="hww-card-icon">🏎️</div>
+                            <h4 class="hww-card-title">Faster Code Delivery</h4>
+                            <p class="hww-card-desc">Generate implementation scaffolds for components, services, APIs, and business logic to reduce repetitive engineering effort.</p>
+                        </div>
+                        <div class="hww-card">
+                            <div class="hww-card-icon">🏛️</div>
+                            <h4 class="hww-card-title">Built Around Your Codebase</h4>
+                            <p class="hww-card-desc">AI works with your existing architecture, coding standards, and reusable components so new development stays consistent.</p>
+                        </div>
+                        <div class="hww-card">
+                            <div class="hww-card-icon">🧠</div>
+                            <h4 class="hww-card-title">Smarter Business Logic</h4>
+                            <p class="hww-card-desc">From validations and workflows to edge cases and error states, AI helps teams implement features more completely from the start.</p>
+                        </div>
+                        <div class="hww-card">
+                            <div class="hww-card-icon">✅</div>
+                            <h4 class="hww-card-title">Better Quality During Development</h4>
+                            <p class="hww-card-desc">Use AI to assist with refactoring, test scaffolding, and debugging so teams can maintain speed without sacrificing quality.</p>
+                        </div>
+                    </div>
+                    <div class="hww-microline">
+                        <div class="hww-microline-dot"></div>
+                        <span class="hww-microline-text">Faster builds • Better consistency • Less rework in development</span>
+                    </div>
+                </div>
+
+                <!-- Panel 4: AI-Accelerated Testing -->
+                <div class="hww-panel" id="hww-panel-4" role="tabpanel" aria-labelledby="hww-tab-4">
                     <div class="hww-panel-header">
                         <div class="hww-panel-tag">🔍 Testing</div>
                         <h3 class="hww-panel-title">AI-Accelerated Testing</h3>
@@ -1900,8 +1935,8 @@
                     </div>
                 </div>
 
-                <!-- Panel 4: AI-Assisted Documentation -->
-                <div class="hww-panel" id="hww-panel-4" role="tabpanel" aria-labelledby="hww-tab-4">
+                <!-- Panel 5: AI-Assisted Documentation -->
+                <div class="hww-panel" id="hww-panel-5" role="tabpanel" aria-labelledby="hww-tab-5">
                     <div class="hww-panel-header">
                         <div class="hww-panel-tag">📝 Documentation</div>
                         <h3 class="hww-panel-title">AI-Assisted Documentation</h3>
@@ -1932,41 +1967,6 @@
                     <div class="hww-microline">
                         <div class="hww-microline-dot"></div>
                         <span class="hww-microline-text">Clear knowledge • Faster onboarding • Better support</span>
-                    </div>
-                </div>
-
-                <!-- Panel 5: AI-Accelerated Implementation -->
-                <div class="hww-panel" id="hww-panel-5" role="tabpanel" aria-labelledby="hww-tab-5">
-                    <div class="hww-panel-header">
-                        <div class="hww-panel-tag">⚡ Implementation</div>
-                        <h3 class="hww-panel-title">AI-Accelerated Implementation</h3>
-                        <p class="hww-panel-desc">We use AI to help engineering teams move faster from approved requirements and prototype flows to production-ready implementation.</p>
-                    </div>
-                    <div class="hww-cards">
-                        <div class="hww-card">
-                            <div class="hww-card-icon">🏎️</div>
-                            <h4 class="hww-card-title">Faster Code Delivery</h4>
-                            <p class="hww-card-desc">Generate implementation scaffolds for components, services, APIs, and business logic to reduce repetitive engineering effort.</p>
-                        </div>
-                        <div class="hww-card">
-                            <div class="hww-card-icon">🏛️</div>
-                            <h4 class="hww-card-title">Built Around Your Codebase</h4>
-                            <p class="hww-card-desc">AI works with your existing architecture, coding standards, and reusable components so new development stays consistent.</p>
-                        </div>
-                        <div class="hww-card">
-                            <div class="hww-card-icon">🧠</div>
-                            <h4 class="hww-card-title">Smarter Business Logic</h4>
-                            <p class="hww-card-desc">From validations and workflows to edge cases and error states, AI helps teams implement features more completely from the start.</p>
-                        </div>
-                        <div class="hww-card">
-                            <div class="hww-card-icon">✅</div>
-                            <h4 class="hww-card-title">Better Quality During Development</h4>
-                            <p class="hww-card-desc">Use AI to assist with refactoring, test scaffolding, and debugging so teams can maintain speed without sacrificing quality.</p>
-                        </div>
-                    </div>
-                    <div class="hww-microline">
-                        <div class="hww-microline-dot"></div>
-                        <span class="hww-microline-text">Faster builds • Better consistency • Less rework in development</span>
                     </div>
                 </div>
 
