@@ -14,7 +14,7 @@ Static HTML/CSS marketing website for **PragmaApps**, an AI-first software consu
 
 | File | Description |
 |---|---|
-| `LandingPage.html` | Main landing/home page |
+| `index.html` | Main landing/home page |
 | `ProductDevelopmentPage.html` | Service page — Product Development |
 | `DigitalTransformationPage.html` | Service page — Digital Transformation |
 | `EnterpriseIntegrationPage.html` | Service page — Enterprise Integration |
@@ -143,7 +143,7 @@ Footer contact column:
 
 Each page has a unique `<title>` tag:
 
-- Landing: `PragmaApps – AI-First Software Development`
+- Landing (`index.html`): `PragmaApps – AI-First Software Development`
 - Product Development: `Product Development – PragmaApps`
 - Digital Transformation: `Digital Transformation – PragmaApps`
 - Enterprise Integration: `Enterprise Integration – PragmaApps`
