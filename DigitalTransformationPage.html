@@ -150,13 +150,13 @@
 
         .approach-tabs { display: flex; gap: 0; border-bottom: 2px solid var(--gray-200); margin-bottom: 48px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
         .approach-tabs::-webkit-scrollbar { display: none; }
-        .approach-tab { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 20px 16px; cursor: pointer; border: none; background: transparent; font-family: var(--font); position: relative; transition: background 0.2s ease; flex: 1; text-align: center; }
+        .approach-tab { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 20px 28px; cursor: pointer; border: none; background: transparent; font-family: var(--font); position: relative; transition: background 0.2s ease; flex: 1; text-align: center; }
         .approach-tab:hover { background: rgba(215,38,56,0.06); }
         .approach-tab.active { background: var(--black); }
         .approach-tab::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: rgba(255,255,255,0.55); transform: scaleX(0); transform-origin: left; }
         .approach-tab.active::after { animation: approachTabProgress 7s linear forwards; }
         @keyframes approachTabProgress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-        .approach-tab-label { font-size: 12px; font-weight: 700; color: var(--gray-700); line-height: 1.35; white-space: normal; }
+        .approach-tab-label { font-size: 14px; font-weight: 700; color: var(--gray-700); line-height: 1.35; white-space: normal; }
         .approach-tab.active .approach-tab-label { color: var(--white); }
 
         .approach-content-panel { display: none; animation: approachFadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
@@ -195,7 +195,7 @@
         @media (max-width: 768px) {
             .approach-tab { padding: 14px 10px; gap: 4px; }
             .approach-tab-icon { font-size: 18px; }
-            .approach-tab-label { font-size: 11px; }
+            .approach-tab-label { font-size: 12px; }
             .approach-content-panel.active { grid-template-columns: 1fr; gap: 28px; }
             .approach-visual-card { padding: 28px 20px; }
             .approach-metric-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
