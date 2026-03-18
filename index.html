@@ -788,22 +788,24 @@
         .hww-tab:hover { background: rgba(215,38,56,0.06); }
 
         .hww-tab.active {
-            background: var(--red);
+            background: var(--black);
         }
 
         .hww-tab::after {
             content: '';
             position: absolute;
-            bottom: -2px;
+            bottom: 0;
             left: 0;
             right: 0;
-            height: 2px;
-            background: var(--red);
+            height: 3px;
+            background: rgba(255,255,255,0.65);
             transform: scaleX(0);
-            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-origin: left;
         }
 
-        .hww-tab.active::after { transform: scaleX(1); }
+        .hww-tab.active::after { animation: hwwTabProgress 7s linear forwards; }
+
+        @keyframes hwwTabProgress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 
         .hww-tab-label {
             font-size: 14px;
@@ -949,7 +951,8 @@
         .hww-microline {
             display: flex;
             align-items: center;
-            gap: 10px;
+            flex-wrap: wrap;
+            gap: 8px;
             padding: 14px 20px;
             background: linear-gradient(90deg, var(--black) 0%, var(--black-soft) 100%);
             border-radius: var(--radius-sm);
@@ -967,19 +970,16 @@
             pointer-events: none;
         }
 
-        .hww-microline-dot {
-            width: 6px; height: 6px;
-            border-radius: 50%;
-            background: var(--red);
-            flex-shrink: 0;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hww-microline-text {
-            font-size: 13px;
+        .hww-chip {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 13px;
+            border-radius: 40px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            font-size: 12px;
             font-weight: 600;
-            color: rgba(255,255,255,0.9);
+            color: rgba(255,255,255,0.88);
             letter-spacing: 0.2px;
             position: relative;
             z-index: 1;
@@ -1825,8 +1825,9 @@
                         </div>
                     </div>
                     <div class="hww-microline">
-                        <div class="hww-microline-dot"></div>
-                        <span class="hww-microline-text">Clearer requirements • Fewer gaps • Faster delivery</span>
+                        <span class="hww-chip">Clearer requirements</span>
+                        <span class="hww-chip">Fewer gaps</span>
+                        <span class="hww-chip">Faster delivery</span>
                     </div>
                 </div>
 
@@ -1860,8 +1861,9 @@
                         </div>
                     </div>
                     <div class="hww-microline">
-                        <div class="hww-microline-dot"></div>
-                        <span class="hww-microline-text">Clearer flows • Better UX decisions • Faster handoff to engineering</span>
+                        <span class="hww-chip">Clearer flows</span>
+                        <span class="hww-chip">Better UX decisions</span>
+                        <span class="hww-chip">Faster handoff to engineering</span>
                     </div>
                 </div>
 
@@ -1895,8 +1897,9 @@
                         </div>
                     </div>
                     <div class="hww-microline">
-                        <div class="hww-microline-dot"></div>
-                        <span class="hww-microline-text">Faster builds • Better consistency • Less rework in development</span>
+                        <span class="hww-chip">Faster builds</span>
+                        <span class="hww-chip">Better consistency</span>
+                        <span class="hww-chip">Less rework in development</span>
                     </div>
                 </div>
 
@@ -1930,8 +1933,9 @@
                         </div>
                     </div>
                     <div class="hww-microline">
-                        <div class="hww-microline-dot"></div>
-                        <span class="hww-microline-text">Faster releases • Higher coverage • Reduced manual testing</span>
+                        <span class="hww-chip">Faster releases</span>
+                        <span class="hww-chip">Higher coverage</span>
+                        <span class="hww-chip">Reduced manual testing</span>
                     </div>
                 </div>
 
@@ -1965,8 +1969,9 @@
                         </div>
                     </div>
                     <div class="hww-microline">
-                        <div class="hww-microline-dot"></div>
-                        <span class="hww-microline-text">Clear knowledge • Faster onboarding • Better support</span>
+                        <span class="hww-chip">Clear knowledge</span>
+                        <span class="hww-chip">Faster onboarding</span>
+                        <span class="hww-chip">Better support</span>
                     </div>
                 </div>
 
@@ -2679,16 +2684,36 @@
         });
 
         // How We Work tab switching
+        let hwwTimer = null;
+        const hwwPanelIds = ['hww-panel-1','hww-panel-2','hww-panel-3','hww-panel-4','hww-panel-5'];
+        let hwwCurrentIndex = 0;
+
         function hwwSwitch(clickedTab, panelId) {
             document.querySelectorAll('.hww-tab').forEach(t => {
                 t.classList.remove('active');
                 t.setAttribute('aria-selected', 'false');
             });
             document.querySelectorAll('.hww-panel').forEach(p => p.classList.remove('active'));
+            void clickedTab.offsetWidth; // force reflow to restart progress animation
             clickedTab.classList.add('active');
             clickedTab.setAttribute('aria-selected', 'true');
             document.getElementById(panelId).classList.add('active');
+            hwwCurrentIndex = hwwPanelIds.indexOf(panelId);
+
+            clearInterval(hwwTimer);
+            hwwTimer = setInterval(function() {
+                hwwCurrentIndex = (hwwCurrentIndex + 1) % hwwPanelIds.length;
+                const nextPanelId = hwwPanelIds[hwwCurrentIndex];
+                const nextTab = document.querySelector('[aria-controls="' + nextPanelId + '"]');
+                if (nextTab) hwwSwitch(nextTab, nextPanelId);
+            }, 7000);
         }
+
+        // Start auto-advance on load
+        (function() {
+            const firstTab = document.querySelector('.hww-tab.active');
+            if (firstTab) hwwSwitch(firstTab, 'hww-panel-1');
+        })();
     </script>
 
 

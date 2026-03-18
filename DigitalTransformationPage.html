@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0148)https://dede3phc22dgx.cloudfront.net/thread_output/b7438f9f-fe0e-4039-98aa-d143de222e25/f8616390-3031-70a0-7b35-fa2bb2d556d8/ProductDevelopment.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Transformation – PragmaApps</title>
+    <meta name="description" content="PragmaApps helps businesses launch and modernize websites, portals, communities, marketplaces, and digital products using AI-first delivery, custom engineering, cloud infrastructure, and platform integrations.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
@@ -31,1578 +32,309 @@
             --shadow-lg: 0 8px 40px rgba(0,0,0,0.13);
         }
 
-        /* ===== RESET & BASE ===== */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--font);
-            background: var(--white);
-            color: var(--black);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        ul {
-            list-style: none;
-        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font); background: var(--white); color: var(--black); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
 
         /* ===== LAYOUT ===== */
-        .container {
-            max-width: 1160px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .section {
-            padding: 96px 0;
-        }
-
-        .section-sm {
-            padding: 64px 0;
-        }
+        .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+        .section { padding: 96px 0; }
 
         .section-tag {
-            display: inline-block;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--red);
-            background: var(--red-light);
-            border-radius: 40px;
-            padding: 6px 16px;
-            margin-bottom: 18px;
+            display: inline-block; font-size: 11px; font-weight: 700;
+            letter-spacing: 2px; text-transform: uppercase;
+            color: var(--red); background: var(--red-light);
+            border-radius: 40px; padding: 6px 16px; margin-bottom: 18px;
         }
 
-        .section-title {
-            font-size: clamp(28px, 4vw, 48px);
-            font-weight: 800;
-            color: var(--black);
-            line-height: 1.15;
-            margin-bottom: 16px;
-        }
-
-        .section-sub {
-            font-size: 17px;
-            color: var(--gray-700);
-            max-width: 560px;
-            line-height: 1.7;
-        }
-
-        .section-center {
-            text-align: center;
-        }
-
-        .section-center .section-sub {
-            margin: 0 auto;
-        }
+        .section-title { font-size: clamp(28px, 4vw, 48px); font-weight: 800; color: var(--black); line-height: 1.15; margin-bottom: 16px; }
+        .section-sub { font-size: 17px; color: var(--gray-700); max-width: 560px; line-height: 1.7; }
+        .section-center { text-align: center; }
+        .section-center .section-sub { margin: 0 auto; }
 
         /* ===== BUTTONS ===== */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 13px 28px;
-            border-radius: var(--radius-sm);
-            font-weight: 600;
-            font-size: 15px;
-            cursor: pointer;
-            transition: all 0.22s ease;
-            border: 2px solid transparent;
-        }
-
-        .btn-primary {
-            background: var(--red);
-            color: var(--white);
-            border-color: var(--red);
-        }
-
-        .btn-primary:hover {
-            background: var(--red-dark);
-            border-color: var(--red-dark);
-            transform: translateY(-1px);
-            box-shadow: 0 6px 20px rgba(215,38,56,0.3);
-        }
-
-        .btn-black {
-            background: var(--black);
-            color: var(--white);
-            border-color: var(--black);
-        }
-
-        .btn-black:hover {
-            background: var(--black-soft);
-            transform: translateY(-1px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--black);
-            border-color: var(--gray-300);
-        }
-
-        .btn-outline:hover {
-            border-color: var(--black);
-            transform: translateY(-1px);
-        }
+        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 28px; border-radius: var(--radius-sm); font-weight: 600; font-size: 15px; cursor: pointer; transition: all 0.22s ease; border: 2px solid transparent; }
+        .btn-primary { background: var(--red); color: var(--white); border-color: var(--red); }
+        .btn-primary:hover { background: var(--red-dark); border-color: var(--red-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(215,38,56,0.3); }
+        .btn-outline-white { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.18); }
+        .btn-outline-white:hover { border-color: rgba(255,255,255,0.45); background: rgba(255,255,255,0.06); transform: translateY(-1px); }
 
         /* ===== HEADER / NAV ===== */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(14px);
-            border-bottom: 1px solid var(--gray-200);
-            transition: box-shadow 0.3s;
-        }
-
-        .header.scrolled {
-            box-shadow: var(--shadow-md);
-        }
-
-        .nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 70px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 20px;
-            font-weight: 800;
-            color: var(--black);
-            letter-spacing: -0.5px;
-            flex-shrink: 0;
-        }
-
-        .logo span {
-            color: var(--red);
-        }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 0;
-            margin-left: auto;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            margin-right: 20px;
-        }
-
-        .nav-links a {
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--gray-700);
-            transition: color 0.2s;
-            padding: 8px 14px;
-            border-radius: 6px;
-            transition: color 0.2s, background 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: var(--red);
-            background: var(--red-light);
-        }
-
-        .nav-links a.active {
-            color: var(--red);
-            font-weight: 600;
-        }
-
-        .nav-cta {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .btn-login {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 9px 20px;
-            border-radius: var(--radius-sm);
-            font-weight: 600;
-            font-size: 14px;
-            cursor: pointer;
-            border: 1.5px solid var(--gray-300);
-            background: transparent;
-            color: var(--black);
-            transition: all 0.22s ease;
-        }
-
-        .btn-login:hover {
-            border-color: var(--black);
-            background: var(--black);
-            color: white;
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            padding: 4px;
-        }
-
-        .hamburger span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: var(--black);
-            border-radius: 2px;
-            transition: all 0.3s;
-        }
+        .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.95); backdrop-filter: blur(14px); border-bottom: 1px solid var(--gray-200); transition: box-shadow 0.3s; }
+        .header.scrolled { box-shadow: var(--shadow-md); }
+        .nav { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+        .logo { display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 800; color: var(--black); letter-spacing: -0.5px; flex-shrink: 0; }
+        .logo span { color: var(--red); }
+        .nav-right { display: flex; align-items: center; gap: 0; margin-left: auto; }
+        .nav-links { display: flex; align-items: center; gap: 4px; margin-right: 20px; }
+        .nav-links a { font-size: 14px; font-weight: 500; color: var(--gray-700); padding: 8px 14px; border-radius: 6px; transition: color 0.2s, background 0.2s; }
+        .nav-links a:hover { color: var(--red); background: var(--red-light); }
+        .nav-links a.active { color: var(--red); font-weight: 600; }
+        .nav-cta { display: flex; align-items: center; gap: 10px; }
+        .btn-login { display: inline-flex; align-items: center; gap: 6px; padding: 9px 20px; border-radius: var(--radius-sm); font-weight: 600; font-size: 14px; cursor: pointer; border: 1.5px solid var(--gray-300); background: transparent; color: var(--black); transition: all 0.22s ease; }
+        .btn-login:hover { border-color: var(--black); background: var(--black); color: white; }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: var(--black); border-radius: 2px; transition: all 0.3s; }
 
         /* ===== HERO ===== */
-        .hero {
-            padding-top: 100px;
-            padding-bottom: 0;
-            background: var(--black);
-            position: relative;
-            overflow: hidden;
-            min-height: 94vh;
-            display: flex;
-            align-items: center;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -120px;
-            left: -120px;
-            width: 640px;
-            height: 640px;
-            background: radial-gradient(circle, rgba(215,38,56,0.13) 0%, transparent 65%);
-            pointer-events: none;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -160px;
-            right: 0;
-            width: 480px;
-            height: 480px;
-            background: radial-gradient(circle, rgba(215,38,56,0.07) 0%, transparent 65%);
-            pointer-events: none;
-        }
-
-        .hero-inner {
-            position: relative;
-            z-index: 1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 72px;
-            align-items: center;
-            padding-bottom: 80px;
-            padding-top: 20px;
-        }
-
+        .hero { padding-top: 100px; padding-bottom: 0; background: var(--black); position: relative; overflow: hidden; min-height: 94vh; display: flex; align-items: center; }
+        .hero::before { content: ''; position: absolute; top: -120px; left: -120px; width: 640px; height: 640px; background: radial-gradient(circle, rgba(215,38,56,0.13) 0%, transparent 65%); pointer-events: none; }
+        .hero::after { content: ''; position: absolute; bottom: -160px; right: 0; width: 480px; height: 480px; background: radial-gradient(circle, rgba(215,38,56,0.07) 0%, transparent 65%); pointer-events: none; }
+        .hero-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; padding-bottom: 80px; padding-top: 20px; }
         .hero-left { max-width: 560px; }
-
-        .hero-eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 5px 14px 5px 8px;
-            background: rgba(215,38,56,0.12);
-            border: 1px solid rgba(215,38,56,0.28);
-            border-radius: 40px;
-            margin-bottom: 28px;
-        }
-
-        .hero-eyebrow-dot {
-            width: 7px;
-            height: 7px;
-            background: var(--red);
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
-
-        .hero-eyebrow span {
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: var(--red);
-        }
-
-        .hero h1 {
-            font-size: clamp(36px, 4.2vw, 56px);
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 22px;
-            color: var(--white);
-            letter-spacing: -0.02em;
-        }
-
-        .hero h1 em {
-            font-style: normal;
-            color: var(--red);
-        }
-
-        .hero-description {
-            font-size: 16.5px;
-            line-height: 1.78;
-            color: rgba(255,255,255,0.58);
-            margin-bottom: 38px;
-            max-width: 480px;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-bottom: 52px;
-        }
-
-        .btn-outline-white {
-            background: transparent;
-            color: var(--white);
-            border: 2px solid rgba(255,255,255,0.18);
-        }
-
-        .btn-outline-white:hover {
-            border-color: rgba(255,255,255,0.45);
-            background: rgba(255,255,255,0.06);
-            transform: translateY(-1px);
-        }
-
-        .hero-stats {
-            display: flex;
-            gap: 36px;
-            padding-top: 28px;
-            border-top: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .hero-stat-val {
-            font-size: 26px;
-            font-weight: 800;
-            color: var(--white);
-            line-height: 1;
-            margin-bottom: 5px;
-        }
-
+        .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 5px 14px 5px 8px; background: rgba(215,38,56,0.12); border: 1px solid rgba(215,38,56,0.28); border-radius: 40px; margin-bottom: 28px; }
+        .hero-eyebrow-dot { width: 7px; height: 7px; background: var(--red); border-radius: 50%; flex-shrink: 0; }
+        .hero-eyebrow span { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--red); }
+        .hero h1 { font-size: clamp(36px, 4.2vw, 56px); font-weight: 800; line-height: 1.1; margin-bottom: 22px; color: var(--white); letter-spacing: -0.02em; }
+        .hero h1 em { font-style: normal; color: var(--red); }
+        .hero-description { font-size: 16.5px; line-height: 1.78; color: rgba(255,255,255,0.58); margin-bottom: 38px; max-width: 480px; }
+        .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 52px; }
+        .hero-stats { display: flex; gap: 36px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.08); }
+        .hero-stat-val { font-size: 26px; font-weight: 800; color: var(--white); line-height: 1; margin-bottom: 5px; }
         .hero-stat-val span { color: var(--red); }
-
-        .hero-stat-lbl {
-            font-size: 11.5px;
-            color: rgba(255,255,255,0.38);
-            font-weight: 500;
-            letter-spacing: 0.3px;
-        }
+        .hero-stat-lbl { font-size: 11.5px; color: rgba(255,255,255,0.38); font-weight: 500; letter-spacing: 0.3px; }
 
         /* ===== HERO VISUAL ===== */
-        .hero-visual {
-            position: relative;
-            height: 500px;
-        }
-
-        .hv-card {
-            position: absolute;
-            background: #131313;
-            border: 1px solid rgba(255,255,255,0.07);
-            border-radius: 14px;
-            padding: 18px 22px;
-            box-shadow: 0 24px 64px rgba(0,0,0,0.55);
-        }
-
-        .hv-label {
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.28);
-            margin-bottom: 14px;
-        }
-
-        .hv-phase {
-            top: 0; left: 0; right: 0;
-            padding: 20px 24px 22px;
-            background: #0e0e0e;
-        }
-
-        .hv-phase-row {
-            display: flex;
-            gap: 6px;
-            align-items: center;
-        }
-
-        .hv-phase-item {
-            flex: 1;
-            text-align: center;
-            padding: 10px 4px;
-            border-radius: 10px;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.06);
-        }
-
-        .hv-phase-item.active-phase {
-            background: rgba(215,38,56,0.14);
-            border-color: rgba(215,38,56,0.32);
-        }
-
+        .hero-visual { position: relative; height: 500px; }
+        .hv-card { position: absolute; background: #131313; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 18px 22px; box-shadow: 0 24px 64px rgba(0,0,0,0.55); }
+        .hv-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 14px; }
+        .hv-phase { top: 0; left: 0; right: 0; padding: 20px 24px 22px; background: #0e0e0e; }
+        .hv-phase-row { display: flex; gap: 6px; align-items: center; }
+        .hv-phase-item { flex: 1; text-align: center; padding: 10px 4px; border-radius: 10px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); }
+        .hv-phase-item.active-phase { background: rgba(215,38,56,0.14); border-color: rgba(215,38,56,0.32); }
         .hv-phase-icon { font-size: 15px; display: block; margin-bottom: 5px; }
-
-        .hv-phase-name {
-            font-size: 9px;
-            font-weight: 600;
-            color: rgba(255,255,255,0.35);
-            letter-spacing: 0.3px;
-        }
-
+        .hv-phase-name { font-size: 9px; font-weight: 600; color: rgba(255,255,255,0.35); letter-spacing: 0.3px; }
         .hv-phase-item.active-phase .hv-phase-name { color: var(--red); }
-
         .hv-arrow { color: rgba(255,255,255,0.16); font-size: 14px; flex-shrink: 0; }
-
         .hv-code { top: 124px; left: 0; width: 60%; }
-
         .hv-code-bar { display: flex; gap: 5px; margin-bottom: 12px; }
-
         .hv-dot { width: 9px; height: 9px; border-radius: 50%; }
-        .hv-dot-r { background: #ff5f57; }
-        .hv-dot-y { background: #ffbd2e; }
-        .hv-dot-g { background: #28c840; }
-
-        .hv-code-line {
-            font-family: 'Courier New', monospace;
-            font-size: 11px;
-            line-height: 1.85;
-        }
-
-        .hv-kw { color: #c792ea; }
-        .hv-fn { color: #82aaff; }
-        .hv-str { color: #c3e88d; }
-        .hv-cm { color: rgba(255,255,255,0.22); }
-        .hv-pn { color: rgba(255,255,255,0.55); }
-
-        .hv-ai-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            margin-top: 10px;
-            padding: 4px 10px;
-            background: rgba(215,38,56,0.12);
-            border: 1px solid rgba(215,38,56,0.22);
-            border-radius: 20px;
-            font-size: 10px;
-            font-weight: 700;
-            color: var(--red);
-        }
-
+        .hv-dot-r { background: #ff5f57; } .hv-dot-y { background: #ffbd2e; } .hv-dot-g { background: #28c840; }
+        .hv-code-line { font-family: 'Courier New', monospace; font-size: 11px; line-height: 1.85; }
+        .hv-kw { color: #c792ea; } .hv-fn { color: #82aaff; } .hv-str { color: #c3e88d; } .hv-cm { color: rgba(255,255,255,0.22); } .hv-pn { color: rgba(255,255,255,0.55); }
+        .hv-ai-pill { display: inline-flex; align-items: center; gap: 5px; margin-top: 10px; padding: 4px 10px; background: rgba(215,38,56,0.12); border: 1px solid rgba(215,38,56,0.22); border-radius: 20px; font-size: 10px; font-weight: 700; color: var(--red); }
         .hv-ai { top: 130px; right: 0; width: 37%; }
-
-        .hv-ai-header {
-            display: flex;
-            align-items: center;
-            gap: 9px;
-            margin-bottom: 14px;
-        }
-
-        .hv-ai-icon {
-            width: 30px; height: 30px;
-            background: rgba(215,38,56,0.14);
-            border-radius: 8px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 14px; flex-shrink: 0;
-        }
-
+        .hv-ai-header { display: flex; align-items: center; gap: 9px; margin-bottom: 14px; }
+        .hv-ai-icon { width: 30px; height: 30px; background: rgba(215,38,56,0.14); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
         .hv-ai-title { font-size: 11.5px; font-weight: 700; color: var(--white); }
         .hv-ai-sub { font-size: 9.5px; color: rgba(255,255,255,0.3); margin-top: 1px; }
-
-        .hv-ai-item {
-            display: flex; align-items: flex-start;
-            gap: 7px; margin-bottom: 7px;
-        }
-
-        .hv-ai-check {
-            width: 14px; height: 14px; border-radius: 50%;
-            background: rgba(74,222,128,0.14);
-            display: flex; align-items: center; justify-content: center;
-            flex-shrink: 0; margin-top: 1px;
-            font-size: 8px; color: #4ade80;
-        }
-
+        .hv-ai-item { display: flex; align-items: flex-start; gap: 7px; margin-bottom: 7px; }
+        .hv-ai-check { width: 14px; height: 14px; border-radius: 50%; background: rgba(74,222,128,0.14); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; font-size: 8px; color: #4ade80; }
         .hv-ai-text { font-size: 10.5px; line-height: 1.5; color: rgba(255,255,255,0.42); }
-
         .hv-metrics { bottom: 0; left: 0; width: 50%; }
-
-        .hv-metric-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 7px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-
+        .hv-metric-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
         .hv-metric-row:last-child { border-bottom: none; padding-bottom: 0; }
-
         .hv-metric-name { font-size: 11px; color: rgba(255,255,255,0.42); }
         .hv-metric-val { font-size: 11.5px; font-weight: 700; color: var(--white); }
         .hv-metric-val.green { color: #4ade80; }
-
         .hv-delivery { bottom: 0; right: 0; width: 37%; text-align: center; }
-
-        .hv-delivery-num {
-            font-size: 40px;
-            font-weight: 800;
-            color: var(--white);
-            line-height: 1;
-            letter-spacing: -0.03em;
-        }
-
+        .hv-delivery-num { font-size: 40px; font-weight: 800; color: var(--white); line-height: 1; letter-spacing: -0.03em; }
         .hv-delivery-num span { color: var(--red); }
+        .hv-delivery-lbl { font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 6px; line-height: 1.4; }
+        .hv-delivery-bar { margin-top: 14px; height: 4px; background: rgba(255,255,255,0.06); border-radius: 4px; overflow: hidden; }
+        .hv-delivery-fill { height: 100%; width: 60%; background: var(--red); border-radius: 4px; }
 
-        .hv-delivery-lbl {
-            font-size: 11px;
-            color: rgba(255,255,255,0.35);
-            margin-top: 6px;
-            line-height: 1.4;
-        }
+        @media (max-width: 960px) { .hero-inner { grid-template-columns: 1fr; gap: 48px; } .hero-visual { height: 420px; } .hero-left { max-width: 100%; } }
+        @media (max-width: 600px) { .hero-visual { display: none; } .hero-stats { gap: 20px; } .hero h1 { font-size: 34px; } }
 
-        .hv-delivery-bar {
-            margin-top: 14px;
-            height: 4px;
-            background: rgba(255,255,255,0.06);
-            border-radius: 4px;
-            overflow: hidden;
-        }
+        /* ===== APPROACH SECTION ===== */
+        .approach-section { background: var(--white); position: relative; overflow: hidden; }
+        .approach-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 10% 20%, rgba(215,38,56,0.04) 0%, transparent 50%), radial-gradient(circle at 90% 80%, rgba(215,38,56,0.02) 0%, transparent 50%); pointer-events: none; }
+        .approach-container { position: relative; z-index: 1; }
+        .approach-section .section-tag { background: var(--red-light); color: var(--red); }
+        .approach-section .section-title { color: var(--black); }
+        .approach-section .section-sub { color: var(--gray-700); }
 
-        .hv-delivery-fill {
-            height: 100%;
-            width: 60%;
-            background: var(--red);
-            border-radius: 4px;
-        }
+        .approach-tabs { display: flex; gap: 0; border-bottom: 2px solid var(--gray-200); margin-bottom: 48px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+        .approach-tabs::-webkit-scrollbar { display: none; }
+        .approach-tab { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 20px 16px; cursor: pointer; border: none; background: transparent; font-family: var(--font); position: relative; transition: background 0.2s ease; flex: 1; text-align: center; }
+        .approach-tab:hover { background: rgba(215,38,56,0.06); }
+        .approach-tab.active { background: var(--black); }
+        .approach-tab::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: rgba(255,255,255,0.55); transform: scaleX(0); transform-origin: left; }
+        .approach-tab.active::after { animation: approachTabProgress 7s linear forwards; }
+        @keyframes approachTabProgress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+        .approach-tab-label { font-size: 12px; font-weight: 700; color: var(--gray-700); line-height: 1.35; white-space: normal; }
+        .approach-tab.active .approach-tab-label { color: var(--white); }
 
-        /* Responsive */
-        @media (max-width: 960px) {
-            .hero-inner { grid-template-columns: 1fr; gap: 48px; }
-            .hero-visual { height: 420px; }
-            .hero-left { max-width: 100%; }
-        }
+        .approach-content-panel { display: none; animation: approachFadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .approach-content-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+        @keyframes approachFadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-        @media (max-width: 600px) {
-            .hero-visual { display: none; }
-            .hero-stats { gap: 20px; }
-            .hero h1 { font-size: 34px; }
-        }
+        .approach-content-left { padding: 8px 0; }
+        .approach-content-icon { font-size: 48px; margin-bottom: 20px; display: inline-block; }
+.approach-content-title { font-size: clamp(26px, 3.5vw, 36px); font-weight: 800; color: var(--black); line-height: 1.2; margin-bottom: 20px; }
+        .approach-content-desc { font-size: 16px; line-height: 1.8; color: var(--gray-700); margin-bottom: 28px; }
+        .approach-content-desc .highlight { color: var(--black); font-weight: 600; background: linear-gradient(120deg, transparent 0%, rgba(215,38,56,0.12) 100%); padding: 1px 6px; border-radius: 4px; }
 
-        /* ===== APPROACH SECTION (Reusable) ===== */
-        .approach-section {
-            background: var(--white);
-            position: relative;
-            overflow: hidden;
-        }
+        .approach-features { display: flex; flex-direction: column; gap: 14px; }
+        .approach-feature { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: var(--gray-700); line-height: 1.5; }
+        .approach-feature-icon { width: 28px; height: 28px; border-radius: 8px; background: rgba(215,38,56,0.15); display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; margin-top: 1px; }
 
-        .approach-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background:
-                radial-gradient(circle at 10% 20%, rgba(215,38,56,0.04) 0%, transparent 50%),
-                radial-gradient(circle at 90% 80%, rgba(215,38,56,0.02) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .approach-container {
-            position: relative;
-            z-index: 1;
-        }
-
-        .approach-section .section-tag {
-            background: var(--red-light);
-            color: var(--red);
-        }
-
-        .approach-section .section-title {
-            color: var(--black);
-        }
-
-        .approach-section .section-sub {
-            color: var(--gray-700);
-        }
-
-        /* Top step indicators - horizontal nav */
-        .approach-steps-nav {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0;
-            margin-bottom: 56px;
-            position: relative;
-        }
-
-        .approach-step-indicator {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            cursor: pointer;
-            position: relative;
-            z-index: 2;
-            flex: 1;
-            max-width: 180px;
-            transition: all 0.3s ease;
-        }
-
-        .approach-step-num {
-            width: 52px;
-            height: 52px;
-            border-radius: 50%;
-            background: var(--gray-100);
-            border: 2px solid var(--gray-200);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            font-weight: 800;
-            color: var(--gray-500);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            z-index: 2;
-        }
-
-        .approach-step-indicator.active .approach-step-num {
-            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
-            border-color: var(--red);
-            color: var(--white);
-            box-shadow: 0 0 0 6px rgba(215,38,56,0.2), 0 4px 20px rgba(215,38,56,0.4);
-            transform: scale(1.1);
-        }
-
-        .approach-step-indicator:hover .approach-step-num {
-            border-color: var(--red);
-            color: var(--red);
-        }
-
-        .approach-step-indicator.active:hover .approach-step-num {
-            color: var(--white);
-        }
-
-        .approach-step-label {
-            margin-top: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            color: var(--gray-500);
-            text-align: center;
-            transition: color 0.3s ease;
-            line-height: 1.4;
-        }
-
-        .approach-step-indicator.active .approach-step-label {
-            color: var(--black);
-        }
-
-        .approach-step-indicator:hover .approach-step-label {
-            color: var(--gray-700);
-        }
-
-        /* Connector lines between step indicators */
-        .approach-step-connector {
-            flex: 1;
-            max-width: 80px;
-            height: 2px;
-            background: var(--gray-200);
-            position: relative;
-            top: -14px;
-        }
-
-        .approach-step-connector.filled {
-            background: linear-gradient(90deg, var(--red), var(--red-dark));
-            box-shadow: 0 0 8px rgba(215,38,56,0.3);
-        }
-
-        /* Content panel */
-        .approach-content-panel {
-            display: none;
-            animation: approachFadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .approach-content-panel.active {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
-            align-items: center;
-        }
-
-        @keyframes approachFadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .approach-content-left {
-            padding: 8px 0;
-        }
-
-        .approach-content-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-            display: inline-block;
-        }
-
-        .approach-content-step {
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--red);
-            margin-bottom: 12px;
-        }
-
-        .approach-content-title {
-            font-size: clamp(26px, 3.5vw, 36px);
-            font-weight: 800;
-            color: var(--black);
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-
-        .approach-content-desc {
-            font-size: 16px;
-            line-height: 1.8;
-            color: var(--gray-700);
-            margin-bottom: 28px;
-        }
-
-        .approach-content-desc .highlight {
-            color: var(--black);
-            font-weight: 600;
-            background: linear-gradient(120deg, transparent 0%, rgba(215,38,56,0.12) 100%);
-            padding: 1px 6px;
-            border-radius: 4px;
-        }
-
-        /* Feature list inside panel */
-        .approach-features {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .approach-feature {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            font-size: 15px;
-            color: var(--gray-700);
-            line-height: 1.5;
-        }
-
-        .approach-feature-icon {
-            width: 28px;
-            height: 28px;
-            border-radius: 8px;
-            background: rgba(215,38,56,0.15);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            flex-shrink: 0;
-            margin-top: 1px;
-        }
-
-        /* Right side - visual card */
-        .approach-visual-card {
-            background: var(--gray-50);
-            border-radius: 16px;
-            padding: 40px;
-            border: 1px solid var(--gray-200);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .approach-visual-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(215,38,56,0.04) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .approach-visual-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 28px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--gray-200);
-        }
-
-        .approach-visual-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-        }
-
+        .approach-visual-card { background: var(--gray-50); border-radius: 16px; padding: 40px; border: 1px solid var(--gray-200); position: relative; overflow: hidden; }
+        .approach-visual-card::before { content: ''; position: absolute; top: -50%; right: -50%; width: 100%; height: 100%; background: radial-gradient(circle, rgba(215,38,56,0.04) 0%, transparent 70%); pointer-events: none; }
+        .approach-visual-header { display: flex; align-items: center; gap: 10px; margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--gray-200); }
+        .approach-visual-dot { width: 10px; height: 10px; border-radius: 50%; }
         .approach-visual-dot.red { background: var(--red); }
         .approach-visual-dot.yellow { background: #f5a623; }
         .approach-visual-dot.green { background: #4cd964; }
+        .approach-visual-title { font-size: 13px; font-weight: 600; color: var(--gray-500); margin-left: 8px; letter-spacing: 0.5px; }
 
-        .approach-visual-title {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--gray-500);
-            margin-left: 8px;
-            letter-spacing: 0.5px;
-        }
+        .approach-metric-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .approach-metric { background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; padding: 24px 20px; text-align: center; transition: all 0.3s ease; }
+        .approach-metric:hover { background: rgba(215,38,56,0.06); border-color: rgba(215,38,56,0.2); transform: translateY(-2px); }
+        .approach-metric-value { font-size: 28px; font-weight: 800; color: var(--black); line-height: 1; margin-bottom: 6px; }
+        .approach-metric-label { font-size: 12px; color: var(--gray-500); line-height: 1.4; }
 
-        .approach-metric-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
+        .approach-quote-block { margin-top: 24px; padding: 20px; border-left: 3px solid var(--red); background: rgba(215,38,56,0.04); border-radius: 0 8px 8px 0; }
+        .approach-quote-text { font-size: 14px; font-style: italic; color: var(--gray-700); line-height: 1.6; }
 
-        .approach-metric {
-            background: var(--white);
-            border: 1px solid var(--gray-200);
-            border-radius: 12px;
-            padding: 24px 20px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .approach-metric:hover {
-            background: rgba(215,38,56,0.06);
-            border-color: rgba(215,38,56,0.2);
-            transform: translateY(-2px);
-        }
-
-        .approach-metric-value {
-            font-size: 28px;
-            font-weight: 800;
-            color: var(--black);
-            line-height: 1;
-            margin-bottom: 6px;
-        }
-
-        .approach-metric-label {
-            font-size: 12px;
-            color: var(--gray-500);
-            line-height: 1.4;
-        }
-
-        .approach-quote-block {
-            margin-top: 24px;
-            padding: 20px;
-            border-left: 3px solid var(--red);
-            background: rgba(215,38,56,0.04);
-            border-radius: 0 8px 8px 0;
-        }
-
-        .approach-quote-text {
-            font-size: 14px;
-            font-style: italic;
-            color: var(--gray-700);
-            line-height: 1.6;
-        }
-
-        /* Bottom step navigation arrows */
-        .approach-nav-arrows {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 16px;
-            margin-top: 48px;
-        }
-
-        .approach-nav-btn {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: transparent;
-            border: 2px solid var(--gray-300);
-            color: var(--gray-700);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.22s;
-        }
-
-        .approach-nav-btn:hover {
-            background: var(--red);
-            color: var(--white);
-            border-color: var(--red);
-            transform: scale(1.05);
-        }
-
-        .approach-nav-counter {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--gray-500);
-            min-width: 60px;
-            text-align: center;
-        }
-
-        .approach-nav-counter .current {
-            color: var(--black);
-            font-size: 18px;
-        }
-
-        /* ===== RESPONSIVE - APPROACH ===== */
-        @media (max-width: 900px) {
-            .approach-content-panel.active {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-        }
-
+        @media (max-width: 900px) { .approach-content-panel.active { grid-template-columns: 1fr; gap: 32px; } }
         @media (max-width: 768px) {
-            .approach-steps-nav {
-                flex-wrap: wrap;
-                gap: 8px;
-                justify-content: center;
-            }
-
-            .approach-step-connector {
-                display: none;
-            }
-
-            .approach-step-indicator {
-                max-width: 64px;
-            }
-
-            .approach-step-label {
-                font-size: 10px;
-            }
-
-            .approach-step-num {
-                width: 42px;
-                height: 42px;
-                font-size: 15px;
-            }
-
-            .approach-content-panel.active {
-                grid-template-columns: 1fr;
-                gap: 28px;
-            }
-
-            .approach-visual-card {
-                padding: 28px 20px;
-            }
-
-            .approach-metric-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 12px;
-            }
-
-            .approach-metric {
-                padding: 16px 12px;
-            }
-
-            .approach-metric-value {
-                font-size: 22px;
-            }
+            .approach-tab { padding: 14px 10px; gap: 4px; }
+            .approach-tab-icon { font-size: 18px; }
+            .approach-tab-label { font-size: 11px; }
+            .approach-content-panel.active { grid-template-columns: 1fr; gap: 28px; }
+            .approach-visual-card { padding: 28px 20px; }
+            .approach-metric-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+            .approach-metric { padding: 16px 12px; }
         }
 
         /* ===== RESULTS SECTION ===== */
-        .results {
-            background: var(--gray-50);
-            color: var(--black);
-        }
+        .results { background: var(--gray-50); }
+        .results .section-title { color: var(--black); }
+        .results .section-sub { color: var(--gray-700); }
+        .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; margin-top: 48px; }
+        .result-item { display: flex; align-items: flex-start; gap: 16px; }
+        .result-icon { width: 40px; height: 40px; border-radius: 50%; background: var(--red); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+        .result-text { font-size: 16px; line-height: 1.6; color: var(--gray-700); }
 
-        .results .section-title {
-            color: var(--black);
-        }
+        /* ===== ENGAGEMENTS GRID ===== */
+        .engagements-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
+        .engagement-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow-sm); transition: all 0.22s ease; }
+        .engagement-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); border-color: rgba(215,38,56,0.2); }
+        .engagement-type { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--red); margin-bottom: 10px; display: block; }
+        .engagement-card h3 { font-size: 19px; font-weight: 700; color: var(--black); margin-bottom: 10px; line-height: 1.35; }
+        .engagement-card p { font-size: 15px; color: var(--gray-700); line-height: 1.7; margin: 0; }
+        @media (max-width: 700px) { .engagements-grid { grid-template-columns: 1fr; } }
 
-        .results .section-sub {
-            color: var(--gray-700);
-        }
+        /* ===== PLATFORM EXPERTISE ===== */
+        .platform-expertise { background: var(--gray-50); }
+        .platform-split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; margin-top: 48px; }
+        .platform-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+        .platform-tag { padding: 9px 18px; background: var(--white); border: 1px solid var(--gray-200); border-radius: 40px; font-size: 14px; font-weight: 600; color: var(--gray-700); box-shadow: var(--shadow-sm); transition: all 0.2s; }
+        .platform-tag:hover { background: var(--red-light); border-color: rgba(215,38,56,0.25); color: var(--red); }
+        .platform-category { margin-bottom: 28px; }
+        .platform-category:last-child { margin-bottom: 0; }
+        .platform-category-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gray-500); margin-bottom: 10px; }
+        @media (max-width: 900px) { .platform-split { grid-template-columns: 1fr; gap: 32px; } }
 
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 32px;
-            margin-top: 48px;
-        }
-
-        .result-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-        }
-
-        .result-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--red);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            flex-shrink: 0;
-        }
-
-        .result-text {
-            font-size: 16px;
-            line-height: 1.6;
-            color: var(--gray-700);
-        }
+        /* ===== CORE CAPABILITIES ===== */
+        .core-capabilities { background: var(--white); }
+        .cap-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 48px; }
+        .cap-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 28px; transition: all 0.22s ease; }
+        .cap-card:hover { background: var(--white); border-color: rgba(215,38,56,0.2); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+        .cap-card-icon { font-size: 28px; margin-bottom: 14px; display: block; }
+        .cap-card h3 { font-size: 17px; font-weight: 700; color: var(--black); margin-bottom: 8px; }
+        .cap-card p { font-size: 14.5px; color: var(--gray-700); line-height: 1.7; margin: 0; }
+        @media (max-width: 700px) { .cap-grid { grid-template-columns: 1fr; } }
 
         /* ===== CASE STUDY ===== */
-        .case-study {
-            background: var(--white);
-        }
-
-        .case-study-card {
-            background: white;
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-        }
-
-        .case-study-inner {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 0;
-        }
-
-        .case-img-wrap {
-            position: relative;
-            overflow: hidden;
-            height: 100%;
-            min-height: 400px;
-        }
-
-        .case-img-wrap img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .case-img-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(215,38,56,0.15) 0%, rgba(10,10,10,0.4) 100%);
-        }
-
-        .case-img-badge {
-            position: absolute;
-            top: 24px;
-            left: 24px;
-            background: rgba(255,255,255,0.95);
-            color: var(--red);
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            padding: 8px 16px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-        }
-
-        .case-content {
-            padding: 48px;
-        }
-
-        .case-client {
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: var(--gray-500);
-            margin-bottom: 8px;
-        }
-
-        .case-title {
-            font-size: 14px;
-            font-weight: 700;
-            color: var(--red);
-            margin-bottom: 12px;
-            letter-spacing: 0.5px;
-        }
-
-        .case-section-label {
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--black);
-            margin-top: 24px;
-            margin-bottom: 10px;
-        }
-
-        .case-section-text {
-            font-size: 15px;
-            line-height: 1.7;
-            color: var(--gray-700);
-        }
-
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 12px;
-        }
-
-        .tech-tag {
-            background: var(--gray-100);
-            color: var(--gray-700);
-            font-size: 12px;
-            font-weight: 600;
-            padding: 6px 14px;
-            border-radius: 20px;
-            border: 1px solid var(--gray-200);
-        }
-
-        .case-metrics {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 12px;
-        }
-
-        .case-metric {
-            text-align: center;
-        }
-
-        .case-metric-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            margin: 0 auto 10px;
-        }
-
-        .case-metric-val {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--black);
-            margin-bottom: 4px;
-        }
-
-        .case-metric-lbl {
-            font-size: 12px;
-            color: var(--gray-500);
-            line-height: 1.4;
-        }
-
-        .case-btn {
-            background: white;
-            border: 2px solid var(--gray-300);
-            color: var(--black);
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.22s;
-        }
-
-        .case-btn:hover {
-            background: var(--red);
-            color: white;
-            border-color: var(--red);
-            transform: scale(1.05);
-        }
+        .case-study { background: var(--gray-50); }
+        .case-study-card { background: white; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); }
+        .case-study-inner { display: grid; grid-template-columns: 1fr 1.2fr; gap: 0; }
+        .case-img-wrap { position: relative; overflow: hidden; height: 100%; min-height: 400px; }
+        .case-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+        .case-img-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(215,38,56,0.15) 0%, rgba(10,10,10,0.4) 100%); }
+        .case-img-badge { position: absolute; top: 24px; left: 24px; background: rgba(255,255,255,0.95); color: var(--red); font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 8px 16px; border-radius: 20px; backdrop-filter: blur(10px); }
+        .case-content { padding: 48px; }
+        .case-client { font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gray-500); margin-bottom: 8px; }
+        .case-title { font-size: 14px; font-weight: 700; color: var(--red); margin-bottom: 12px; letter-spacing: 0.5px; }
+        .case-section-label { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--black); margin-top: 24px; margin-bottom: 10px; }
+        .case-section-text { font-size: 15px; line-height: 1.7; color: var(--gray-700); }
+        .tech-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .tech-tag { background: var(--gray-100); color: var(--gray-700); font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 20px; border: 1px solid var(--gray-200); }
+        .case-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 12px; }
+        .case-metric { text-align: center; }
+        .case-metric-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; margin: 0 auto 8px; }
+        .case-metric-val { font-size: 17px; font-weight: 800; color: var(--black); margin-bottom: 4px; }
+        .case-metric-lbl { font-size: 12px; color: var(--gray-500); }
+        .case-btn { width: 44px; height: 44px; border-radius: 50%; background: var(--white); border: 2px solid var(--gray-300); color: var(--gray-700); font-size: 18px; font-weight: 700; cursor: pointer; transition: all 0.22s; display: flex; align-items: center; justify-content: center; }
+        .case-btn:hover { background: var(--red); color: var(--white); border-color: var(--red); }
 
         /* ===== CONTACT ===== */
-        .contact {
-            background: var(--gray-50);
-        }
-
-        .contact-inner {
-            display: grid;
-            grid-template-columns: 1fr 1.3fr;
-            gap: 64px;
-            margin-top: 48px;
-        }
-
-        .contact-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 32px;
-            margin-bottom: 24px;
-        }
-
-        .contact-card-title {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--black);
-            margin-bottom: 24px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            margin-bottom: 24px;
-        }
-
-        .contact-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .contact-item-icon {
-            font-size: 24px;
-            flex-shrink: 0;
-        }
-
-        .contact-item-label {
-            font-size: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--gray-500);
-            margin-bottom: 4px;
-        }
-
-        .contact-item-val {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--black);
-        }
-
-        .contact-item-val a {
-            color: var(--red);
-        }
-
-        .expect-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .expect-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 15px;
-            color: var(--gray-700);
-        }
-
-        .expect-check {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: var(--red-light);
-            color: var(--red);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 14px;
-            flex-shrink: 0;
-        }
-
-        .contact-form {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 40px;
-        }
-
-        .form-group {
-            margin-bottom: 24px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .form-label {
-            display: block;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--black);
-            margin-bottom: 8px;
-        }
-
-        .req {
-            color: var(--red);
-        }
-
-        .form-input,
-        .form-select,
-        .form-textarea {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1.5px solid var(--gray-300);
-            border-radius: var(--radius-sm);
-            font-family: var(--font);
-            font-size: 15px;
-            color: var(--black);
-            background: white;
-            transition: border-color 0.2s;
-        }
-
-        .form-input:focus,
-        .form-select:focus,
-        .form-textarea:focus {
-            outline: none;
-            border-color: var(--red);
-        }
-
-        .form-textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .form-submit {
-            width: 100%;
-            margin-top: 8px;
-        }
+        .contact { background: var(--gray-50); }
+        .contact-inner { display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px; }
+        .contact-info { display: flex; flex-direction: column; gap: 20px; }
+        .contact-card { background: var(--white); border-radius: var(--radius); padding: 28px; border: 1px solid var(--gray-200); box-shadow: var(--shadow-sm); }
+        .contact-card-title { font-size: 18px; font-weight: 700; color: var(--black); margin-bottom: 20px; }
+        .contact-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px; }
+        .contact-item:last-child { margin-bottom: 0; }
+        .contact-item-icon { width: 36px; height: 36px; background: var(--red-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+        .contact-item-label { font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--gray-500); margin-bottom: 4px; }
+        .contact-item-val { font-size: 15px; color: var(--black); }
+        .contact-item-val a { color: var(--red); }
+        .contact-item-val a:hover { text-decoration: underline; }
+        .expect-list { display: flex; flex-direction: column; gap: 10px; }
+        .expect-item { display: flex; align-items: center; gap: 10px; font-size: 14.5px; color: var(--gray-700); }
+        .expect-check { width: 20px; height: 20px; background: var(--red); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex-shrink: 0; }
+        .contact-form { background: var(--white); border-radius: var(--radius); padding: 36px; border: 1px solid var(--gray-200); box-shadow: var(--shadow-sm); }
+        .form-group { margin-bottom: 20px; }
+        .form-label { display: block; font-size: 13.5px; font-weight: 600; color: var(--black); margin-bottom: 8px; }
+        .req { color: var(--red); }
+        .form-input, .form-select, .form-textarea { width: 100%; padding: 12px 16px; font-family: var(--font); font-size: 15px; border: 1.5px solid var(--gray-200); border-radius: var(--radius-sm); background: var(--white); color: var(--black); transition: border-color 0.2s; outline: none; }
+        .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--red); }
+        .form-textarea { resize: vertical; min-height: 120px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .form-submit { width: 100%; justify-content: center; font-size: 16px; padding: 15px; margin-top: 4px; }
 
         /* ===== FOOTER ===== */
-        .footer {
-            background: var(--black);
-            color: white;
-            padding: 64px 0 32px;
-        }
-
-        .footer-top {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr 1fr;
-            gap: 48px;
-            margin-bottom: 48px;
-            padding-bottom: 48px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .footer-brand p {
-            font-size: 15px;
-            line-height: 1.7;
-            color: var(--gray-300);
-            margin-top: 16px;
-        }
-
-        .footer-col-title {
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-            color: white;
-        }
-
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .footer-links a {
-            font-size: 14px;
-            color: var(--gray-300);
-            transition: color 0.2s;
-        }
-
-        .footer-links a:hover {
-            color: var(--red);
-        }
-
-        .footer-bottom {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .footer-bottom p {
-            font-size: 14px;
-            color: var(--gray-300);
-        }
-
-        .footer-socials {
-            display: flex;
-            gap: 16px;
-        }
-
-        .social-link {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            font-weight: 700;
-            color: white;
-            transition: all 0.22s;
-        }
-
-        .social-link:hover {
-            background: var(--red);
-            transform: translateY(-2px);
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .case-study-inner {
-                grid-template-columns: 1fr;
-            }
-
-            .case-img-wrap {
-                min-height: 300px;
-            }
-
-            .case-content {
-                padding: 32px 24px;
-            }
-
-            .case-metrics {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-inner {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-top {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                gap: 20px;
-                text-align: center;
-            }
-
-            .results-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        .footer { background: var(--black); color: rgba(255,255,255,0.55); padding: 64px 0 28px; }
+        .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
+        .footer-brand p { font-size: 14px; line-height: 1.7; margin-top: 14px; max-width: 260px; }
+        .footer-col-title { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--white); margin-bottom: 16px; }
+        .footer-links { display: flex; flex-direction: column; gap: 10px; }
+        .footer-links a { font-size: 14px; color: rgba(255,255,255,0.55); transition: color 0.2s; }
+        .footer-links a:hover { color: var(--white); }
+        .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 13px; }
+        .footer-socials { display: flex; gap: 10px; }
+        .social-link { width: 34px; height: 34px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; font-size: 13px; color: rgba(255,255,255,0.55); transition: all 0.2s; }
+        .social-link:hover { background: var(--red); border-color: var(--red); color: white; }
 
         /* ===== NAV DROPDOWN ===== */
-        .nav-dropdown {
-            position: relative;
-            display: inline-block;
-        }
+        .nav-dropdown { position: relative; display: inline-block; }
+        .nav-dropdown-toggle { display: flex; align-items: center; gap: 5px; cursor: pointer; }
+        .dropdown-arrow { font-size: 8px; display: inline-block; transition: transform 0.25s ease; }
+        .nav-dropdown:hover .dropdown-arrow { transform: rotate(180deg); }
+        .nav-dropdown-menu { opacity: 0; visibility: hidden; position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(6px); background: var(--white); border: 1px solid var(--gray-200); border-top: 3px solid var(--red); border-radius: 0 0 var(--radius-sm) var(--radius-sm); box-shadow: var(--shadow-lg); min-width: 220px; z-index: 1000; overflow: hidden; transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease; padding: 6px 0; }
+        .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+        .nav-dropdown-menu a { display: block; padding: 11px 20px; font-size: 14px; font-weight: 500; color: var(--gray-700); transition: background 0.15s ease, color 0.15s ease, padding-left 0.15s ease; white-space: nowrap; }
+        .nav-dropdown-menu a:hover { background: var(--gray-50); color: var(--black); padding-left: 26px; }
 
-        .nav-dropdown-toggle {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            cursor: pointer;
-        }
-
-        .dropdown-arrow {
-            font-size: 8px;
-            display: inline-block;
-            transition: transform 0.25s ease;
-        }
-
-        .nav-dropdown:hover .dropdown-arrow {
-            transform: rotate(180deg);
-        }
-
-        .nav-dropdown-menu {
-            opacity: 0;
-            visibility: hidden;
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%) translateY(6px);
-            background: var(--white);
-            border: 1px solid var(--gray-200);
-            border-top: 3px solid var(--red);
-            border-radius: 0 0 var(--radius-sm) var(--radius-sm);
-            box-shadow: var(--shadow-lg);
-            min-width: 220px;
-            z-index: 1000;
-            overflow: hidden;
-            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
-            padding: 6px 0;
-        }
-
-        .nav-dropdown:hover .nav-dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateX(-50%) translateY(0);
-        }
-
-        .nav-dropdown-menu a {
-            display: block;
-            padding: 11px 20px;
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--gray-700);
-            transition: background 0.15s ease, color 0.15s ease, padding-left 0.15s ease;
-            white-space: nowrap;
-        }
-
-        .nav-dropdown-menu a:hover {
-            background: var(--gray-50);
-            color: var(--black);
-            padding-left: 26px;
+        /* ===== RESPONSIVE OVERRIDES ===== */
+        @media (max-width: 768px) {
+            .section { padding: 72px 0; }
+            .case-study-inner { grid-template-columns: 1fr; }
+            .case-img-wrap { min-height: 260px; }
+            .case-content { padding: 32px 24px; }
+            .case-metrics { grid-template-columns: 1fr; }
+            .contact-inner { grid-template-columns: 1fr; gap: 32px; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-top { grid-template-columns: 1fr; gap: 32px; }
+            .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+            .hamburger { display: flex; }
         }
     </style>
 </head>
 <body>
+
     <!-- Header / Navigation -->
     <header class="header scrolled" id="header">
         <div class="container">
             <nav class="nav">
                 <a href="index.html" class="logo">Pragma<span>Apps</span></a>
-
-                <!-- Right-aligned navigation -->
                 <div class="nav-right">
                     <div class="nav-links" id="navLinks">
                         <a href="index.html">Home</a>
@@ -1624,9 +356,7 @@
                     <div class="nav-cta">
                         <a href="#" class="btn-login">Login</a>
                         <div class="hamburger" id="hamburger">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                            <span></span><span></span><span></span>
                         </div>
                     </div>
                 </div>
@@ -1638,241 +368,131 @@
     <section class="hero" id="hero">
         <div class="container">
             <div class="hero-inner">
-                <!-- Left: Copy -->
                 <div class="hero-left">
                     <div class="hero-eyebrow">
                         <div class="hero-eyebrow-dot"></div>
                         <span>Digital Transformation</span>
                     </div>
-                    <h1>Transform Your Business with <em>Intelligent Automation</em></h1>
-                    <p class="hero-description">We embed AI at every stage of your transformation — from process discovery to production automation — compressing timelines, reducing execution risk, and delivering measurable operational improvements.</p>
+                    <h1>Build Modern Digital Platforms <em>Faster with AI</em></h1>
+                    <p class="hero-description">We help businesses launch and modernize websites, portals, communities, marketplaces, and business applications using platform expertise, custom engineering, cloud architecture, and AI-assisted delivery.</p>
                     <div class="hero-cta">
-                        <a href="#contact" class="btn btn-primary">Start Transforming →</a>
-                        <a href="#case-study" class="btn btn-outline-white">View Case Studies</a>
+                        <a href="#contact" class="btn btn-primary">Book a Free Consulting Call →</a>
+                        <a href="#approach" class="btn btn-outline-white">See Our Approach</a>
                     </div>
                     <div class="hero-stats">
                         <div>
-                            <div class="hero-stat-val">3<span>×</span></div>
-                            <div class="hero-stat-lbl">Average ROI</div>
-                        </div>
-                        <div>
-                            <div class="hero-stat-val">200<span>+</span></div>
-                            <div class="hero-stat-lbl">Processes Automated</div>
+                            <div class="hero-stat-val">50<span>+</span></div>
+                            <div class="hero-stat-lbl">Platforms Launched</div>
                         </div>
                         <div>
                             <div class="hero-stat-val">40<span>%</span></div>
-                            <div class="hero-stat-lbl">Cost Reduction</div>
+                            <div class="hero-stat-lbl">Faster with AI Delivery</div>
+                        </div>
+                        <div>
+                            <div class="hero-stat-val">15<span>+</span></div>
+                            <div class="hero-stat-lbl">Years of Platform Work</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right: Visual -->
                 <div class="hero-visual">
-
-                    <!-- Transformation pipeline — top full-width -->
                     <div class="hv-card hv-phase">
-                        <div class="hv-label">Transformation Lifecycle</div>
+                        <div class="hv-label">Platform Delivery Journey</div>
                         <div class="hv-phase-row">
-                            <div class="hv-phase-item">
-                                <span class="hv-phase-icon">🔍</span>
-                                <div class="hv-phase-name">Assess</div>
-                            </div>
+                            <div class="hv-phase-item"><span class="hv-phase-icon">🔍</span><div class="hv-phase-name">Discover</div></div>
                             <div class="hv-arrow">›</div>
-                            <div class="hv-phase-item">
-                                <span class="hv-phase-icon">🗺</span>
-                                <div class="hv-phase-name">Map</div>
-                            </div>
+                            <div class="hv-phase-item"><span class="hv-phase-icon">✏️</span><div class="hv-phase-name">Prototype</div></div>
                             <div class="hv-arrow">›</div>
-                            <div class="hv-phase-item active-phase">
-                                <span class="hv-phase-icon">⚙️</span>
-                                <div class="hv-phase-name">Automate</div>
-                            </div>
+                            <div class="hv-phase-item active-phase"><span class="hv-phase-icon">⚙️</span><div class="hv-phase-name">Build</div></div>
                             <div class="hv-arrow">›</div>
-                            <div class="hv-phase-item">
-                                <span class="hv-phase-icon">📊</span>
-                                <div class="hv-phase-name">Monitor</div>
-                            </div>
+                            <div class="hv-phase-item"><span class="hv-phase-icon">🚀</span><div class="hv-phase-name">Launch</div></div>
                             <div class="hv-arrow">›</div>
-                            <div class="hv-phase-item">
-                                <span class="hv-phase-icon">📈</span>
-                                <div class="hv-phase-name">Scale</div>
-                            </div>
+                            <div class="hv-phase-item"><span class="hv-phase-icon">📈</span><div class="hv-phase-name">Scale</div></div>
                         </div>
                     </div>
-
-                    <!-- Automation code — mid-left -->
                     <div class="hv-card hv-code">
-                        <div class="hv-code-bar">
-                            <div class="hv-dot hv-dot-r"></div>
-                            <div class="hv-dot hv-dot-y"></div>
-                            <div class="hv-dot hv-dot-g"></div>
-                        </div>
-                        <div class="hv-code-line"><span class="hv-cm">// AI process automation</span></div>
-                        <div class="hv-code-line"><span class="hv-kw">const</span> <span class="hv-fn">workflow</span> <span class="hv-pn">= await</span> <span class="hv-fn">automate</span><span class="hv-pn">({</span></div>
-                        <div class="hv-code-line">&nbsp;&nbsp;<span class="hv-fn">process</span><span class="hv-pn">:</span> <span class="hv-str">'invoice_approval'</span><span class="hv-pn">,</span></div>
-                        <div class="hv-code-line">&nbsp;&nbsp;<span class="hv-fn">aiEnabled</span><span class="hv-pn">:</span> <span class="hv-kw">true</span><span class="hv-pn">,</span></div>
+                        <div class="hv-code-bar"><div class="hv-dot hv-dot-r"></div><div class="hv-dot hv-dot-y"></div><div class="hv-dot hv-dot-g"></div></div>
+                        <div class="hv-code-line"><span class="hv-cm">// AI-assisted platform build</span></div>
+                        <div class="hv-code-line"><span class="hv-kw">const</span> <span class="hv-fn">platform</span> <span class="hv-pn">= await</span> <span class="hv-fn">launch</span><span class="hv-pn">({</span></div>
+                        <div class="hv-code-line">&nbsp;&nbsp;<span class="hv-fn">type</span><span class="hv-pn">:</span> <span class="hv-str">'customer_portal'</span><span class="hv-pn">,</span></div>
+                        <div class="hv-code-line">&nbsp;&nbsp;<span class="hv-fn">aiDelivery</span><span class="hv-pn">:</span> <span class="hv-kw">true</span><span class="hv-pn">,</span></div>
                         <div class="hv-code-line"><span class="hv-pn">});</span></div>
-                        <div class="hv-code-line"><span class="hv-fn">expect</span><span class="hv-pn">(</span><span class="hv-fn">workflow</span><span class="hv-pn">.</span><span class="hv-fn">timeSaved</span><span class="hv-pn">).</span><span class="hv-fn">toBeGreaterThan</span><span class="hv-pn">(</span><span class="hv-str">80</span><span class="hv-pn">);</span></div>
-                        <div class="hv-ai-pill">⚡ AI Optimized &nbsp;·&nbsp; 38% faster</div>
+                        <div class="hv-code-line"><span class="hv-fn">expect</span><span class="hv-pn">(</span><span class="hv-fn">platform</span><span class="hv-pn">.</span><span class="hv-fn">launchTime</span><span class="hv-pn">).</span><span class="hv-fn">toBeFaster</span><span class="hv-pn">(</span><span class="hv-str">40</span><span class="hv-pn">);</span></div>
+                        <div class="hv-ai-pill">⚡ AI-First &nbsp;·&nbsp; 40% faster launch</div>
                     </div>
-
-                    <!-- Process Intelligence — mid-right -->
                     <div class="hv-card hv-ai">
                         <div class="hv-ai-header">
                             <div class="hv-ai-icon">🤖</div>
-                            <div>
-                                <div class="hv-ai-title">Process Intelligence</div>
-                                <div class="hv-ai-sub">Optimization active</div>
-                            </div>
+                            <div><div class="hv-ai-title">AI Delivery</div><div class="hv-ai-sub">Active across lifecycle</div></div>
                         </div>
-                        <div class="hv-ai-item">
-                            <div class="hv-ai-check">✓</div>
-                            <div class="hv-ai-text">Manual bottlenecks eliminated</div>
-                        </div>
-                        <div class="hv-ai-item">
-                            <div class="hv-ai-check">✓</div>
-                            <div class="hv-ai-text">Legacy systems integrated</div>
-                        </div>
-                        <div class="hv-ai-item">
-                            <div class="hv-ai-check">✓</div>
-                            <div class="hv-ai-text">ROI tracked in real time</div>
-                        </div>
+                        <div class="hv-ai-item"><div class="hv-ai-check">✓</div><div class="hv-ai-text">Requirements structured</div></div>
+                        <div class="hv-ai-item"><div class="hv-ai-check">✓</div><div class="hv-ai-text">UX prototype validated</div></div>
+                        <div class="hv-ai-item"><div class="hv-ai-check">✓</div><div class="hv-ai-text">Development accelerated</div></div>
                     </div>
-
-                    <!-- Automation metrics — bottom-left -->
                     <div class="hv-card hv-metrics">
-                        <div class="hv-label">Automation Results</div>
-                        <div class="hv-metric-row">
-                            <div class="hv-metric-name">Processes automated</div>
-                            <div class="hv-metric-val green">142 / 142</div>
-                        </div>
-                        <div class="hv-metric-row">
-                            <div class="hv-metric-name">Hours saved / week</div>
-                            <div class="hv-metric-val green">2,400h</div>
-                        </div>
-                        <div class="hv-metric-row">
-                            <div class="hv-metric-name">Cost reduction</div>
-                            <div class="hv-metric-val">38%</div>
-                        </div>
+                        <div class="hv-label">Platform Delivery</div>
+                        <div class="hv-metric-row"><div class="hv-metric-name">Time to launch</div><div class="hv-metric-val green">40% faster</div></div>
+                        <div class="hv-metric-row"><div class="hv-metric-name">Platforms this year</div><div class="hv-metric-val green">12 live</div></div>
+                        <div class="hv-metric-row"><div class="hv-metric-name">Cloud-ready architecture</div><div class="hv-metric-val">100%</div></div>
                     </div>
-
-                    <!-- ROI badge — bottom-right -->
                     <div class="hv-card hv-delivery">
-                        <div class="hv-delivery-num">3<span>×</span></div>
-                        <div class="hv-delivery-lbl">ROI in<br>Year One</div>
+                        <div class="hv-delivery-num">40<span>%</span></div>
+                        <div class="hv-delivery-lbl">Faster<br>Launches</div>
                         <div class="hv-delivery-bar"><div class="hv-delivery-fill"></div></div>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Our Approach Section -->
     <section class="approach-section section" id="approach">
         <div class="container approach-container">
             <div style="text-align: center; margin-bottom: 56px;">
                 <div class="section-tag">OUR APPROACH</div>
-                <h2 class="section-title">How We Transform Businesses</h2>
-                <p class="section-sub" style="margin: 0 auto;">Our AI-driven transformation methodology compresses timelines, reduces execution risk, and delivers measurable operational improvements at every stage.</p>
+                <h2 class="section-title">How We Apply AI in Digital Transformation</h2>
+                <p class="section-sub" style="margin: 0 auto;">We do not treat AI as a separate add-on. We embed it across planning, design, engineering, content, optimization, and operations — and into the platforms we deliver.</p>
             </div>
 
-            <div class="approach-steps-nav" id="approachNav">
-                <div class="approach-step-indicator active" data-step="1" onclick="showApproachStep(1)">
-                    <div class="approach-step-num">01</div>
-                    <div class="approach-step-label">Process<br>Discovery</div>
-                </div>
-                <div class="approach-step-connector filled"></div>
-                <div class="approach-step-indicator" data-step="2" onclick="showApproachStep(2)">
-                    <div class="approach-step-num">02</div>
-                    <div class="approach-step-label">System<br>Design</div>
-                </div>
-                <div class="approach-step-connector"></div>
-                <div class="approach-step-indicator" data-step="3" onclick="showApproachStep(3)">
-                    <div class="approach-step-num">03</div>
-                    <div class="approach-step-label">Accelerated<br>Development</div>
-                </div>
-                <div class="approach-step-connector"></div>
-                <div class="approach-step-indicator" data-step="4" onclick="showApproachStep(4)">
-                    <div class="approach-step-num">04</div>
-                    <div class="approach-step-label">Process<br>Automation</div>
-                </div>
-                <div class="approach-step-connector"></div>
-                <div class="approach-step-indicator" data-step="5" onclick="showApproachStep(5)">
-                    <div class="approach-step-num">05</div>
-                    <div class="approach-step-label">Data-Driven<br>Insights</div>
-                </div>
+            <div class="approach-tabs" id="approachNav">
+                <button class="approach-tab active" data-step="1" onclick="showApproachStep(1)">
+                    <span class="approach-tab-label">Strategy &amp; Discovery</span>
+                </button>
+                <button class="approach-tab" data-step="2" onclick="showApproachStep(2)">
+                    <span class="approach-tab-label">UX &amp; Prototyping</span>
+                </button>
+                <button class="approach-tab" data-step="3" onclick="showApproachStep(3)">
+                    <span class="approach-tab-label">Custom Engineering</span>
+                </button>
+                <button class="approach-tab" data-step="4" onclick="showApproachStep(4)">
+                    <span class="approach-tab-label">Content Intelligence</span>
+                </button>
+                <button class="approach-tab" data-step="5" onclick="showApproachStep(5)">
+                    <span class="approach-tab-label">GEO &amp; AI Search</span>
+                </button>
+                <button class="approach-tab" data-step="6" onclick="showApproachStep(6)">
+                    <span class="approach-tab-label">Engagement &amp; Automation</span>
+                </button>
             </div>
 
+            <!-- Step 1 -->
             <div class="approach-content-panel active" data-panel="1">
                 <div class="approach-content-left">
-                    <div class="approach-content-icon">🔍</div>
-                    <div class="approach-content-step">STEP 01</div>
-                    <h3 class="approach-content-title">Process Discovery</h3>
-                    <p class="approach-content-desc">Understanding existing workflows is the most time-consuming part of any transformation. We use AI to analyze <span class="highlight">documents, workflows, and business rules</span> — rapidly surfacing bottlenecks, redundant steps, and automation opportunities.</p>
+                    <div class="approach-content-icon">🗺️</div>
+                    <h3 class="approach-content-title">AI-Assisted Requirements and Solution Design</h3>
+                    <p class="approach-content-desc">We use AI to convert business goals into <span class="highlight">structured requirements, user journeys, and feature maps</span> — turning scattered inputs into delivery-ready specifications that reduce ambiguity and speed up stakeholder alignment before development starts.</p>
                     <div class="approach-features">
                         <div class="approach-feature">
-                            <div class="approach-feature-icon">📄</div>
-                            <span>AI-assisted analysis of documents and historical data</span>
+                            <div class="approach-feature-icon">🎯</div>
+                            <span>Business goals converted into structured, actionable requirements</span>
                         </div>
                         <div class="approach-feature">
-                            <div class="approach-feature-icon">🔎</div>
-                            <span>Rapid identification of bottlenecks and manual inefficiencies</span>
-                        </div>
-                        <div class="approach-feature">
-                            <div class="approach-feature-icon">🗺️</div>
-                            <span>Automation opportunity mapping across all workflows</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="approach-visual-card">
-                    <div class="approach-visual-header">
-                        <div class="approach-visual-dot red"></div>
-                        <div class="approach-visual-dot yellow"></div>
-                        <div class="approach-visual-dot green"></div>
-                        <div class="approach-visual-title">process_analysis.md</div>
-                    </div>
-                    <div class="approach-metric-grid">
-                        <div class="approach-metric">
-                            <div class="approach-metric-value">Weeks</div>
-                            <div class="approach-metric-label">Analysis compressed from months</div>
-                        </div>
-                        <div class="approach-metric">
-                            <div class="approach-metric-value">80%</div>
-                            <div class="approach-metric-label">Bottlenecks identified automatically</div>
-                        </div>
-                        <div class="approach-metric">
-                            <div class="approach-metric-value">3x</div>
-                            <div class="approach-metric-label">Faster discovery phase</div>
-                        </div>
-                        <div class="approach-metric">
-                            <div class="approach-metric-value">100%</div>
-                            <div class="approach-metric-label">Process visibility achieved</div>
-                        </div>
-                    </div>
-                    <div class="approach-quote-block">
-                        <p class="approach-quote-text">"They mapped our entire order fulfillment process in two weeks. It would have taken us three months internally."</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="approach-content-panel" data-panel="2">
-                <div class="approach-content-left">
-                    <div class="approach-content-icon">🏗️</div>
-                    <div class="approach-content-step">STEP 02</div>
-                    <h3 class="approach-content-title">System Design</h3>
-                    <p class="approach-content-desc">Our architects use AI to design <span class="highlight">integration architectures, microservices, and data pipelines</span> — drawing on patterns from similar transformation programs to suggest optimized, proven designs rather than starting from scratch.</p>
-                    <div class="approach-features">
-                        <div class="approach-feature">
-                            <div class="approach-feature-icon">🏗️</div>
-                            <span>AI-suggested integration and microservice architectures</span>
-                        </div>
-                        <div class="approach-feature">
-                            <div class="approach-feature-icon">🔄</div>
-                            <span>Automation pipeline and data pipeline design</span>
+                            <div class="approach-feature-icon">📋</div>
+                            <span>User journey mapping, feature prioritisation, and scope definition</span>
                         </div>
                         <div class="approach-feature">
                             <div class="approach-feature-icon">⚡</div>
-                            <span>Proven patterns adapted to your specific context</span>
+                            <span>Delivery-ready process flows and specifications before any code</span>
                         </div>
                     </div>
                 </div>
@@ -1881,102 +501,78 @@
                         <div class="approach-visual-dot red"></div>
                         <div class="approach-visual-dot yellow"></div>
                         <div class="approach-visual-dot green"></div>
-                        <div class="approach-visual-title">system_design.yaml</div>
+                        <div class="approach-visual-title">requirements_output.md</div>
                     </div>
                     <div class="approach-metric-grid">
-                        <div class="approach-metric">
-                            <div class="approach-metric-value">60%</div>
-                            <div class="approach-metric-label">Faster architecture design</div>
-                        </div>
-                        <div class="approach-metric">
-                            <div class="approach-metric-value">Zero</div>
-                            <div class="approach-metric-label">Start-from-scratch designs</div>
-                        </div>
-                        <div class="approach-metric">
-                            <div class="approach-metric-value">5x</div>
-                            <div class="approach-metric-label">Architecture options evaluated</div>
-                        </div>
-                        <div class="approach-metric">
-                            <div class="approach-metric-value">100%</div>
-                            <div class="approach-metric-label">Scalability by design</div>
-                        </div>
+                        <div class="approach-metric"><div class="approach-metric-value">3x</div><div class="approach-metric-label">Faster requirement capture</div></div>
+                        <div class="approach-metric"><div class="approach-metric-value">80%</div><div class="approach-metric-label">Fewer missed requirements</div></div>
+                        <div class="approach-metric"><div class="approach-metric-value">2 wk</div><div class="approach-metric-label">Avg. discovery phase</div></div>
+                        <div class="approach-metric"><div class="approach-metric-value">100%</div><div class="approach-metric-label">Stakeholder alignment</div></div>
                     </div>
                     <div class="approach-quote-block">
-                        <p class="approach-quote-text">"The architecture they proposed was production-ready from day one. No rework, no surprises."</p>
+                        <p class="approach-quote-text">"Requirements structured from early conversations meant zero surprises when engineering started."</p>
                     </div>
                 </div>
             </div>
 
+            <!-- Step 2 -->
+            <div class="approach-content-panel" data-panel="2">
+                <div class="approach-content-left">
+                    <div class="approach-content-icon">✏️</div>
+                    <h3 class="approach-content-title">AI-Powered Prototyping and Experience Design</h3>
+                    <p class="approach-content-desc">AI helps us rapidly turn requirements into <span class="highlight">wireframes, layouts, and reusable interface patterns</span> so teams can validate ideas early and move into implementation with far greater confidence and fewer costly revisions.</p>
+                    <div class="approach-features">
+                        <div class="approach-feature">
+                            <div class="approach-feature-icon">🗺️</div>
+                            <span>Requirements to screen flows and interaction logic</span>
+                        </div>
+                        <div class="approach-feature">
+                            <div class="approach-feature-icon">🔗</div>
+                            <span>Reusable components mapped to existing design patterns</span>
+                        </div>
+                        <div class="approach-feature">
+                            <div class="approach-feature-icon">📋</div>
+                            <span>Prototype notes with validations, edge cases, and states</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="approach-visual-card">
+                    <div class="approach-visual-header">
+                        <div class="approach-visual-dot red"></div>
+                        <div class="approach-visual-dot yellow"></div>
+                        <div class="approach-visual-dot green"></div>
+                        <div class="approach-visual-title">ux_prototype.fig</div>
+                    </div>
+                    <div class="approach-metric-grid">
+                        <div class="approach-metric"><div class="approach-metric-value">5x</div><div class="approach-metric-label">Faster prototype creation</div></div>
+                        <div class="approach-metric"><div class="approach-metric-value">70%</div><div class="approach-metric-label">Less redesign in dev</div></div>
+                        <div class="approach-metric"><div class="approach-metric-value">Days</div><div class="approach-metric-label">From brief to prototype</div></div>
+                        <div class="approach-metric"><div class="approach-metric-value">100%</div><div class="approach-metric-label">Validated before code</div></div>
+                    </div>
+                    <div class="approach-quote-block">
+                        <p class="approach-quote-text">"Seeing a working prototype in days, not weeks, helped us align the team and get stakeholder sign-off faster."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
             <div class="approach-content-panel" data-panel="3">
                 <div class="approach-content-left">
-                    <div class="approach-content-icon">⚡</div>
-                    <div class="approach-content-step">STEP 03</div>
-                    <h3 class="approach-content-title">Accelerated Development</h3>
-                    <p class="approach-content-desc">We use AI to generate APIs, integration connectors, workflow logic, and data transformation code — dramatically <span class="highlight">reducing the build phase</span> for dashboards, automation services, and system integrations.</p>
+                    <div class="approach-content-icon">⚙️</div>
+                    <h3 class="approach-content-title">Faster Development Across Platforms</h3>
+                    <p class="approach-content-desc">We accelerate theme development, module coding, plugin extensions, API integrations, and admin workflows using <span class="highlight">AI-assisted engineering</span> — without compromising architecture, maintainability, or code quality standards.</p>
                     <div class="approach-features">
                         <div class="approach-feature">
-                            <div class="approach-feature-icon">🤖</div>
-                            <span>AI-generated APIs, connectors, and workflow logic</span>
+                            <div class="approach-feature-icon">🏎️</div>
+                            <span>AI-accelerated theme, module, and feature development</span>
                         </div>
                         <div class="approach-feature">
-                            <div class="approach-feature-icon">🚀</div>
-                            <span>Dramatically shorter build phase for integrations</span>
-                        </div>
-                        <div class="approach-feature">
-                            <div class="approach-feature-icon">📊</div>
-                            <span>Internal dashboards and automation services delivered faster</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="approach-visual-card">
-                    <div class="approach-visual-header">
-                        <div class="approach-visual-dot red"></div>
-                        <div class="approach-visual-dot yellow"></div>
-                        <div class="approach-visual-dot green"></div>
-                        <div class="approach-visual-title">build_pipeline.log</div>
-                    </div>
-                    <div class="approach-metric-grid">
-                        <div class="approach-metric">
-                            <div class="approach-metric-value">2–4x</div>
-                            <div class="approach-metric-label">Engineering productivity gain</div>
-                        </div>
-                        <div class="approach-metric">
-                            <div class="approach-metric-value">40%</div>
-                            <div class="approach-metric-label">Shorter build cycles</div>
-                        </div>
-                        <div class="approach-metric">
-                            <div class="approach-metric-value">95%+</div>
-                            <div class="approach-metric-label">Code quality score</div>
-                        </div>
-                        <div class="approach-metric">
-                            <div class="approach-metric-value">Zero</div>
-                            <div class="approach-metric-label">Manual boilerplate written</div>
-                        </div>
-                    </div>
-                    <div class="approach-quote-block">
-                        <p class="approach-quote-text">"What we estimated as a 6-month integration project was completed in 10 weeks."</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="approach-content-panel" data-panel="4">
-                <div class="approach-content-left">
-                    <div class="approach-content-icon">🤖</div>
-                    <div class="approach-content-step">STEP 04</div>
-                    <h3 class="approach-content-title">Business Process Automation</h3>
-                    <p class="approach-content-desc">We automate high-volume, rule-based processes such as <span class="highlight">document processing, invoice extraction, approval routing, and data entry</span> — eliminating manual errors and freeing your teams for higher-value work.</p>
-                    <div class="approach-features">
-                        <div class="approach-feature">
-                            <div class="approach-feature-icon">📄</div>
-                            <span>Automated document processing and data extraction</span>
-                        </div>
-                        <div class="approach-feature">
-                            <div class="approach-feature-icon">🔄</div>
-                            <span>Intelligent approval routing and ticket classification</span>
+                            <div class="approach-feature-icon">🏛️</div>
+                            <span>Built around your existing architecture and coding standards</span>
                         </div>
                         <div class="approach-feature">
                             <div class="approach-feature-icon">✅</div>
-                            <span>Zero manual data entry — end-to-end automation</span>
+                            <span>Refactoring, test scaffolding, and debugging assistance</span>
                         </div>
                     </div>
                 </div>
@@ -1985,50 +581,118 @@
                         <div class="approach-visual-dot red"></div>
                         <div class="approach-visual-dot yellow"></div>
                         <div class="approach-visual-dot green"></div>
-                        <div class="approach-visual-title">automation_report.json</div>
+                        <div class="approach-visual-title">platform_build.ts</div>
                     </div>
                     <div class="approach-metric-grid">
-                        <div class="approach-metric">
-                            <div class="approach-metric-value">90%</div>
-                            <div class="approach-metric-label">Manual effort eliminated</div>
-                        </div>
-                        <div class="approach-metric">
-                            <div class="approach-metric-value">Zero</div>
-                            <div class="approach-metric-label">Manual data entry errors</div>
-                        </div>
-                        <div class="approach-metric">
-                            <div class="approach-metric-value">5x</div>
-                            <div class="approach-metric-label">Faster process throughput</div>
-                        </div>
-                        <div class="approach-metric">
-                            <div class="approach-metric-value">24/7</div>
-                            <div class="approach-metric-label">Automated processing uptime</div>
-                        </div>
+                        <div class="approach-metric"><div class="approach-metric-value">40%</div><div class="approach-metric-label">Faster dev cycles</div></div>
+                        <div class="approach-metric"><div class="approach-metric-value">3x</div><div class="approach-metric-label">More features per sprint</div></div>
+                        <div class="approach-metric"><div class="approach-metric-value">Zero</div><div class="approach-metric-label">Architecture compromises</div></div>
+                        <div class="approach-metric"><div class="approach-metric-value">100%</div><div class="approach-metric-label">Code review standards met</div></div>
                     </div>
                     <div class="approach-quote-block">
-                        <p class="approach-quote-text">"Invoice processing that took our team 3 days now runs overnight without human intervention."</p>
+                        <p class="approach-quote-text">"Development velocity improved significantly without any reduction in code quality or architecture standards."</p>
                     </div>
                 </div>
             </div>
 
-            <div class="approach-content-panel" data-panel="5">
+            <!-- Step 4 -->
+            <div class="approach-content-panel" data-panel="4">
                 <div class="approach-content-left">
-                    <div class="approach-content-icon">📊</div>
-                    <div class="approach-content-step">STEP 05</div>
-                    <h3 class="approach-content-title">Data-Driven Decision Making</h3>
-                    <p class="approach-content-desc">Once systems are digitized, AI helps surface trends, detect anomalies, and identify optimization opportunities — enabling leadership to shift from <span class="highlight">reactive to predictive decision-making</span>.</p>
+                    <div class="approach-content-icon">📝</div>
+                    <h3 class="approach-content-title">AI-Enabled Content Creation and Editing</h3>
+                    <p class="approach-content-desc">We embed AI into content workflows so teams can <span class="highlight">generate, rewrite, localize, and refine</span> pages, articles, product content, and knowledge content directly within the platforms they already use — without switching tools.</p>
                     <div class="approach-features">
                         <div class="approach-feature">
-                            <div class="approach-feature-icon">📈</div>
-                            <span>AI-powered trend analysis and business forecasting</span>
+                            <div class="approach-feature-icon">✍️</div>
+                            <span>Generate and refine content at scale within the CMS</span>
                         </div>
                         <div class="approach-feature">
-                            <div class="approach-feature-icon">🚨</div>
-                            <span>Anomaly detection before issues impact operations</span>
+                            <div class="approach-feature-icon">🌐</div>
+                            <span>Localization and multilingual content support built-in</span>
+                        </div>
+                        <div class="approach-feature">
+                            <div class="approach-feature-icon">🔄</div>
+                            <span>AI-assisted editorial review, rewriting, and tone control</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="approach-visual-card">
+                    <div class="approach-visual-header">
+                        <div class="approach-visual-dot red"></div>
+                        <div class="approach-visual-dot yellow"></div>
+                        <div class="approach-visual-dot green"></div>
+                        <div class="approach-visual-title">content_workflow.cms</div>
+                    </div>
+                    <div class="approach-metric-grid">
+                        <div class="approach-metric"><div class="approach-metric-value">10x</div><div class="approach-metric-label">Content production speed</div></div>
+                        <div class="approach-metric"><div class="approach-metric-value">60%</div><div class="approach-metric-label">Reduction in editing time</div></div>
+                        <div class="approach-metric"><div class="approach-metric-value">Multi</div><div class="approach-metric-label">Language support</div></div>
+                        <div class="approach-metric"><div class="approach-metric-value">In-app</div><div class="approach-metric-label">AI content workflows</div></div>
+                    </div>
+                    <div class="approach-quote-block">
+                        <p class="approach-quote-text">"The team went from one blog post per week to five — all inside their existing CMS workflow."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="approach-content-panel" data-panel="5">
+                <div class="approach-content-left">
+                    <div class="approach-content-icon">🔍</div>
+                    <h3 class="approach-content-title">GEO: Built for LLM Discovery</h3>
+                    <p class="approach-content-desc">We structure websites for <span class="highlight">Generative Engine Optimization</span> — using entity-rich writing, answer-focused sections, strong semantic structure, and topic clustering so AI systems can understand, cite, and surface your content in AI-powered search.</p>
+                    <div class="approach-features">
+                        <div class="approach-feature">
+                            <div class="approach-feature-icon">📡</div>
+                            <span>Entity-rich content and semantic topic structure</span>
+                        </div>
+                        <div class="approach-feature">
+                            <div class="approach-feature-icon">💡</div>
+                            <span>Answer-focused sections optimized for LLM citation</span>
+                        </div>
+                        <div class="approach-feature">
+                            <div class="approach-feature-icon">🏗️</div>
+                            <span>Structured data markup and AI-first content architecture</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="approach-visual-card">
+                    <div class="approach-visual-header">
+                        <div class="approach-visual-dot red"></div>
+                        <div class="approach-visual-dot yellow"></div>
+                        <div class="approach-visual-dot green"></div>
+                        <div class="approach-visual-title">geo_structure.json</div>
+                    </div>
+                    <div class="approach-metric-grid">
+                        <div class="approach-metric"><div class="approach-metric-value">GEO</div><div class="approach-metric-label">Ready for LLM discovery</div></div>
+                        <div class="approach-metric"><div class="approach-metric-value">Entity</div><div class="approach-metric-label">Rich content design</div></div>
+                        <div class="approach-metric"><div class="approach-metric-value">AI-First</div><div class="approach-metric-label">Content architecture</div></div>
+                        <div class="approach-metric"><div class="approach-metric-value">Semantic</div><div class="approach-metric-label">Structured markup</div></div>
+                    </div>
+                    <div class="approach-quote-block">
+                        <p class="approach-quote-text">"We built the site structure so AI assistants would cite and surface the right answers from the right pages."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="approach-content-panel" data-panel="6">
+                <div class="approach-content-left">
+                    <div class="approach-content-icon">💬</div>
+                    <h3 class="approach-content-title">Conversational Journeys and Smart Workflows</h3>
+                    <p class="approach-content-desc">We design platforms that can include <span class="highlight">AI assistants, guided user journeys, and workflow automation</span> — combining lead qualification, multilingual support, internal search, and smarter customer interactions into the platform experience.</p>
+                    <div class="approach-features">
+                        <div class="approach-feature">
+                            <div class="approach-feature-icon">🤖</div>
+                            <span>AI assistants and guided conversational user journeys</span>
                         </div>
                         <div class="approach-feature">
                             <div class="approach-feature-icon">🎯</div>
-                            <span>Optimization insights that improve ongoing performance</span>
+                            <span>Lead qualification and smart onboarding flows</span>
+                        </div>
+                        <div class="approach-feature">
+                            <div class="approach-feature-icon">⚡</div>
+                            <span>Workflow automation and multilingual customer support</span>
                         </div>
                     </div>
                 </div>
@@ -2037,64 +701,172 @@
                         <div class="approach-visual-dot red"></div>
                         <div class="approach-visual-dot yellow"></div>
                         <div class="approach-visual-dot green"></div>
-                        <div class="approach-visual-title">insights_dashboard.json</div>
+                        <div class="approach-visual-title">engagement_layer.config</div>
                     </div>
                     <div class="approach-metric-grid">
-                        <div class="approach-metric">
-                            <div class="approach-metric-value">Real-time</div>
-                            <div class="approach-metric-label">Business intelligence visibility</div>
-                        </div>
-                        <div class="approach-metric">
-                            <div class="approach-metric-value">3x</div>
-                            <div class="approach-metric-label">Faster executive decisions</div>
-                        </div>
-                        <div class="approach-metric">
-                            <div class="approach-metric-value">Early</div>
-                            <div class="approach-metric-label">Anomaly detection before impact</div>
-                        </div>
-                        <div class="approach-metric">
-                            <div class="approach-metric-value">100%</div>
-                            <div class="approach-metric-label">Data-backed recommendations</div>
-                        </div>
+                        <div class="approach-metric"><div class="approach-metric-value">24/7</div><div class="approach-metric-label">AI assistant availability</div></div>
+                        <div class="approach-metric"><div class="approach-metric-value">40%</div><div class="approach-metric-label">Lead qualification lift</div></div>
+                        <div class="approach-metric"><div class="approach-metric-value">Auto</div><div class="approach-metric-label">Workflow handling</div></div>
+                        <div class="approach-metric"><div class="approach-metric-value">Multi</div><div class="approach-metric-label">Channel engagement</div></div>
                     </div>
                     <div class="approach-quote-block">
-                        <p class="approach-quote-text">"We went from gut-feel decisions to data-backed strategies in under 60 days."</p>
+                        <p class="approach-quote-text">"The conversational AI layer transformed how users engaged with the platform — support tickets dropped by 35%."</p>
                     </div>
                 </div>
             </div>
 
-            <div class="approach-nav-arrows">
-                <button class="approach-nav-btn" onclick="prevApproachStep()">←</button>
-                <div class="approach-nav-counter"><span class="current" id="approachCurrent">01</span> / 05</div>
-                <button class="approach-nav-btn" onclick="nextApproachStep()">→</button>
-            </div>
         </div>
     </section>
 
-    <!-- Results Section -->
+    <!-- Results / What You Get -->
     <section class="results section" id="results">
         <div class="container">
             <div style="text-align: center; margin-bottom: 24px;">
                 <div class="section-tag" style="background: rgba(215,38,56,0.2);">THE RESULT</div>
                 <h2 class="section-title">What You Get</h2>
-                <p class="section-sub" style="margin: 0 auto;">Our AI-accelerated transformation approach delivers operational efficiency and business intelligence that traditional methods can't match.</p>
+                <p class="section-sub" style="margin: 0 auto;">Our goal is not just to ship software. It is to help you launch faster, operate more efficiently, and build digital platforms that improve over time.</p>
             </div>
             <div class="results-grid">
                 <div class="result-item">
                     <div class="result-icon">⚡</div>
-                    <p class="result-text"><strong>Faster transformation timelines</strong> with lower execution risk — months of analysis compressed into weeks using AI-assisted process discovery.</p>
+                    <p class="result-text"><strong>Faster delivery</strong> through AI-assisted planning, prototyping, and development — compressing timelines without cutting corners on quality or architecture.</p>
                 </div>
                 <div class="result-item">
-                    <div class="result-icon">🤖</div>
-                    <p class="result-text"><strong>Significant reduction in manual processes</strong> — high-volume, rule-based work automated end-to-end, eliminating costly human errors.</p>
-                </div>
-                <div class="result-item">
-                    <div class="result-icon">📊</div>
-                    <p class="result-text"><strong>Data-backed operational insights from day one</strong> — leadership moves from reactive decision-making to predictive, intelligence-driven strategy.</p>
+                    <div class="result-icon">🧠</div>
+                    <p class="result-text"><strong>Smarter platforms</strong> that include AI-enabled content workflows, conversational journeys, intelligent search, and customer-facing automation built in from the start.</p>
                 </div>
                 <div class="result-item">
                     <div class="result-icon">🏗️</div>
-                    <p class="result-text"><strong>Scalable architecture designed for continued growth</strong> — systems built to handle tomorrow's complexity without costly redesign.</p>
+                    <p class="result-text"><strong>Stronger architecture</strong> — better performance, maintainability, cloud readiness, and deep integration with your wider business ecosystem.</p>
+                </div>
+                <div class="result-item">
+                    <div class="result-icon">🔭</div>
+                    <p class="result-text"><strong>Future-ready platforms</strong> structured for AI discovery, continuous optimization, and evolving digital business requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Representative Engagements -->
+    <section class="section" style="background: var(--white);" id="engagements">
+        <div class="container">
+            <div class="section-center">
+                <div class="section-tag">Representative Engagements</div>
+                <h2 class="section-title">The kinds of transformation work we support</h2>
+                <p class="section-sub">We have supported use cases ranging from corporate websites and fully optimized digital experiences to accessibility-led implementations, integrations, and business workflows embedded into web platforms.</p>
+            </div>
+            <div class="engagements-grid">
+                <div class="engagement-card">
+                    <span class="engagement-type">Corporate Websites</span>
+                    <h3>Marketing platforms that perform</h3>
+                    <p>We help companies build and modernize corporate websites that are responsive, scalable, fast, and easier to evolve through strong architecture and content systems.</p>
+                </div>
+                <div class="engagement-card">
+                    <span class="engagement-type">Communities &amp; Portals</span>
+                    <h3>Engagement-led digital ecosystems</h3>
+                    <p>We design communities, member platforms, and partner portals that combine strong user experience, custom workflows, and platform extensibility.</p>
+                </div>
+                <div class="engagement-card">
+                    <span class="engagement-type">Marketplaces &amp; Commerce</span>
+                    <h3>Transaction-ready digital products</h3>
+                    <p>We build commerce and marketplace experiences with custom features, integrations, and scalable infrastructure to support growth.</p>
+                </div>
+                <div class="engagement-card">
+                    <span class="engagement-type">Integrations &amp; Business Workflows</span>
+                    <h3>Connected digital operations</h3>
+                    <p>We extend platforms with CRM, analytics, reporting, payments, messaging, and other business systems so your digital channels become part of a larger operating model.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Expertise -->
+    <section class="platform-expertise section" id="platforms">
+        <div class="container">
+            <div style="margin-bottom: 0;">
+                <div class="section-tag">Platform Expertise</div>
+                <h2 class="section-title">We work with the right platform for the business problem</h2>
+                <p class="section-sub">Our digital transformation work spans websites, communities, marketplaces, customer-facing applications, and internal platforms. We combine platform customisation with custom-built features, integrations, and cloud services.</p>
+            </div>
+            <div class="platform-split">
+                <div>
+                    <div class="platform-category">
+                        <div class="platform-category-label">CMS &amp; Web</div>
+                        <div class="platform-tags">
+                            <span class="platform-tag">WordPress</span>
+                            <span class="platform-tag">Custom PHP</span>
+                            <span class="platform-tag">Headless CMS</span>
+                        </div>
+                    </div>
+                    <div class="platform-category">
+                        <div class="platform-category-label">Commerce</div>
+                        <div class="platform-tags">
+                            <span class="platform-tag">Magento</span>
+                            <span class="platform-tag">WooCommerce</span>
+                            <span class="platform-tag">Custom Commerce</span>
+                        </div>
+                    </div>
+                    <div class="platform-category">
+                        <div class="platform-category-label">Communities &amp; Portals</div>
+                        <div class="platform-tags">
+                            <span class="platform-tag">SocialEngine</span>
+                            <span class="platform-tag">Custom Portal</span>
+                            <span class="platform-tag">Member Platforms</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="platform-category">
+                        <div class="platform-category-label">Custom Stack</div>
+                        <div class="platform-tags">
+                            <span class="platform-tag">React</span>
+                            <span class="platform-tag">Node.js</span>
+                            <span class="platform-tag">Python</span>
+                            <span class="platform-tag">REST APIs</span>
+                        </div>
+                    </div>
+                    <div class="platform-category">
+                        <div class="platform-category-label">Cloud &amp; Mobile</div>
+                        <div class="platform-tags">
+                            <span class="platform-tag">AWS Cloud</span>
+                            <span class="platform-tag">Firebase</span>
+                            <span class="platform-tag">iOS Apps</span>
+                            <span class="platform-tag">Android Apps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Capabilities -->
+    <section class="core-capabilities section" id="capabilities">
+        <div class="container">
+            <div class="section-center" style="margin-bottom: 0;">
+                <div class="section-tag">Core Capabilities</div>
+                <h2 class="section-title">Beyond implementation, we help you operate and scale</h2>
+                <p class="section-sub">Launching a platform is the start, not the finish. We provide the engineering depth to keep your platform fast, integrated, secure, and evolving.</p>
+            </div>
+            <div class="cap-grid">
+                <div class="cap-card">
+                    <span class="cap-card-icon">📱</span>
+                    <h3>Responsive and accessible experiences</h3>
+                    <p>Design and engineering for mobile, tablet, desktop, and inclusive user access — built to WCAG standards so no user is left behind.</p>
+                </div>
+                <div class="cap-card">
+                    <span class="cap-card-icon">⚡</span>
+                    <h3>Performance and scalability</h3>
+                    <p>Front-end optimization, CDN strategy, caching, database tuning, and server-side efficiency to handle growth without degrading the user experience.</p>
+                </div>
+                <div class="cap-card">
+                    <span class="cap-card-icon">☁️</span>
+                    <h3>Cloud hosting and modernization</h3>
+                    <p>Architecture, migration, autoscaling, backups, monitoring, and production operations — so your platform is always available and always current.</p>
+                </div>
+                <div class="cap-card">
+                    <span class="cap-card-icon">🔗</span>
+                    <h3>Third-party integrations</h3>
+                    <p>CRM, marketing tools, payment gateways, messaging providers, analytics, and enterprise systems — connected cleanly into your platform's data and workflow layer.</p>
                 </div>
             </div>
         </div>
@@ -2108,36 +880,16 @@
                 <h2 class="section-title">Real Projects, Real Results</h2>
                 <p class="section-sub" style="margin: 0 auto;">See how we've applied our AI-first approach to solve complex challenges across industries.</p>
             </div>
-
-            <!-- Case Study Card Container -->
             <div class="case-study-card" id="caseStudyContainer">
-                <!-- Inscopix Case Study -->
+
+                <!-- Inscopix -->
                 <div class="case-study-inner case-study-slide" data-case="1">
                     <div class="case-img-wrap" style="background: linear-gradient(145deg, #0f0c29 0%, #302b63 55%, #1a1634 100%);">
                         <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.22" viewBox="0 0 400 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                            <g stroke="#a78bfa" stroke-width="1" fill="none">
-                                <line x1="60" y1="100" x2="180" y2="70"/><line x1="180" y1="70" x2="300" y2="120"/>
-                                <line x1="60" y1="100" x2="120" y2="220"/><line x1="180" y1="70" x2="240" y2="190"/>
-                                <line x1="300" y1="120" x2="360" y2="230"/><line x1="120" y1="220" x2="240" y2="190"/>
-                                <line x1="240" y1="190" x2="360" y2="230"/><line x1="120" y1="220" x2="80" y2="340"/>
-                                <line x1="240" y1="190" x2="200" y2="340"/><line x1="360" y1="230" x2="320" y2="380"/>
-                                <line x1="80" y1="340" x2="200" y2="340"/><line x1="200" y1="340" x2="320" y2="380"/>
-                            </g>
-                            <g fill="#c4b5fd">
-                                <circle cx="60" cy="100" r="5"/><circle cx="180" cy="70" r="7"/><circle cx="300" cy="120" r="5"/>
-                                <circle cx="120" cy="220" r="6"/><circle cx="240" cy="190" r="9"/><circle cx="360" cy="230" r="5"/>
-                                <circle cx="80" cy="340" r="6"/><circle cx="200" cy="340" r="5"/><circle cx="320" cy="380" r="7"/>
-                            </g>
+                            <g stroke="#a78bfa" stroke-width="1" fill="none"><line x1="60" y1="100" x2="180" y2="70"/><line x1="180" y1="70" x2="300" y2="120"/><line x1="60" y1="100" x2="120" y2="220"/><line x1="180" y1="70" x2="240" y2="190"/><line x1="300" y1="120" x2="360" y2="230"/><line x1="120" y1="220" x2="240" y2="190"/><line x1="240" y1="190" x2="360" y2="230"/><line x1="120" y1="220" x2="80" y2="340"/><line x1="240" y1="190" x2="200" y2="340"/><line x1="360" y1="230" x2="320" y2="380"/><line x1="80" y1="340" x2="200" y2="340"/><line x1="200" y1="340" x2="320" y2="380"/></g>
+                            <g fill="#c4b5fd"><circle cx="60" cy="100" r="5"/><circle cx="180" cy="70" r="7"/><circle cx="300" cy="120" r="5"/><circle cx="120" cy="220" r="6"/><circle cx="240" cy="190" r="9"/><circle cx="360" cy="230" r="5"/><circle cx="80" cy="340" r="6"/><circle cx="200" cy="340" r="5"/><circle cx="320" cy="380" r="7"/></g>
                         </svg>
-                        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
-                            <svg width="180" height="180" viewBox="0 0 24 24" fill="none" stroke="#e9d5ff" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.18">
-                                <rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/>
-                                <line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/>
-                                <line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/>
-                                <line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/>
-                                <line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/>
-                            </svg>
-                        </div>
+                        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;"><svg width="180" height="180" viewBox="0 0 24 24" fill="none" stroke="#e9d5ff" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.18"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div>
                         <div class="case-img-overlay"></div>
                         <div class="case-img-badge">Case Study</div>
                     </div>
@@ -2150,64 +902,25 @@
                         <div class="case-section-label">Our Solution</div>
                         <p class="case-section-text">We architected a cloud-native solution using React for the frontend, Python microservices for data processing, and AWS infrastructure for scalability. AI-powered code generation accelerated development of complex data visualization components.</p>
                         <div class="case-section-label">Technologies</div>
-                        <div class="tech-tags">
-                            <div class="tech-tag">React</div>
-                            <div class="tech-tag">Python</div>
-                            <div class="tech-tag">AWS</div>
-                            <div class="tech-tag">TensorFlow</div>
-                            <div class="tech-tag">PostgreSQL</div>
-                        </div>
+                        <div class="tech-tags"><div class="tech-tag">React</div><div class="tech-tag">Python</div><div class="tech-tag">AWS</div><div class="tech-tag">TensorFlow</div><div class="tech-tag">PostgreSQL</div></div>
                         <div class="case-section-label">AI Impact Metrics</div>
                         <div class="case-metrics">
-                            <div class="case-metric">
-                                <div class="case-metric-icon" style="background: var(--red-light);">⏱</div>
-                                <div class="case-metric-val">60% faster</div>
-                                <div class="case-metric-lbl">delivery vs traditional</div>
-                            </div>
-                            <div class="case-metric">
-                                <div class="case-metric-icon" style="background: var(--red-light);">💰</div>
-                                <div class="case-metric-val">35% cost</div>
-                                <div class="case-metric-lbl">reduction achieved</div>
-                            </div>
-                            <div class="case-metric">
-                                <div class="case-metric-icon" style="background: var(--red-light);">📈</div>
-                                <div class="case-metric-val">3x faster</div>
-                                <div class="case-metric-lbl">iteration cycles</div>
-                            </div>
+                            <div class="case-metric"><div class="case-metric-icon" style="background: var(--red-light);">⏱</div><div class="case-metric-val">60% faster</div><div class="case-metric-lbl">delivery vs traditional</div></div>
+                            <div class="case-metric"><div class="case-metric-icon" style="background: var(--red-light);">💰</div><div class="case-metric-val">35% cost</div><div class="case-metric-lbl">reduction achieved</div></div>
+                            <div class="case-metric"><div class="case-metric-icon" style="background: var(--red-light);">📈</div><div class="case-metric-val">3x faster</div><div class="case-metric-lbl">iteration cycles</div></div>
                         </div>
-                        <div style="margin-top: 28px;">
-                            <a href="InscopixCaseStudyPage.html" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:var(--red);color:white;border-radius:8px;font-weight:700;font-size:14px;transition:all 0.22s;border:none;cursor:pointer;text-decoration:none;" onmouseover="this.style.background=&#39;var(--red-dark)&#39;;this.style.transform=&#39;translateY(-1px)&#39;" onmouseout="this.style.background=&#39;var(--red)&#39;;this.style.transform=&#39;translateY(0)&#39;">
-                                Read Full Case Study →
-                            </a>
-                        </div>
+                        <div style="margin-top: 28px;"><a href="InscopixCaseStudyPage.html" class="btn btn-primary">Read Full Case Study →</a></div>
                     </div>
                 </div>
 
-                <!-- Govmates Case Study -->
+                <!-- Govmates -->
                 <div class="case-study-inner case-study-slide" data-case="2" style="display:none;">
                     <div class="case-img-wrap" style="background: linear-gradient(145deg, #0a1a0a 0%, #163a1a 55%, #0c2214 100%);">
                         <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.22" viewBox="0 0 400 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                            <g stroke="#6ee7b7" stroke-width="1" fill="none">
-                                <line x1="200" y1="240" x2="80" y2="140"/><line x1="200" y1="240" x2="320" y2="140"/>
-                                <line x1="200" y1="240" x2="80" y2="340"/><line x1="200" y1="240" x2="320" y2="340"/>
-                                <line x1="80" y1="140" x2="200" y2="80"/><line x1="320" y1="140" x2="200" y2="80"/>
-                                <line x1="80" y1="340" x2="200" y2="400"/><line x1="320" y1="340" x2="200" y2="400"/>
-                                <line x1="40" y1="240" x2="80" y2="140"/><line x1="40" y1="240" x2="80" y2="340"/>
-                                <line x1="360" y1="240" x2="320" y2="140"/><line x1="360" y1="240" x2="320" y2="340"/>
-                                <line x1="80" y1="140" x2="320" y2="140"/><line x1="80" y1="340" x2="320" y2="340"/>
-                            </g>
-                            <g fill="#a7f3d0">
-                                <circle cx="200" cy="240" r="10"/><circle cx="80" cy="140" r="6"/><circle cx="320" cy="140" r="6"/>
-                                <circle cx="80" cy="340" r="6"/><circle cx="320" cy="340" r="6"/><circle cx="200" cy="80" r="5"/>
-                                <circle cx="200" cy="400" r="5"/><circle cx="40" cy="240" r="5"/><circle cx="360" cy="240" r="5"/>
-                            </g>
+                            <g stroke="#6ee7b7" stroke-width="1" fill="none"><line x1="200" y1="240" x2="80" y2="140"/><line x1="200" y1="240" x2="320" y2="140"/><line x1="200" y1="240" x2="80" y2="340"/><line x1="200" y1="240" x2="320" y2="340"/><line x1="80" y1="140" x2="200" y2="80"/><line x1="320" y1="140" x2="200" y2="80"/><line x1="80" y1="340" x2="200" y2="400"/><line x1="320" y1="340" x2="200" y2="400"/><line x1="40" y1="240" x2="80" y2="140"/><line x1="40" y1="240" x2="80" y2="340"/><line x1="360" y1="240" x2="320" y2="140"/><line x1="360" y1="240" x2="320" y2="340"/><line x1="80" y1="140" x2="320" y2="140"/><line x1="80" y1="340" x2="320" y2="340"/></g>
+                            <g fill="#a7f3d0"><circle cx="200" cy="240" r="10"/><circle cx="80" cy="140" r="6"/><circle cx="320" cy="140" r="6"/><circle cx="80" cy="340" r="6"/><circle cx="320" cy="340" r="6"/><circle cx="200" cy="80" r="5"/><circle cx="200" cy="400" r="5"/><circle cx="40" cy="240" r="5"/><circle cx="360" cy="240" r="5"/></g>
                         </svg>
-                        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
-                            <svg width="180" height="180" viewBox="0 0 24 24" fill="none" stroke="#d1fae5" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.18">
-                                <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
-                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
-                            </svg>
-                        </div>
+                        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;"><svg width="180" height="180" viewBox="0 0 24 24" fill="none" stroke="#d1fae5" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.18"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div>
                         <div class="case-img-overlay"></div>
                         <div class="case-img-badge">Case Study</div>
                     </div>
@@ -2220,63 +933,26 @@
                         <div class="case-section-label">Our Solution</div>
                         <p class="case-section-text">We embedded five agentic AI features: PDF and URL profile extraction with merge interfaces, natural language search layered on Elasticsearch, conversational Ask AI assistant, and continuous profile improvement — all integrated without disrupting existing infrastructure.</p>
                         <div class="case-section-label">Technologies</div>
-                        <div class="tech-tags">
-                            <div class="tech-tag">Agentic AI</div>
-                            <div class="tech-tag">LLMs</div>
-                            <div class="tech-tag">PDF Parsing</div>
-                            <div class="tech-tag">Elasticsearch</div>
-                            <div class="tech-tag">RAG</div>
-                        </div>
+                        <div class="tech-tags"><div class="tech-tag">Agentic AI</div><div class="tech-tag">LLMs</div><div class="tech-tag">PDF Parsing</div><div class="tech-tag">Elasticsearch</div><div class="tech-tag">RAG</div></div>
                         <div class="case-section-label">AI Impact Metrics</div>
                         <div class="case-metrics">
-                            <div class="case-metric">
-                                <div class="case-metric-icon" style="background: var(--red-light);">🚀</div>
-                                <div class="case-metric-val">5 features</div>
-                                <div class="case-metric-lbl">designed &amp; delivered</div>
-                            </div>
-                            <div class="case-metric">
-                                <div class="case-metric-icon" style="background: var(--red-light);">⚡</div>
-                                <div class="case-metric-val">5× faster</div>
-                                <div class="case-metric-lbl">profile enrichment</div>
-                            </div>
-                            <div class="case-metric">
-                                <div class="case-metric-icon" style="background: var(--red-light);">🎯</div>
-                                <div class="case-metric-val">Instant</div>
-                                <div class="case-metric-lbl">operational answers</div>
-                            </div>
+                            <div class="case-metric"><div class="case-metric-icon" style="background: var(--red-light);">🚀</div><div class="case-metric-val">5 features</div><div class="case-metric-lbl">designed &amp; delivered</div></div>
+                            <div class="case-metric"><div class="case-metric-icon" style="background: var(--red-light);">⚡</div><div class="case-metric-val">5× faster</div><div class="case-metric-lbl">profile enrichment</div></div>
+                            <div class="case-metric"><div class="case-metric-icon" style="background: var(--red-light);">🎯</div><div class="case-metric-val">Instant</div><div class="case-metric-lbl">operational answers</div></div>
                         </div>
-                        <div style="margin-top: 28px;">
-                            <a href="GovmatesCaseStudyPage.html" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:var(--red);color:white;border-radius:8px;font-weight:700;font-size:14px;transition:all 0.22s;border:none;cursor:pointer;text-decoration:none;" onmouseover="this.style.background=&#39;var(--red-dark)&#39;;this.style.transform=&#39;translateY(-1px)&#39;" onmouseout="this.style.background=&#39;var(--red)&#39;;this.style.transform=&#39;translateY(0)&#39;">
-                                Read Full Case Study →
-                            </a>
-                        </div>
+                        <div style="margin-top: 28px;"><a href="GovmatesCaseStudyPage.html" class="btn btn-primary">Read Full Case Study →</a></div>
                     </div>
                 </div>
 
-                <!-- LifeSherpa Case Study -->
+                <!-- LifeSherpa -->
                 <div class="case-study-inner case-study-slide" data-case="3" style="display:none;">
                     <div class="case-img-wrap" style="background: linear-gradient(145deg, #0a1628 0%, #1b3a5c 55%, #0d2140 100%);">
                         <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.2" viewBox="0 0 400 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                            <g fill="none" stroke="#7dd3fc" stroke-width="1.5">
-                                <circle cx="200" cy="240" r="190"/><circle cx="200" cy="240" r="145"/>
-                                <circle cx="200" cy="240" r="100"/><circle cx="200" cy="240" r="55"/>
-                            </g>
-                            <g fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="6 5">
-                                <circle cx="200" cy="240" r="168"/><circle cx="200" cy="240" r="123"/>
-                                <circle cx="200" cy="240" r="78"/>
-                            </g>
-                            <g fill="#7dd3fc">
-                                <circle cx="200" cy="50" r="4"/><circle cx="390" cy="240" r="4"/>
-                                <circle cx="200" cy="430" r="4"/><circle cx="10" cy="240" r="4"/>
-                                <circle cx="334" cy="106" r="3"/><circle cx="334" cy="374" r="3"/>
-                                <circle cx="66" cy="106" r="3"/><circle cx="66" cy="374" r="3"/>
-                            </g>
+                            <g fill="none" stroke="#7dd3fc" stroke-width="1.5"><circle cx="200" cy="240" r="190"/><circle cx="200" cy="240" r="145"/><circle cx="200" cy="240" r="100"/><circle cx="200" cy="240" r="55"/></g>
+                            <g fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="6 5"><circle cx="200" cy="240" r="168"/><circle cx="200" cy="240" r="123"/><circle cx="200" cy="240" r="78"/></g>
+                            <g fill="#7dd3fc"><circle cx="200" cy="50" r="4"/><circle cx="390" cy="240" r="4"/><circle cx="200" cy="430" r="4"/><circle cx="10" cy="240" r="4"/><circle cx="334" cy="106" r="3"/><circle cx="334" cy="374" r="3"/><circle cx="66" cy="106" r="3"/><circle cx="66" cy="374" r="3"/></g>
                         </svg>
-                        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
-                            <svg width="180" height="180" viewBox="0 0 24 24" fill="none" stroke="#bae6fd" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.18">
-                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-                            </svg>
-                        </div>
+                        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;"><svg width="180" height="180" viewBox="0 0 24 24" fill="none" stroke="#bae6fd" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.18"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
                         <div class="case-img-overlay"></div>
                         <div class="case-img-badge">Case Study</div>
                     </div>
@@ -2289,41 +965,18 @@
                         <div class="case-section-label">Our Solution</div>
                         <p class="case-section-text">We rebuilt the architecture from the ground up with enterprise-grade security, built a self-service admin dashboard, implemented Auth0 + Azure AD SSO, created a self-healing BI pipeline, launched a full web portal, and centralized logic in a serverless API — delivering 11 major capabilities over 8 years.</p>
                         <div class="case-section-label">Technologies</div>
-                        <div class="tech-tags">
-                            <div class="tech-tag">React</div>
-                            <div class="tech-tag">Node.js</div>
-                            <div class="tech-tag">Firebase</div>
-                            <div class="tech-tag">Auth0</div>
-                            <div class="tech-tag">Zoho Analytics</div>
-                        </div>
+                        <div class="tech-tags"><div class="tech-tag">React</div><div class="tech-tag">Node.js</div><div class="tech-tag">Firebase</div><div class="tech-tag">Auth0</div><div class="tech-tag">Zoho Analytics</div></div>
                         <div class="case-section-label">Partnership Metrics</div>
                         <div class="case-metrics">
-                            <div class="case-metric">
-                                <div class="case-metric-icon" style="background: var(--red-light);">🤝</div>
-                                <div class="case-metric-val">8+ years</div>
-                                <div class="case-metric-lbl">continuous partnership</div>
-                            </div>
-                            <div class="case-metric">
-                                <div class="case-metric-icon" style="background: var(--red-light);">📊</div>
-                                <div class="case-metric-val">11 features</div>
-                                <div class="case-metric-lbl">major capabilities built</div>
-                            </div>
-                            <div class="case-metric">
-                                <div class="case-metric-icon" style="background: var(--red-light);">🌐</div>
-                                <div class="case-metric-val">3 platforms</div>
-                                <div class="case-metric-lbl">iOS, Android, Web</div>
-                            </div>
+                            <div class="case-metric"><div class="case-metric-icon" style="background: var(--red-light);">🤝</div><div class="case-metric-val">8+ years</div><div class="case-metric-lbl">continuous partnership</div></div>
+                            <div class="case-metric"><div class="case-metric-icon" style="background: var(--red-light);">📊</div><div class="case-metric-val">11 features</div><div class="case-metric-lbl">major capabilities built</div></div>
+                            <div class="case-metric"><div class="case-metric-icon" style="background: var(--red-light);">🌐</div><div class="case-metric-val">3 platforms</div><div class="case-metric-lbl">iOS, Android, Web</div></div>
                         </div>
-                        <div style="margin-top: 28px;">
-                            <a href="LifeSherpaCaseStudyPage.html" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:var(--red);color:white;border-radius:8px;font-weight:700;font-size:14px;transition:all 0.22s;border:none;cursor:pointer;text-decoration:none;" onmouseover="this.style.background=&#39;var(--red-dark)&#39;;this.style.transform=&#39;translateY(-1px)&#39;" onmouseout="this.style.background=&#39;var(--red)&#39;;this.style.transform=&#39;translateY(0)&#39;">
-                                Read Full Case Study →
-                            </a>
-                        </div>
+                        <div style="margin-top: 28px;"><a href="LifeSherpaCaseStudyPage.html" class="btn btn-primary">Read Full Case Study →</a></div>
                     </div>
                 </div>
             </div>
 
-            <!-- Navigation Arrows Below Case Study Section -->
             <div style="display:flex;justify-content:center;gap:12px;margin-top:40px;">
                 <button class="case-btn" onclick="previousCase()">←</button>
                 <button class="case-btn" onclick="nextCase()">→</button>
@@ -2334,11 +987,10 @@
     <!-- Contact Section -->
     <section class="contact section" id="contact">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 24px;">
+            <div style="text-align: center; margin-bottom: 48px;">
                 <div class="section-tag">GET IN TOUCH</div>
-                <h2 class="section-title">Contact Us</h2>
-                <p class="section-sub" style="margin: 0 auto;">Ready to Build Your Product?</p>
-                <p style="font-size: 15px; color: var(--gray-700); margin-top: 12px; max-width: 640px; margin-left: auto; margin-right: auto;">Let's talk about how our AI-accelerated development can take your idea from concept to launch — faster and smarter than you thought possible.</p>
+                <h2 class="section-title">What can we help you build?</h2>
+                <p class="section-sub" style="margin: 0 auto;">Whether you need a high-performance website, a customer portal, an online community, a marketplace, or a broader digital platform with AI and cloud infrastructure — let's talk.</p>
             </div>
             <div class="contact-inner">
                 <div class="contact-info">
@@ -2380,12 +1032,12 @@
                 <form class="contact-form">
                     <div class="form-group">
                         <label class="form-label">Name <span class="req">*</span></label>
-                        <input type="text" class="form-input" placeholder="Your name" required="">
+                        <input type="text" class="form-input" placeholder="Your name" required>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label class="form-label">Email <span class="req">*</span></label>
-                            <input type="email" class="form-input" placeholder="your@email.com" required="">
+                            <input type="email" class="form-input" placeholder="your@email.com" required>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Company</label>
@@ -2396,6 +1048,7 @@
                         <label class="form-label">Service Interested In</label>
                         <select class="form-select">
                             <option>Select a service...</option>
+                            <option>Digital Transformation</option>
                             <option>Product Development</option>
                             <option>AI &amp; Machine Learning Integration</option>
                             <option>Web Application Development</option>
@@ -2407,9 +1060,9 @@
                     </div>
                     <div class="form-group">
                         <label class="form-label">Project Description <span class="req">*</span></label>
-                        <textarea class="form-textarea" placeholder="Tell us about your project..." required=""></textarea>
+                        <textarea class="form-textarea" placeholder="Tell us about your project..." required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary form-submit">Send Message ►</button>
+                    <button type="submit" class="btn btn-primary form-submit">Send Message →</button>
                 </form>
             </div>
         </div>
@@ -2426,11 +1079,11 @@
                 <div>
                     <div class="footer-col-title">Services</div>
                     <div class="footer-links">
-                        <a href="index.html#services">Product Development</a>
-                        <a href="index.html#services">Digital Transformation</a>
-                        <a href="index.html#services">Enterprise Integration</a>
-                        <a href="index.html#services">AI/ML Integration</a>
-                        <a href="index.html#services">CTO as a Service</a>
+                        <a href="ProductDevelopmentPage.html">Product Development</a>
+                        <a href="DigitalTransformationPage.html">Digital Transformation</a>
+                        <a href="EnterpriseIntegrationPage.html">Enterprise Integration</a>
+                        <a href="AIAndMLPage.html">AI/ML Integration</a>
+                        <a href="CTOAsAServicePage.html">CTO as a Service</a>
                     </div>
                 </div>
                 <div>
@@ -2439,7 +1092,7 @@
                         <a href="AboutPage.html">About</a>
                         <a href="index.html#case-study">Case Studies</a>
                         <a href="BlogPage.html">Blog</a>
-                        <a href="index.html#contact">Contact</a>
+                        <a href="#contact">Contact</a>
                     </div>
                 </div>
                 <div>
@@ -2488,84 +1141,55 @@
             }
         });
 
+        // Approach capability selection + auto-advance
+        let currentApproachStep = 1;
+        let approachTimer = null;
+
+        function showApproachStep(stepNum) {
+            document.querySelectorAll('.approach-tab').forEach(t => t.classList.remove('active'));
+            const activeTab = document.querySelector('.approach-tab[data-step="' + stepNum + '"]');
+            if (activeTab) {
+                void activeTab.offsetWidth; // force reflow to restart progress animation
+                activeTab.classList.add('active');
+            }
+
+            document.querySelectorAll('.approach-content-panel').forEach(p => p.classList.remove('active'));
+            const activePanel = document.querySelector('.approach-content-panel[data-panel="' + stepNum + '"]');
+            if (activePanel) activePanel.classList.add('active');
+
+            currentApproachStep = stepNum;
+            clearInterval(approachTimer);
+            approachTimer = setInterval(function() {
+                showApproachStep(currentApproachStep === 6 ? 1 : currentApproachStep + 1);
+            }, 7000);
+        }
+
+        showApproachStep(1);
+
         // Case study carousel
         let currentCase = 1;
         const totalCases = 3;
 
         function showCase(caseNumber) {
-            const slides = document.querySelectorAll('.case-study-slide');
-            slides.forEach(slide => {
-                slide.style.display = 'none';
-            });
-
-            const targetSlide = document.querySelector('[data-case="' + caseNumber + '"]');
-            if (targetSlide) {
-                targetSlide.style.display = 'grid';
-            }
+            document.querySelectorAll('.case-study-slide').forEach(s => s.style.display = 'none');
+            const target = document.querySelector('[data-case="' + caseNumber + '"]');
+            if (target) target.style.display = 'grid';
             currentCase = caseNumber;
         }
 
         function nextCase() {
-            let nextCaseNum = currentCase + 1;
-            if (nextCaseNum > totalCases) {
-                nextCaseNum = 1;
-            }
-            showCase(nextCaseNum);
+            let next = currentCase + 1;
+            if (next > totalCases) next = 1;
+            showCase(next);
         }
 
         function previousCase() {
-            let prevCaseNum = currentCase - 1;
-            if (prevCaseNum < 1) {
-                prevCaseNum = totalCases;
-            }
-            showCase(prevCaseNum);
+            let prev = currentCase - 1;
+            if (prev < 1) prev = totalCases;
+            showCase(prev);
         }
 
-        // Approach section step navigation
-        let currentApproachStep = 1;
-        const totalApproachSteps = 5;
-
-        function showApproachStep(stepNum) {
-            // Update indicators
-            document.querySelectorAll('.approach-step-indicator').forEach(ind => {
-                ind.classList.remove('active');
-            });
-            const activeIndicator = document.querySelector('.approach-step-indicator[data-step="' + stepNum + '"]');
-            if (activeIndicator) activeIndicator.classList.add('active');
-
-            // Update connector lines
-            const connectors = document.querySelectorAll('.approach-step-connector');
-            connectors.forEach((conn, idx) => {
-                conn.classList.toggle('filled', idx < stepNum - 1);
-            });
-
-            // Update panels
-            document.querySelectorAll('.approach-content-panel').forEach(panel => {
-                panel.classList.remove('active');
-            });
-            const activePanel = document.querySelector('.approach-content-panel[data-panel="' + stepNum + '"]');
-            if (activePanel) activePanel.classList.add('active');
-
-            // Update counter
-            const counterEl = document.getElementById('approachCurrent');
-            if (counterEl) counterEl.textContent = String(stepNum).padStart(2, '0');
-
-            currentApproachStep = stepNum;
-        }
-
-        function nextApproachStep() {
-            let next = currentApproachStep + 1;
-            if (next > totalApproachSteps) next = 1;
-            showApproachStep(next);
-        }
-
-        function prevApproachStep() {
-            let prev = currentApproachStep - 1;
-            if (prev < 1) prev = totalApproachSteps;
-            showApproachStep(prev);
-        }
-
-        // Smooth scroll for anchor links
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(link => {
             link.addEventListener('click', e => {
                 const target = document.querySelector(link.getAttribute('href'));
@@ -2578,5 +1202,5 @@
         });
     </script>
 
-
-</body></html>
+</body>
+</html>
